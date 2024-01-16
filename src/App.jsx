@@ -16,15 +16,17 @@ export const EducationForm = () => {
         <input type="text" name="school" id="school" />
       </div>
 
-      <div>
-        <label htmlFor="start-date">Start Date</label>
-        <input type="date" name="start-date" id="start-date" />
-      </div>
+      <fieldset className="dates">
+        <div>
+          <label htmlFor="start-date">Start Date</label>
+          <input type="date" name="start-date" id="start-date" />
+        </div>
 
-      <div>
-        <label htmlFor="end-date">End Date</label>
-        <input type="date" name="end-date" id="end-date" />
-      </div>
+        <div>
+          <label htmlFor="end-date">End Date</label>
+          <input type="date" name="end-date" id="end-date" />
+        </div>
+      </fieldset>
 
       <div>
         <label htmlFor="description">Description</label>
