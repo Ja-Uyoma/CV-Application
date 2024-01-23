@@ -58,6 +58,7 @@ const BasicInformation = () => {
           <div>
             <label htmlFor="post-code">
               Postal code
+              {/** */}
               <input type="text" name="post-code" id="post-code" />
             </label>
           </div>
@@ -65,6 +66,7 @@ const BasicInformation = () => {
           <div>
             <label htmlFor="city">
               City
+              {/** */}
               <input type="text" name="city" id="city" />
             </label>
           </div>
