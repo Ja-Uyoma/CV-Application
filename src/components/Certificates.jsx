@@ -1,9 +1,15 @@
+import { v4 as uuidv4 } from "uuid";
+
 const Certificates = () => {
   const yearsOption = () => {
     let years = [];
 
     for (let idx = 2029; idx >= 1924; --idx) {
-      years.push(<option value="${idx}">{idx}</option>);
+      years.push(
+        <option value="${idx}" key={uuidv4()}>
+          {idx}
+        </option>
+      );
     }
 
     return years;
