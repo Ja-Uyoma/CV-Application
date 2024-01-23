@@ -30,6 +30,7 @@ const MonthList = () => {
 
 const YearList = () => {
   let years = [];
+  years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
 
   for (let i = 2029; i >= 1924; --i) {
     years.push({ texual: `${i}`, numeric: i, id: uuidv4() });
@@ -72,9 +73,6 @@ const Certificates = () => {
             Year
             {/* */}
             <select name="year" id="year" defaultValue={"Year"}>
-              <option value="Year" key={1}>
-                Year
-              </option>
               <YearList />
             </select>
           </label>
