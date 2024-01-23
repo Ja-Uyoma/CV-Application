@@ -6,7 +6,7 @@ const Certificates = () => {
 
     for (let idx = 2029; idx >= 1924; --idx) {
       years.push(
-        <option value="${idx}" key={uuidv4()}>
+        <option value="{idx}" key={uuidv4()}>
           {idx}
         </option>
       );
