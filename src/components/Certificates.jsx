@@ -1,20 +1,24 @@
 import { v4 as uuidv4 } from "uuid";
 
-const Certificates = () => {
-  const yearsOption = () => {
-    let years = [];
+const YearList = () => {
+  let years = [];
 
-    for (let idx = 2029; idx >= 1924; --idx) {
-      years.push(
-        <option value="{idx}" key={uuidv4()}>
-          {idx}
+  for (let i = 2029; i >= 1924; --i) {
+    years.push({ texual: `${i}`, numeric: i, id: uuidv4() });
+  }
+
+  return (
+    <>
+      {years.map((year) => (
+        <option value={year.texual} key={year.id}>
+          {year.numeric}
         </option>
-      );
-    }
+      ))}
+    </>
+  );
+};
 
-    return years;
-  };
-
+const Certificates = () => {
   return (
     <section>
       <h2>Certificates</h2>
@@ -53,7 +57,7 @@ const Certificates = () => {
             {/* */}
             <select name="year" id="year" defaultValue={"Year"}>
               <option value="Year">Year</option>
-              {yearsOption()}
+              <YearList />
             </select>
           </label>
         </div>
