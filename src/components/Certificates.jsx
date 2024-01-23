@@ -62,19 +62,15 @@ const Certificates = () => {
           <label htmlFor="period">
             Period
             {/* */}
-            <select name="period" id="period" defaultValue={"Month"}>
-              <MonthList />
-            </select>
-          </label>
-        </div>
+            <div>
+              <select name="period" id="period" defaultValue={"Month"}>
+                <MonthList />
+              </select>
 
-        <div>
-          <label htmlFor="year">
-            Year
-            {/* */}
-            <select name="year" id="year" defaultValue={"Year"}>
-              <YearList />
-            </select>
+              <select name="year" id="year" defaultValue={"Year"}>
+                <YearList />
+              </select>
+            </div>
           </label>
         </div>
 
