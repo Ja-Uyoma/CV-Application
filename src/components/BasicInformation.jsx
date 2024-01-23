@@ -9,7 +9,7 @@ const BasicInformation = () => {
             <label htmlFor="given-name">
               Given Name
               {/** */}
-              <input type="text" name="given-name" id="give-name" />
+              <input type="text" name="given-name" id="given-name" />
             </label>
           </div>
 
