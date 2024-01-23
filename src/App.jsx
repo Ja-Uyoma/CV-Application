@@ -1,5 +1,5 @@
 import { TextArea } from "./components/TextArea";
-import { History } from "./components/HistoryForm";
+import { History } from "./components/History";
 import { Certificates } from "./components/Certificates";
 
 function App() {
