@@ -31,9 +31,25 @@ export const EducationForm = () => {
   );
 };
 
+const Qualifications = () => {
+  return (
+    <section>
+      <h2>Qualifications</h2>
+
+      <form action="/" method="post">
+        <label htmlFor="description">Description</label>
+
+        <textarea name="description" id="description" cols="30" rows="10">
+        </textarea>
+      </form>
+    </section>
+  );
+};
+
 function App() {
   return (
     <main>
+      <Qualifications />
     </main>
   );
 }
