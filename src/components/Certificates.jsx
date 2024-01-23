@@ -1,5 +1,32 @@
 import { v4 as uuidv4 } from "uuid";
 
+const MonthList = () => {
+  const months = [
+    { month: "January", id: uuidv4() },
+    { month: "February", id: uuidv4() },
+    { month: "March", id: uuidv4() },
+    { month: "April", id: uuidv4() },
+    { month: "May", id: uuidv4() },
+    { month: "June", id: uuidv4() },
+    { month: "July", id: uuidv4() },
+    { month: "August", id: uuidv4() },
+    { month: "September", id: uuidv4() },
+    { month: "October", id: uuidv4() },
+    { month: "November", id: uuidv4() },
+    { month: "December", id: uuidv4() },
+  ];
+
+  return (
+    <>
+      {months.map((month) => (
+        <option value={month.month} key={month.id}>
+          {month.month}
+        </option>
+      ))}
+    </>
+  );
+};
+
 const YearList = () => {
   let years = [];
 
@@ -35,18 +62,7 @@ const Certificates = () => {
             {/* */}
             <select name="period" id="period" defaultValue={"Month"}>
               <option value="month">Month</option>
-              <option value="jan">January</option>
-              <option value="feb">February</option>
-              <option value="mar">March</option>
-              <option value="apr">April</option>
-              <option value="may">May</option>
-              <option value="jun">June</option>
-              <option value="jul">July</option>
-              <option value="aug">August</option>
-              <option value="sep">September</option>
-              <option value="oct">October</option>
-              <option value="nov">November</option>
-              <option value="dec">December</option>
+              <MonthList />
             </select>
           </label>
         </div>
