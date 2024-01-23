@@ -3,7 +3,7 @@ const BasicInformation = () => {
     <section>
       <h2>Basic Information</h2>
 
-      <form action="/" method="post">
+      <form action="/" method="post" autoComplete="off">
         <div>
           <div>
             <label htmlFor="given-name">

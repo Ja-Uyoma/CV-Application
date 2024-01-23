@@ -11,7 +11,7 @@ const History = ({ formName }) => {
     <section>
       <h2>{formName}</h2>
 
-      <form action="/" method="post">
+      <form action="/" method="post" autoComplete="off">
         <div>
           <label htmlFor="education">{formName === "Education" ? "Education" : "Position"}</label>
           <input type="text" name="education" id="education" />
