@@ -60,8 +60,12 @@ const Certificates = () => {
 
         <div>
           <label htmlFor="period">
-            Period
+            <span>Period</span>
             {/* */}
+            <span>
+              <input type="checkbox" name="present" id="present" />
+              Present
+            </span>
             <div>
               <select name="period" id="period" defaultValue={"Month"}>
                 <MonthList />
