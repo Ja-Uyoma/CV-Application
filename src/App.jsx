@@ -9,6 +9,7 @@ function App() {
       <TextArea sectionName={"Interests"} />
       <TextArea sectionName={"References"} />
       <TextArea sectionName={"Skills"} />
+      <HistoryForm formName={"Work Experience"} />
     </main>
   );
 }
