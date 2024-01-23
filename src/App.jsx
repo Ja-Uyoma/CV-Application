@@ -1,3 +1,5 @@
+import { TextArea } from "./components/TextArea";
+
 export const EducationForm = () => {
   return (
     <form action="/" method="post">
@@ -28,21 +30,6 @@ export const EducationForm = () => {
         <textarea name="description" id="description" cols="30" rows="10"></textarea>
       </div>
     </form>
-  );
-};
-
-const TextArea = ({ sectionName }) => {
-  return (
-    <section>
-      <h2>{sectionName}</h2>
-
-      <form action="/" method="post">
-        <label htmlFor="description">Description</label>
-
-        <textarea name="description" id="description" cols="30" rows="10">
-        </textarea>
-      </form>
-    </section>
   );
 };
 
