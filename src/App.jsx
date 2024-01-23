@@ -31,10 +31,10 @@ export const EducationForm = () => {
   );
 };
 
-const Qualifications = () => {
+const TextArea = ({ sectionName }) => {
   return (
     <section>
-      <h2>Qualifications</h2>
+      <h2>{sectionName}</h2>
 
       <form action="/" method="post">
         <label htmlFor="description">Description</label>
@@ -49,7 +49,10 @@ const Qualifications = () => {
 function App() {
   return (
     <main>
-      <Qualifications />
+      <TextArea sectionName={"Qualifications"} />
+      <TextArea sectionName={"Interests"} />
+      <TextArea sectionName={"References"} />
+      <TextArea sectionName={"Skills"} />
     </main>
   );
 }
