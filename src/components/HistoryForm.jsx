@@ -13,12 +13,12 @@ const HistoryForm = ({ formName }) => {
 
       <form action="/" method="post">
         <div>
-          <label htmlFor="education">Education</label>
+          <label htmlFor="education">{formName === "Education" ? "Education" : "Position"}</label>
           <input type="text" name="education" id="education" />
         </div>
 
         <div>
-          <label htmlFor="school">School</label>
+          <label htmlFor="school">{formName === "Education" ? "School" : "Employer"}</label>
           <input type="text" name="school" id="school" />
         </div>
 
