@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const MonthList = () => {
   const months = [
+    { month: "Month", id: uuidv4() },
     { month: "January", id: uuidv4() },
     { month: "February", id: uuidv4() },
     { month: "March", id: uuidv4() },
@@ -61,7 +62,6 @@ const Certificates = () => {
             Period
             {/* */}
             <select name="period" id="period" defaultValue={"Month"}>
-              <option value="month">Month</option>
               <MonthList />
             </select>
           </label>
@@ -72,7 +72,9 @@ const Certificates = () => {
             Year
             {/* */}
             <select name="year" id="year" defaultValue={"Year"}>
-              <option value="Year">Year</option>
+              <option value="Year" key={1}>
+                Year
+              </option>
               <YearList />
             </select>
           </label>
