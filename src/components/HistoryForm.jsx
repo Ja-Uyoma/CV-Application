@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
  * @param {string} formName The type of form, either an education or employment history form
  * @returns JSX that renders the appropriate form depending on the name givens
  */
-const HistoryForm = ({ formName }) => {
+const History = ({ formName }) => {
   return (
     <section>
       <h2>{formName}</h2>
@@ -43,8 +43,8 @@ const HistoryForm = ({ formName }) => {
   );
 };
 
-HistoryForm.propTypes = {
+History.propTypes = {
   formName: PropTypes.string,
 };
 
-export { HistoryForm };
+export { History };

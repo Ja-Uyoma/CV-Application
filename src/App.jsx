@@ -1,16 +1,16 @@
 import { TextArea } from "./components/TextArea";
-import { HistoryForm } from "./components/HistoryForm";
+import { History } from "./components/HistoryForm";
 import { Certificates } from "./components/Certificates";
 
 function App() {
   return (
     <main>
-      <HistoryForm formName={"Education"} />
+      <History formName={"Education"} />
       <TextArea sectionName={"Qualifications"} />
       <TextArea sectionName={"Interests"} />
       <TextArea sectionName={"References"} />
       <TextArea sectionName={"Skills"} />
-      <HistoryForm formName={"Work Experience"} />
+      <History formName={"Work Experience"} />
       <Certificates />
     </main>
   );
