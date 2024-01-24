@@ -4,7 +4,7 @@ const BasicInformation = () => {
       <h2 className="font-bold text-xl py-4">Basic Information</h2>
 
       <form action="/" method="post" autoComplete="off">
-        <div className="flex gap-2">
+        <div className="flex gap-2 my-2">
           <div className="flex-1">
             <label htmlFor="given-name">
               <span className="block font-medium text-gray-700">Given Name</span>
@@ -32,7 +32,7 @@ const BasicInformation = () => {
           </div>
         </div>
 
-        <div>
+        <div className="my-2">
           <label htmlFor="email">
             <span className="block font-medium text-gray-700">Email Address</span>
             {/** */}
@@ -40,7 +40,7 @@ const BasicInformation = () => {
           </label>
         </div>
 
-        <div>
+        <div className="my-2">
           <label htmlFor="headline">
             <span className="block font-medium text-gray-700">Headline</span>
             {/** */}
@@ -48,7 +48,7 @@ const BasicInformation = () => {
           </label>
         </div>
 
-        <div>
+        <div className="my-2">
           <label htmlFor="phone-number">
             <span className="block font-medium text-gray-700">Phone Number</span>
             {/** */}
@@ -61,7 +61,7 @@ const BasicInformation = () => {
           </label>
         </div>
 
-        <div>
+        <div className="my-2">
           <label htmlFor="address">
             <span className="block font-medium text-gray-700">Address</span>
             {/** */}
@@ -69,7 +69,7 @@ const BasicInformation = () => {
           </label>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 my-2">
           <div className="flex-1">
             <label htmlFor="post-code">
               <span className="block font-medium text-gray-700">Postal code</span>
