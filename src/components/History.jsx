@@ -39,7 +39,7 @@ const History = ({ formName }) => {
             />
           </div>
 
-          <div className="flex-1 my-2">
+          <div className="flex-1">
             <label htmlFor="end-date" className="block font-medium text-gray-700">
               End Date
             </label>
