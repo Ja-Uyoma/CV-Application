@@ -30,14 +30,14 @@ const BasicInformation = () => {
               />
             </label>
           </div>
+        </div>
 
-          <div>
-            <label htmlFor="email">
-              <span className="block font-medium text-gray-700">Email Address</span>
-              {/** */}
-              <input type="email" name="email" id="email" className="bg-gray-100 rounded-lg border-none w-full" />
-            </label>
-          </div>
+        <div>
+          <label htmlFor="email">
+            <span className="block font-medium text-gray-700">Email Address</span>
+            {/** */}
+            <input type="email" name="email" id="email" className="bg-gray-100 rounded-lg border-none w-full" />
+          </label>
         </div>
 
         <div>
