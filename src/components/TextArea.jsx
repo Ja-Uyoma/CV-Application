@@ -7,7 +7,7 @@ const TextArea = ({ sectionName }) => {
 
       <form action="/" method="post" autoComplete="off">
         <label htmlFor="description">
-          Description
+          <div className="block">Description</div>
           {/** */}
           <textarea name="description" id="description" cols="30" rows="10"></textarea>
         </label>
