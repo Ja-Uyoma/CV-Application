@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const TextArea = ({ sectionName }) => {
   return (
-    <section>
+    <section className="my-4">
       <h2 className="font-bold text-xl my-5">{sectionName}</h2>
 
       <form action="/" method="post" autoComplete="off">
