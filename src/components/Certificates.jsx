@@ -83,9 +83,15 @@ const Certificates = () => {
 
         <div>
           <label htmlFor="description">
-            Description
+            <span className="block font-medium text-gray-700">Description</span>
             {/** */}
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea
+              name="description"
+              id="description"
+              cols="80"
+              rows="10"
+              className="bg-gray-100 border-none"
+            ></textarea>
           </label>
         </div>
       </form>
