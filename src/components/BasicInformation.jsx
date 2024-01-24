@@ -1,7 +1,7 @@
 const BasicInformation = () => {
   return (
     <section>
-      <h2>Basic Information</h2>
+      <h2 className="font-bold text-xl py-4">Basic Information</h2>
 
       <form action="/" method="post" autoComplete="off">
         <div>
