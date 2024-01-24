@@ -14,7 +14,7 @@ const TextArea = ({ sectionName }) => {
             id="description"
             cols="80"
             rows="10"
-            className="bg-gray-100 border-none"
+            className="bg-gray-100 border-none w-full"
           ></textarea>
         </label>
       </form>
