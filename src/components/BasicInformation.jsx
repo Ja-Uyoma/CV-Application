@@ -7,7 +7,7 @@ const BasicInformation = () => {
         <div>
           <div>
             <label htmlFor="given-name">
-              Given Name
+              <span className="block font-medium text-gray-700">Given Name</span>
               {/** */}
               <input type="text" name="given-name" id="given-name" />
             </label>
@@ -15,7 +15,7 @@ const BasicInformation = () => {
 
           <div>
             <label htmlFor="family-name">
-              Family Name
+              <span className="block font-medium text-gray-700">Family Name</span>
               {/** */}
               <input type="text" name="family-name" id="family-name" />
             </label>
@@ -23,7 +23,7 @@ const BasicInformation = () => {
 
           <div>
             <label htmlFor="email">
-              Email Address
+              <span className="block font-medium text-gray-700">Email Address</span>
               {/** */}
               <input type="email" name="email" id="email" />
             </label>
@@ -32,7 +32,7 @@ const BasicInformation = () => {
 
         <div>
           <label htmlFor="headline">
-            Headline
+            <span className="block font-medium text-gray-700">Headline</span>
             {/** */}
             <input type="text" name="headline" id="headline" />
           </label>
@@ -40,7 +40,7 @@ const BasicInformation = () => {
 
         <div>
           <label htmlFor="phone-number">
-            Phone Number
+            <span className="block font-medium text-gray-700">Phone Number</span>
             {/** */}
             <input type="tel" name="phone-number" id="phone-number" />
           </label>
@@ -48,7 +48,7 @@ const BasicInformation = () => {
 
         <div>
           <label htmlFor="address">
-            Address
+            <span className="block font-medium text-gray-700">Address</span>
             {/** */}
             <input type="text" name="address" id="address" />
           </label>
@@ -57,7 +57,7 @@ const BasicInformation = () => {
         <div>
           <div>
             <label htmlFor="post-code">
-              Postal code
+              <span className="block font-medium text-gray-700">Postal code</span>
               {/** */}
               <input type="text" name="post-code" id="post-code" />
             </label>
@@ -65,7 +65,7 @@ const BasicInformation = () => {
 
           <div>
             <label htmlFor="city">
-              City
+              <span className="block font-medium text-gray-700">City</span>
               {/** */}
               <input type="text" name="city" id="city" />
             </label>
