@@ -52,7 +52,7 @@ const Certificates = () => {
     <section className="my-4">
       <h2 className="font-bold text-xl my-5">Certificates</h2>
 
-      <form action="/" method="post" autoComplete="off">
+      <form action="/" method="post" autoComplete="off" className="border-solid border rounded-lg border-gray-900">
         <div>
           <label htmlFor="certificate">
             <span className="block font-medium text-gray-700">Certificate</span>
