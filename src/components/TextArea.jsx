@@ -9,7 +9,13 @@ const TextArea = ({ sectionName }) => {
         <label htmlFor="description">
           <div className="font-medium text-gray-700">Description</div>
           {/** */}
-          <textarea name="description" id="description" cols="80" rows="10" className="bg-gray-100"></textarea>
+          <textarea
+            name="description"
+            id="description"
+            cols="80"
+            rows="10"
+            className="bg-gray-100 border-none"
+          ></textarea>
         </label>
       </form>
     </section>
