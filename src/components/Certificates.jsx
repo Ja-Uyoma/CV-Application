@@ -52,12 +52,17 @@ const Certificates = () => {
     <section className="my-4">
       <h2 className="font-bold text-xl my-5">Certificates</h2>
 
-      <form action="/" method="post" autoComplete="off" className="border-solid border rounded-lg border-gray-900">
+      <form action="/" method="post" autoComplete="off" className="border-solid border rounded-lg border-gray-900 p-4">
         <div className="my-3">
           <label htmlFor="certificate">
             <span className="block font-medium text-gray-700">Certificate</span>
             {/** */}
-            <input type="text" name="certificate" id="certificate" className="bg-gray-100 rounded-lg border-none" />
+            <input
+              type="text"
+              name="certificate"
+              id="certificate"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
           </label>
         </div>
 
@@ -96,7 +101,7 @@ const Certificates = () => {
               id="description"
               cols="80"
               rows="10"
-              className="bg-gray-100 border-none"
+              className="bg-gray-100 border-none w-full"
             ></textarea>
           </label>
         </div>
