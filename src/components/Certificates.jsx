@@ -53,27 +53,34 @@ const Certificates = () => {
       <h2 className="font-bold text-xl my-5">Certificates</h2>
 
       <form action="/" method="post" autoComplete="off" className="border-solid border rounded-lg border-gray-900">
-        <div>
+        <div className="my-3">
           <label htmlFor="certificate">
             <span className="block font-medium text-gray-700">Certificate</span>
             {/** */}
-            <input type="text" name="certificate" id="certificate" />
+            <input type="text" name="certificate" id="certificate" className="bg-gray-100 rounded-lg border-none" />
           </label>
         </div>
 
-        <div>
+        <div className="my-3">
           <label htmlFor="period">
-            <div>
-              <span className="font-medium text-gray-700">Period</span>
-              <input type="checkbox" name="present" id="present" />
-              <span>Present</span>
+            <div className="flex">
+              <span className="font-medium text-gray-700 flex-1">Period</span>
+              <span className="flex-1">
+                <input type="checkbox" name="present" id="present" className="form-checkbox" />
+                <span className="p-1">Present</span>
+              </span>
             </div>
-            <div>
-              <select name="period" id="period" defaultValue={"Month"}>
+            <div className="flex gap-2">
+              <select
+                name="period"
+                id="period"
+                defaultValue={"Month"}
+                className="flex-1 rounded-lg bg-gray-100 border-none"
+              >
                 <MonthList />
               </select>
 
-              <select name="year" id="year" defaultValue={"Year"}>
+              <select name="year" id="year" defaultValue={"Year"} className="flex-1 rounded-lg bg-gray-100 border-none">
                 <YearList />
               </select>
             </div>
