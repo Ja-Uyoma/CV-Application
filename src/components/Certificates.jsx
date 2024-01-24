@@ -54,8 +54,11 @@ const Certificates = () => {
 
       <form action="/" method="post" autoComplete="off">
         <div>
-          <label htmlFor="certificate">Certificate</label>
-          <input type="text" name="certificate" id="certificate" />
+          <label htmlFor="certificate">
+            Certificate
+            {/** */}
+            <input type="text" name="certificate" id="certificate" />
+          </label>
         </div>
 
         <div>
