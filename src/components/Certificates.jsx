@@ -70,7 +70,7 @@ const Certificates = () => {
           <label htmlFor="period">
             <div className="flex">
               <span className="font-medium text-gray-700 flex-1">Period</span>
-              <span className="flex-1">
+              <span>
                 <input type="checkbox" name="present" id="present" className="form-checkbox" />
                 <span className="p-1">Present</span>
               </span>
