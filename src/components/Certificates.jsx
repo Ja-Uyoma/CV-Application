@@ -53,7 +53,7 @@ const Certificates = () => {
       <h2 className="font-bold text-xl my-5">Certificates</h2>
 
       <form action="/" method="post" autoComplete="off" className="border-solid border rounded-lg border-gray-900 p-4">
-        <div className="my-3">
+        <div>
           <label htmlFor="certificate">
             <span className="block font-medium text-gray-700">Certificate</span>
             {/** */}
