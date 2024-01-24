@@ -6,9 +6,11 @@ const TextArea = ({ sectionName }) => {
       <h2 className="font-bold text-xl">{sectionName}</h2>
 
       <form action="/" method="post" autoComplete="off">
-        <label htmlFor="description">Description</label>
-
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <label htmlFor="description">
+          Description
+          {/** */}
+          <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        </label>
       </form>
     </section>
   );
