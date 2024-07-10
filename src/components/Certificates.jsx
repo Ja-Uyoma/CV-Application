@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import { useState } from "react";
 
 const MonthList = () => {
   const months = [
@@ -48,6 +49,14 @@ const YearList = () => {
 };
 
 const Certificates = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const [ongoing, setOngoing] = useState(false);
+
+  const handleCheckBoxChecked = (event) => {
+    setIsChecked(event.target.checked);
+    setOngoing(!isChecked);
+  };
+
   return (
     <section className="my-4">
       <h2 className="font-bold text-xl my-5">Certificates</h2>
@@ -71,7 +80,7 @@ const Certificates = () => {
             <div className="flex">
               <span className="font-medium text-gray-700 flex-1">Period</span>
               <span>
-                <input type="checkbox" name="present" id="present" className="form-checkbox w-3 h-3" />
+                <input type="checkbox" name="present" id="present" checked={isChecked} onChange={handleCheckBoxChecked} className="form-checkbox w-3 h-3" />
                 <span className="p-1">Present</span>
               </span>
             </div>
@@ -85,7 +94,7 @@ const Certificates = () => {
                 <MonthList />
               </select>
 
-              <select name="year" id="year" defaultValue={"Year"} className="flex-1 rounded-lg bg-gray-100 border-none">
+              <select name="year" id="year" defaultValue={"Year"} disabled={ongoing} className="flex-1 rounded-lg bg-gray-100 border-none">
                 <YearList />
               </select>
             </div>
