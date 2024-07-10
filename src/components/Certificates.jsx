@@ -32,7 +32,7 @@ const YearList = () => {
   let years = [];
   years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
 
-  for (let i = 2029; i >= 1924; --i) {
+  for (let i = 2029; i >= 1924; i--) {
     years.push({ texual: `${i}`, numeric: i, id: uuidv4() });
   }
 
