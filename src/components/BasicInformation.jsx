@@ -3,11 +3,18 @@ const BasicInformation = () => {
     <section>
       <h2 className="font-bold text-xl py-4">Basic Information</h2>
 
-      <form action="/" method="post" autoComplete="off" className="border border-solid rounded-lg border-gray-900 p-4">
+      <form
+        action="/"
+        method="post"
+        autoComplete="off"
+        className="border rounded-lg border-gray-900 p-4"
+      >
         <div className="flex gap-2 my-2">
           <div className="flex-1">
             <label htmlFor="given-name">
-              <span className="block font-medium text-gray-700">Given Name</span>
+              <span className="block font-medium text-gray-700">
+                Given Name
+              </span>
               {/** */}
               <input
                 type="text"
@@ -20,7 +27,9 @@ const BasicInformation = () => {
 
           <div className="flex-1">
             <label htmlFor="family-name">
-              <span className="block font-medium text-gray-700">Family Name</span>
+              <span className="block font-medium text-gray-700">
+                Family Name
+              </span>
               {/** */}
               <input
                 type="text"
@@ -34,9 +43,16 @@ const BasicInformation = () => {
 
         <div className="my-2">
           <label htmlFor="email">
-            <span className="block font-medium text-gray-700">Email Address</span>
+            <span className="block font-medium text-gray-700">
+              Email Address
+            </span>
             {/** */}
-            <input type="email" name="email" id="email" className="bg-gray-100 rounded-lg border-none w-full" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
           </label>
         </div>
 
@@ -44,13 +60,20 @@ const BasicInformation = () => {
           <label htmlFor="headline">
             <span className="block font-medium text-gray-700">Headline</span>
             {/** */}
-            <input type="text" name="headline" id="headline" className="bg-gray-100 rounded-lg border-none w-full" />
+            <input
+              type="text"
+              name="headline"
+              id="headline"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
           </label>
         </div>
 
         <div className="my-2">
           <label htmlFor="phone-number">
-            <span className="block font-medium text-gray-700">Phone Number</span>
+            <span className="block font-medium text-gray-700">
+              Phone Number
+            </span>
             {/** */}
             <input
               type="tel"
@@ -65,14 +88,21 @@ const BasicInformation = () => {
           <label htmlFor="address">
             <span className="block font-medium text-gray-700">Address</span>
             {/** */}
-            <input type="text" name="address" id="address" className="bg-gray-100 rounded-lg border-none w-full" />
+            <input
+              type="text"
+              name="address"
+              id="address"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
           </label>
         </div>
 
         <div className="flex gap-2 my-2">
           <div className="flex-1">
             <label htmlFor="post-code">
-              <span className="block font-medium text-gray-700">Postal code</span>
+              <span className="block font-medium text-gray-700">
+                Postal code
+              </span>
               {/** */}
               <input
                 type="text"
@@ -87,7 +117,12 @@ const BasicInformation = () => {
             <label htmlFor="city">
               <span className="block font-medium text-gray-700">City</span>
               {/** */}
-              <input type="text" name="city" id="city" className="bg-gray-100 rounded-lg border-none w-full" />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                className="bg-gray-100 rounded-lg border-none w-full"
+              />
             </label>
           </div>
         </div>
