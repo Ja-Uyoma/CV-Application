@@ -31,7 +31,7 @@ const Months = () => {
   );
 };
 
-const YearList = () => {
+const Years = () => {
   const years = [];
   years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
 
@@ -104,7 +104,7 @@ const Certificates = () => {
                 disabled={isChecked}
                 className="flex-1 rounded-lg bg-gray-100 border-none"
               >
-                <YearList />
+                <Years />
               </select>
             </div>
           </label>
