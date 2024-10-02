@@ -110,19 +110,17 @@ const Certificates = () => {
       >
         <TextField name="Certificate" />
 
-        <div className="my-3">
-          <div className="flex">
-            <span className="font-medium text-gray-700 flex-1">Period</span>
-            <CheckBox
-              isChecked={isChecked}
-              onChangeHandler={handleCheckBoxChecked}
-            />
-          </div>
-          <div className="flex gap-2">
-            <Months isDisabled={isChecked} />
+        <div className="flex">
+          <span className="font-medium text-gray-700 flex-1">Period</span>
+          <CheckBox
+            isChecked={isChecked}
+            onChangeHandler={handleCheckBoxChecked}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Months isDisabled={isChecked} />
 
-            <Years isDisabled={isChecked} />
-          </div>
+          <Years isDisabled={isChecked} />
         </div>
 
         <TextArea name="Description" />
