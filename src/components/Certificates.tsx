@@ -114,17 +114,10 @@ const Certificates = () => {
         <div className="my-3">
           <div className="flex">
             <span className="font-medium text-gray-700 flex-1">Period</span>
-            <span>
-              <input
-                type="checkbox"
-                name="present"
-                id="present"
-                checked={isChecked}
-                onChange={handleCheckBoxChecked}
-                className="form-checkbox w-3 h-3"
-              />
-              <span className="p-1">Present</span>
-            </span>
+            <CheckBox
+              isChecked={isChecked}
+              onChangeHandler={handleCheckBoxChecked}
+            />
           </div>
           <div className="flex gap-2">
             <Months />
