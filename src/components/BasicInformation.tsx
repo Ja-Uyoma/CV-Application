@@ -1,3 +1,5 @@
+import { TextInput } from "./TextInput";
+
 const BasicInformation = () => {
   return (
     <section>
@@ -11,33 +13,11 @@ const BasicInformation = () => {
       >
         <div className="flex gap-2 my-2">
           <div className="flex-1">
-            <label htmlFor="given-name">
-              <span className="block font-medium text-gray-700">
-                Given Name
-              </span>
-              {/** */}
-              <input
-                type="text"
-                name="given-name"
-                id="given-name"
-                className="bg-gray-100 rounded-lg border-none w-full"
-              />
-            </label>
+            <TextInput name="Given Name" />
           </div>
 
           <div className="flex-1">
-            <label htmlFor="family-name">
-              <span className="block font-medium text-gray-700">
-                Family Name
-              </span>
-              {/** */}
-              <input
-                type="text"
-                name="family-name"
-                id="family-name"
-                className="bg-gray-100 rounded-lg border-none w-full"
-              />
-            </label>
+            <TextInput name="Family Name" />
           </div>
         </div>
 
@@ -57,16 +37,7 @@ const BasicInformation = () => {
         </div>
 
         <div className="my-2">
-          <label htmlFor="headline">
-            <span className="block font-medium text-gray-700">Headline</span>
-            {/** */}
-            <input
-              type="text"
-              name="headline"
-              id="headline"
-              className="bg-gray-100 rounded-lg border-none w-full"
-            />
-          </label>
+          <TextInput name="Headline" />
         </div>
 
         <div className="my-2">
@@ -85,45 +56,16 @@ const BasicInformation = () => {
         </div>
 
         <div className="my-2">
-          <label htmlFor="address">
-            <span className="block font-medium text-gray-700">Address</span>
-            {/** */}
-            <input
-              type="text"
-              name="address"
-              id="address"
-              className="bg-gray-100 rounded-lg border-none w-full"
-            />
-          </label>
+          <TextInput name="Address" />
         </div>
 
         <div className="flex gap-2 my-2">
           <div className="flex-1">
-            <label htmlFor="post-code">
-              <span className="block font-medium text-gray-700">
-                Postal code
-              </span>
-              {/** */}
-              <input
-                type="text"
-                name="post-code"
-                id="post-code"
-                className="bg-gray-100 rounded-lg border-none w-full"
-              />
-            </label>
+            <TextInput name="Postal Code" />
           </div>
 
           <div className="flex-1">
-            <label htmlFor="city">
-              <span className="block font-medium text-gray-700">City</span>
-              {/** */}
-              <input
-                type="text"
-                name="city"
-                id="city"
-                className="bg-gray-100 rounded-lg border-none w-full"
-              />
-            </label>
+            <TextInput name="City" />
           </div>
         </div>
       </form>
