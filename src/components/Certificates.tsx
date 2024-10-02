@@ -30,7 +30,7 @@ const MonthList = () => {
 };
 
 const YearList = () => {
-  let years = [];
+  const years = [];
   years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
 
   for (let i = 2029; i >= 1924; i--) {
