@@ -108,9 +108,7 @@ const Certificates = () => {
         autoComplete="off"
         className="border-solid border rounded-lg border-gray-900 p-4"
       >
-        <div>
-          <TextField name="Certificate" />
-        </div>
+        <TextField name="Certificate" />
 
         <div className="my-3">
           <div className="flex">
@@ -127,9 +125,7 @@ const Certificates = () => {
           </div>
         </div>
 
-        <div>
-          <TextArea name="Description" />
-        </div>
+        <TextArea name="Description" />
       </form>
     </section>
   );
