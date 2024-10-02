@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const MonthList = () => {
   const months = [
@@ -51,7 +51,7 @@ const YearList = () => {
 const Certificates = () => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckBoxChecked = (event) => {
+  const handleCheckBoxChecked = (event: ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
   };
 
