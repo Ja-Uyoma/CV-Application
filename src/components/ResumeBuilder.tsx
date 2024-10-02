@@ -1,4 +1,4 @@
-import { Pane } from "./TextArea.jsx";
+import { Pane } from "./Pane.tsx";
 import { History } from "./History.jsx";
 import { Certificates } from "./Certificates.jsx";
 import { BasicInformation } from "./BasicInformation.jsx";
