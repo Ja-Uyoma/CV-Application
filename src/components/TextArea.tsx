@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TextArea = ({ sectionName }) => {
+const TextArea = ({ sectionName }: { sectionName: string }) => {
   return (
     <section className="my-4">
       <h2 className="font-bold text-xl my-5">{sectionName}</h2>
