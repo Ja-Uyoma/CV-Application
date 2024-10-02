@@ -117,7 +117,7 @@ const Certificates = () => {
             onChangeHandler={handleCheckBoxChecked}
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex justify-between gap-2">
           <Months isDisabled={isChecked} />
 
           <Years isDisabled={isChecked} />
