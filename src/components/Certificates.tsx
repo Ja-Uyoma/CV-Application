@@ -2,7 +2,7 @@ import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import { TextField } from "./TextField";
 import { TextArea } from "./TextArea";
 
-const Months = () => {
+const Months = ({ isDisabled }: { isDisabled: boolean }) => {
   const months = [
     "Month",
     "January",
@@ -25,6 +25,7 @@ const Months = () => {
         <select
           name="months"
           id="months"
+          disabled={isDisabled}
           className="flex-1 rounded-lg bg-gray-100 border-none"
         >
           {months.map((val, idx) => (
@@ -120,7 +121,7 @@ const Certificates = () => {
             />
           </div>
           <div className="flex gap-2">
-            <Months />
+            <Months isDisabled={isChecked} />
 
             <Years isDisabled={isChecked} />
           </div>
