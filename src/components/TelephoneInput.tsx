@@ -9,6 +9,7 @@ export const TelephoneInput = ({ name }: { name: string }) => {
           type="tel"
           name={name}
           id={createIDFromName(name)}
+          required
           className="bg-gray-100 rounded-lg border-none w-full"
         />
       </label>

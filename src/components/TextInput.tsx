@@ -9,6 +9,7 @@ export const TextInput = ({ name }: { name: string }) => {
           type="text"
           name={name}
           id={createIDFromName(name)}
+          required
           className="bg-gray-100 rounded-lg border-none w-full"
         />
       </label>
