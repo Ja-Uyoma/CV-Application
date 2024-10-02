@@ -110,8 +110,8 @@ const Certificates = () => {
       >
         <TextField name="Certificate" />
 
-        <div className="flex">
-          <span className="font-medium text-gray-700 flex-1">Period</span>
+        <div className="flex justify-between">
+          <span className="font-medium text-gray-700">Period</span>
           <CheckBox
             isChecked={isChecked}
             onChangeHandler={handleCheckBoxChecked}
