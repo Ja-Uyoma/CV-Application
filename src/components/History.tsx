@@ -58,35 +58,8 @@ const History = ({ formName }: { formName: string }) => {
         </div>
 
         <div className="flex gap-2 my-2">
-          <div className="flex-1">
-            <label
-              htmlFor="start-date"
-              className="block font-medium text-gray-700"
-            >
-              Start Date
-            </label>
-            <input
-              type="date"
-              name="start-date"
-              id="start-date"
-              className="bg-gray-100 rounded-lg border-none w-full"
-            />
-          </div>
-
-          <div className="flex-1">
-            <label
-              htmlFor="end-date"
-              className="block font-medium text-gray-700"
-            >
-              End Date
-            </label>
-            <input
-              type="date"
-              name="end-date"
-              id="end-date"
-              className="bg-gray-100 rounded-lg border-none w-full"
-            />
-          </div>
+          <Date name="Start Date" />
+          <Date name="End Date" />
         </div>
 
         <div className="my-2">
