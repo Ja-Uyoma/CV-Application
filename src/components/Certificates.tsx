@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import { TextField } from "./TextField";
 import { TextArea } from "./TextArea";
 
@@ -61,6 +61,30 @@ const Years = ({ isDisabled }: { isDisabled: boolean }) => {
             </option>
           ))}
         </select>
+      </label>
+    </>
+  );
+};
+
+const CheckBox = ({
+  isChecked,
+  onChangeHandler,
+}: {
+  isChecked: boolean;
+  onChangeHandler: ChangeEventHandler<HTMLInputElement>;
+}) => {
+  return (
+    <>
+      <label htmlFor="present">
+        <span className="p-1">Present</span>
+        <input
+          type="checkbox"
+          name="present"
+          id="present"
+          checked={isChecked}
+          onChange={onChangeHandler}
+          className="form-checkbox w-3 h-3"
+        />
       </label>
     </>
   );
