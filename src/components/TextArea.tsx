@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TextArea = ({ sectionName }: { sectionName: string }) => {
+const Pane = ({ sectionName }: { sectionName: string }) => {
   return (
     <section className="my-4">
       <h2 className="font-bold text-xl my-5">{sectionName}</h2>
@@ -22,8 +22,8 @@ const TextArea = ({ sectionName }: { sectionName: string }) => {
   );
 };
 
-TextArea.propTypes = {
+Pane.propTypes = {
   sectionName: PropTypes.string,
 };
 
-export { TextArea };
+export { Pane };
