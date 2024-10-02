@@ -1,3 +1,4 @@
+import { EmailInput } from "./EmailInput";
 import { TelephoneInput } from "./TelephoneInput";
 import { TextInput } from "./TextInput";
 
@@ -23,18 +24,7 @@ const BasicInformation = () => {
         </div>
 
         <div className="my-2">
-          <label htmlFor="email">
-            <span className="block font-medium text-gray-700">
-              Email Address
-            </span>
-            {/** */}
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="bg-gray-100 rounded-lg border-none w-full"
-            />
-          </label>
+          <EmailInput name="Email Address" />
         </div>
 
         <div className="my-2">
