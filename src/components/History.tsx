@@ -1,4 +1,23 @@
 import PropTypes from "prop-types";
+import { createIDFromName } from "../main";
+
+const Date = ({ name }: { name: string }) => {
+  const id = createIDFromName(name);
+
+  return (
+    <>
+      <label htmlFor={id} className="block w-full">
+        <span className="font-medium text-gray-700">{name}</span>
+        <input
+          type="date"
+          name={name}
+          id={id}
+          className="bg-gray-100 rounded-lg border-none w-full"
+        />
+      </label>
+    </>
+  );
+};
 
 const History = ({ formName }: { formName: string }) => {
   return (
