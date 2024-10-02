@@ -33,17 +33,17 @@ const Months = () => {
 
 const Years = () => {
   const years = [];
-  years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
+  years.push("Year");
 
   for (let i = 2029; i >= 1924; i--) {
-    years.push({ textual: `${i}`, numeric: i, id: uuidv4() });
+    years.push(i.toString());
   }
 
   return (
     <>
-      {years.map((year) => (
-        <option value={year.textual} key={year.id}>
-          {year.numeric}
+      {years.map((val, idx) => (
+        <option value={val} key={idx}>
+          {val}
         </option>
       ))}
     </>
