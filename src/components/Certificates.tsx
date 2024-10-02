@@ -77,7 +77,7 @@ const CheckBox = ({
   return (
     <>
       <label htmlFor="present">
-        <span className="p-1">Present</span>
+        <span className="font-medium text-gray-700 p-1">Present</span>
         <input
           type="checkbox"
           name="present"
