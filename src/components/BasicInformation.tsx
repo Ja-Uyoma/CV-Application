@@ -1,6 +1,6 @@
 import { EmailInput } from "./EmailInput";
 import { TelephoneInput } from "./TelephoneInput";
-import { TextInput } from "./TextInput";
+import { TextField } from "./TextInput";
 
 const BasicInformation = () => {
   return (
@@ -15,11 +15,11 @@ const BasicInformation = () => {
       >
         <div className="flex gap-2 my-2">
           <div className="flex-1">
-            <TextInput name="Given Name" />
+            <TextField name="Given Name" />
           </div>
 
           <div className="flex-1">
-            <TextInput name="Family Name" />
+            <TextField name="Family Name" />
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const BasicInformation = () => {
         </div>
 
         <div className="my-2">
-          <TextInput name="Headline" />
+          <TextField name="Headline" />
         </div>
 
         <div className="my-2">
@@ -36,16 +36,16 @@ const BasicInformation = () => {
         </div>
 
         <div className="my-2">
-          <TextInput name="Address" />
+          <TextField name="Address" />
         </div>
 
         <div className="flex gap-2 my-2">
           <div className="flex-1">
-            <TextInput name="Postal Code" />
+            <TextField name="Postal Code" />
           </div>
 
           <div className="flex-1">
-            <TextInput name="City" />
+            <TextField name="City" />
           </div>
         </div>
       </form>

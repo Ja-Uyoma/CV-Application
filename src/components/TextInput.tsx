@@ -1,6 +1,6 @@
 import { createIDFromName } from "../main";
 
-export const TextInput = ({ name }: { name: string }) => {
+export const TextField = ({ name }: { name: string }) => {
   const id = createIDFromName(name);
 
   return (

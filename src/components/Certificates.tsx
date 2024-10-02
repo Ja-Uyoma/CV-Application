@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { ChangeEvent, useState } from "react";
-import { TextInput } from "./TextInput";
+import { TextField } from "./TextInput";
 
 const MonthList = () => {
   const months = [
@@ -67,7 +67,7 @@ const Certificates = () => {
         className="border-solid border rounded-lg border-gray-900 p-4"
       >
         <div>
-          <TextInput name="Certificate" />
+          <TextField name="Certificate" />
         </div>
 
         <div className="my-3">
