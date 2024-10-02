@@ -1,11 +1,5 @@
 import PropTypes from "prop-types";
 
-/**
- * This returns a form which can be used to describe someone's employment
- * or education history
- * @param {string} formName The type of form, either an education or employment history form
- * @returns JSX that renders the appropriate form depending on the name givens
- */
 const History = ({ formName }: { formName: string }) => {
   return (
     <section>
