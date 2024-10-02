@@ -124,8 +124,8 @@ const Certificates = () => {
             <textarea
               name="description"
               id="description"
-              cols="80"
-              rows="10"
+              cols={80}
+              rows={10}
               className="bg-gray-100 border-none w-full"
             ></textarea>
           </label>

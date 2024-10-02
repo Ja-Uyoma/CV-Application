@@ -86,8 +86,8 @@ const History = ({ formName }: { formName: string }) => {
           <textarea
             name="description"
             id="description"
-            cols="30"
-            rows="10"
+            cols={30}
+            rows={10}
             className="bg-gray-100 border-none w-full"
           ></textarea>
         </div>
