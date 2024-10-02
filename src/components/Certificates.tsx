@@ -106,7 +106,7 @@ const Certificates = () => {
         action="/"
         method="post"
         autoComplete="off"
-        className="border-solid border rounded-lg border-gray-900 p-4"
+        className="border-solid border rounded-lg border-gray-900 p-4 flex flex-col gap-1"
       >
         <TextField name="Certificate" />
 
