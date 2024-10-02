@@ -10,6 +10,7 @@ export const TelephoneInput = ({ name }: { name: string }) => {
           name={name}
           id={createIDFromName(name)}
           required
+          autoComplete="on"
           className="bg-gray-100 rounded-lg border-none w-full"
         />
       </label>
