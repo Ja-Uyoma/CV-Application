@@ -1,7 +1,7 @@
 import { Pane } from "./Pane.tsx";
-import { History } from "./History.jsx";
-import { Certificates } from "./Certificates.jsx";
-import { BasicInformation } from "./BasicInformation.jsx";
+import { History } from "./History.tsx";
+import { Certificates } from "./Certificates.tsx";
+import { BasicInformation } from "./BasicInformation.tsx";
 
 export const ResumeBuilder = () => {
   return (
