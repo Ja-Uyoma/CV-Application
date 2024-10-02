@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TextArea = ({ sectionName }) => {
+const TextArea = ({ sectionName }: { sectionName: string }) => {
   return (
     <section className="my-4">
       <h2 className="font-bold text-xl my-5">{sectionName}</h2>
@@ -12,8 +12,8 @@ const TextArea = ({ sectionName }) => {
           <textarea
             name="description"
             id="description"
-            cols="80"
-            rows="10"
+            cols={80}
+            rows={10}
             className="bg-gray-100 border-none w-full"
           ></textarea>
         </label>

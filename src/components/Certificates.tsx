@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 const MonthList = () => {
   const months = [
@@ -34,13 +34,13 @@ const YearList = () => {
   years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
 
   for (let i = 2029; i >= 1924; i--) {
-    years.push({ texual: `${i}`, numeric: i, id: uuidv4() });
+    years.push({ textual: `${i}`, numeric: i, id: uuidv4() });
   }
 
   return (
     <>
       {years.map((year) => (
-        <option value={year.texual} key={year.id}>
+        <option value={year.textual} key={year.id}>
           {year.numeric}
         </option>
       ))}
@@ -51,7 +51,7 @@ const YearList = () => {
 const Certificates = () => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleCheckBoxChecked = (event) => {
+  const handleCheckBoxChecked = (event: ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
   };
 
@@ -124,8 +124,8 @@ const Certificates = () => {
             <textarea
               name="description"
               id="description"
-              cols="80"
-              rows="10"
+              cols={80}
+              rows={10}
               className="bg-gray-100 border-none w-full"
             ></textarea>
           </label>
