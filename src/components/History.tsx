@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { createIDFromName } from "../main";
+import { TextArea } from "./TextArea";
 
 const Date = ({ name }: { name: string }) => {
   const id = createIDFromName(name);
@@ -63,19 +64,7 @@ const History = ({ formName }: { formName: string }) => {
         </div>
 
         <div className="my-2">
-          <label
-            htmlFor="description"
-            className="block font-medium text-gray-700"
-          >
-            Description
-          </label>
-          <textarea
-            name="description"
-            id="description"
-            cols={30}
-            rows={10}
-            className="bg-gray-100 border-none w-full"
-          ></textarea>
+          <TextArea name="Description" />
         </div>
       </form>
     </section>
