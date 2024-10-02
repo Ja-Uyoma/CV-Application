@@ -21,12 +21,12 @@ const Months = ({ isDisabled }: { isDisabled: boolean }) => {
 
   return (
     <>
-      <label htmlFor="months">
+      <label htmlFor="months" className="block w-full">
         <select
           name="months"
           id="months"
           disabled={isDisabled}
-          className="rounded-lg bg-gray-100 border-none"
+          className="rounded-lg bg-gray-100 border-none min-w-full"
         >
           {months.map((val, idx) => (
             <option value={val} key={idx}>
@@ -49,12 +49,12 @@ const Years = ({ isDisabled }: { isDisabled: boolean }) => {
 
   return (
     <>
-      <label htmlFor="years">
+      <label htmlFor="years" className="block w-full">
         <select
           name="years"
           id="years"
           disabled={isDisabled}
-          className="rounded-lg bg-gray-100 border-none"
+          className="rounded-lg bg-gray-100 border-none min-w-full"
         >
           {years.map((val, idx) => (
             <option value={val} key={idx}>
