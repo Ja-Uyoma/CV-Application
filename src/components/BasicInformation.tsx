@@ -1,6 +1,6 @@
 import { EmailInput } from "./EmailInput";
 import { TelephoneInput } from "./TelephoneInput";
-import { TextField } from "./TextInput";
+import { TextField } from "./TextField";
 
 const BasicInformation = () => {
   return (
