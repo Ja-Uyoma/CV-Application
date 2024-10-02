@@ -21,11 +21,19 @@ const Months = () => {
 
   return (
     <>
-      {months.map((val, idx) => (
-        <option value={val} key={idx}>
-          {val}
-        </option>
-      ))}
+      <label htmlFor="months">
+        <select
+          name="months"
+          id="months"
+          className="flex-1 rounded-lg bg-gray-100 border-none"
+        >
+          {months.map((val, idx) => (
+            <option value={val} key={idx}>
+              {val}
+            </option>
+          ))}
+        </select>
+      </label>
     </>
   );
 };
@@ -87,14 +95,7 @@ const Certificates = () => {
               </span>
             </div>
             <div className="flex gap-2">
-              <select
-                name="period"
-                id="period"
-                defaultValue={"Month"}
-                className="flex-1 rounded-lg bg-gray-100 border-none"
-              >
-                <Months />
-              </select>
+              <Months />
 
               <select
                 name="year"
