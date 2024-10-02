@@ -3,7 +3,7 @@ import { ChangeEvent, useState } from "react";
 import { TextField } from "./TextField";
 import { TextArea } from "./TextArea";
 
-const MonthList = () => {
+const Months = () => {
   const months = [
     { month: "Month", id: uuidv4() },
     { month: "January", id: uuidv4() },
@@ -94,7 +94,7 @@ const Certificates = () => {
                 defaultValue={"Month"}
                 className="flex-1 rounded-lg bg-gray-100 border-none"
               >
-                <MonthList />
+                <Months />
               </select>
 
               <select
