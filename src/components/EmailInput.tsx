@@ -1,14 +1,16 @@
 import { createIDFromName } from "../main";
 
 export const EmailInput = ({ name }: { name: string }) => {
+  const id = createIDFromName(name);
+
   return (
     <>
-      <label htmlFor={createIDFromName(name)}>
+      <label htmlFor={id}>
         <span className="block font-medium text-gray-700">{name}</span>
         <input
           type="email"
           name={name}
-          id={createIDFromName(name)}
+          id={id}
           required
           autoComplete="on"
           className="bg-gray-100 rounded-lg border-none w-full"
