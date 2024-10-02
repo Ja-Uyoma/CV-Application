@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { TextArea } from "./TextArea";
 
 const Pane = ({ sectionName }: { sectionName: string }) => {
   return (
@@ -6,17 +7,7 @@ const Pane = ({ sectionName }: { sectionName: string }) => {
       <h2 className="font-bold text-xl my-5">{sectionName}</h2>
 
       <form action="/" method="post" autoComplete="off">
-        <label htmlFor="description">
-          <div className="font-medium text-gray-700">Description</div>
-          {/** */}
-          <textarea
-            name="description"
-            id="description"
-            cols={80}
-            rows={10}
-            className="bg-gray-100 border-none w-full"
-          ></textarea>
-        </label>
+        <TextArea name="Description" />
       </form>
     </section>
   );

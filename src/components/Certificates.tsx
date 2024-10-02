@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { ChangeEvent, useState } from "react";
 import { TextField } from "./TextField";
+import { TextArea } from "./TextArea";
 
 const MonthList = () => {
   const months = [
@@ -110,17 +111,7 @@ const Certificates = () => {
         </div>
 
         <div>
-          <label htmlFor="description">
-            <span className="block font-medium text-gray-700">Description</span>
-            {/** */}
-            <textarea
-              name="description"
-              id="description"
-              cols={80}
-              rows={10}
-              className="bg-gray-100 border-none w-full"
-            ></textarea>
-          </label>
+          <TextArea name="Description" />
         </div>
       </form>
     </section>
