@@ -34,13 +34,13 @@ const YearList = () => {
   years.push({ textual: "Year", numeric: "Year", id: uuidv4() });
 
   for (let i = 2029; i >= 1924; i--) {
-    years.push({ texual: `${i}`, numeric: i, id: uuidv4() });
+    years.push({ textual: `${i}`, numeric: i, id: uuidv4() });
   }
 
   return (
     <>
       {years.map((year) => (
-        <option value={year.texual} key={year.id}>
+        <option value={year.textual} key={year.id}>
           {year.numeric}
         </option>
       ))}
