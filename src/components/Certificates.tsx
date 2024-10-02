@@ -26,7 +26,7 @@ const Months = ({ isDisabled }: { isDisabled: boolean }) => {
           name="months"
           id="months"
           disabled={isDisabled}
-          className="flex-1 rounded-lg bg-gray-100 border-none"
+          className="rounded-lg bg-gray-100 border-none"
         >
           {months.map((val, idx) => (
             <option value={val} key={idx}>
@@ -54,7 +54,7 @@ const Years = ({ isDisabled }: { isDisabled: boolean }) => {
           name="years"
           id="years"
           disabled={isDisabled}
-          className="flex-1 rounded-lg bg-gray-100 border-none"
+          className="rounded-lg bg-gray-100 border-none"
         >
           {years.map((val, idx) => (
             <option value={val} key={idx}>
