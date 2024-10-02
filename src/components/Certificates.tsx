@@ -38,7 +38,7 @@ const Months = () => {
   );
 };
 
-const Years = () => {
+const Years = ({ isDisabled }: { isDisabled: boolean }) => {
   const years = [];
   years.push("Year");
 
@@ -48,11 +48,20 @@ const Years = () => {
 
   return (
     <>
-      {years.map((val, idx) => (
-        <option value={val} key={idx}>
-          {val}
-        </option>
-      ))}
+      <label htmlFor="years">
+        <select
+          name="years"
+          id="years"
+          disabled={isDisabled}
+          className="flex-1 rounded-lg bg-gray-100 border-none"
+        >
+          {years.map((val, idx) => (
+            <option value={val} key={idx}>
+              {val}
+            </option>
+          ))}
+        </select>
+      </label>
     </>
   );
 };
@@ -97,15 +106,7 @@ const Certificates = () => {
             <div className="flex gap-2">
               <Months />
 
-              <select
-                name="year"
-                id="year"
-                defaultValue={"Year"}
-                disabled={isChecked}
-                className="flex-1 rounded-lg bg-gray-100 border-none"
-              >
-                <Years />
-              </select>
+              <Years isDisabled={isChecked} />
             </div>
           </label>
         </div>
