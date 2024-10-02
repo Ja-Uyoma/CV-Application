@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
  * @param {string} formName The type of form, either an education or employment history form
  * @returns JSX that renders the appropriate form depending on the name givens
  */
-const History = ({ formName }) => {
+const History = ({ formName }: { formName: string }) => {
   return (
     <section>
       <h2 className="font-bold text-xl py-4">{formName}</h2>
