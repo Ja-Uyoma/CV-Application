@@ -4,14 +4,16 @@ import { TextField } from "./TextField";
 
 const BasicInformation = () => {
   return (
-    <section>
-      <h2 className="font-bold text-xl py-4">Basic Information</h2>
+    <section tabIndex={0} className="collapse collapse-open">
+      <h2 className="font-bold text-xl py-4 collapse-title">
+        Basic Information
+      </h2>
 
       <form
         action="/"
         method="post"
         autoComplete="off"
-        className="border rounded-lg border-gray-900 p-4"
+        className="border rounded-lg border-gray-900 p-4 collapse-content"
       >
         <div className="flex gap-2 my-2">
           <div className="flex-1">
