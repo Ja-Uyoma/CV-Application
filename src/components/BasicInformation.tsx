@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { EmailInput } from "./EmailInput";
 import { TelephoneInput } from "./TelephoneInput";
 import { TextField } from "./TextField";
+import { CircleButton } from "./Buttons";
 
 const ChevronUp = () => {
   return (
@@ -67,13 +68,7 @@ const BasicInformation = () => {
     <section tabIndex={0} className="collapse collapse-close" ref={sectionRef}>
       <div className="collapse-title flex justify-between items-center">
         <h2 className="font-bold text-xl py-4">Basic Information</h2>
-        <button
-          type="button"
-          className="btn btn-circle"
-          onClick={() => onButtonClicked()}
-        >
-          <PlusCircle />
-        </button>
+        <CircleButton handleClick={onButtonClicked} />
       </div>
 
       <form
