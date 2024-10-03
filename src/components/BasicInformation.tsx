@@ -51,16 +51,13 @@ const BasicInformation = () => {
           </div>
         </div>
 
-        <div className="my-2">
+        <div className="flex justify-between gap-2">
           <EmailInput name="Email Address" />
+          <TelephoneInput name="Phone Number" />
         </div>
 
         <div className="my-2">
           <TextField name="Headline" />
-        </div>
-
-        <div className="my-2">
-          <TelephoneInput name="Phone Number" />
         </div>
 
         <div className="my-2">
