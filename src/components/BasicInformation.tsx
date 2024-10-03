@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { EmailInput } from "./EmailInput";
 import { TelephoneInput } from "./TelephoneInput";
 import { TextField } from "./TextField";
@@ -43,11 +44,34 @@ const PlusCircle = () => {
 };
 
 const BasicInformation = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const onButtonClicked = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (section && isOpen) {
+      section.classList.remove("collapse-close");
+      section.classList.add("collapse-open");
+    } else if (section && !isOpen) {
+      section.classList.remove("collapse-open");
+      section.classList.add("collapse-close");
+    }
+  }, [isOpen]);
+
   return (
-    <section tabIndex={0} className="collapse">
+    <section tabIndex={0} className="collapse collapse-close" ref={sectionRef}>
       <div className="collapse-title flex justify-between items-center">
         <h2 className="font-bold text-xl py-4">Basic Information</h2>
-        <button type="button" className="btn btn-circle">
+        <button
+          type="button"
+          className="btn btn-circle"
+          onClick={() => onButtonClicked()}
+        >
           <PlusCircle />
         </button>
       </div>
