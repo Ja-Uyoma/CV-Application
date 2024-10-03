@@ -1,34 +1,11 @@
-import { ChangeEvent, ChangeEventHandler, useRef, useState } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 import { TextField } from "./TextField";
 import { TextArea } from "./TextArea";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 import { Months } from "./Months";
 import { Years } from "./Years";
-
-const CheckBox = ({
-  isChecked,
-  onChangeHandler,
-}: {
-  isChecked: boolean;
-  onChangeHandler: ChangeEventHandler<HTMLInputElement>;
-}) => {
-  return (
-    <>
-      <label htmlFor="present">
-        <span className="font-medium p-1">Present</span>
-        <input
-          type="checkbox"
-          name="present"
-          id="present"
-          checked={isChecked}
-          onChange={onChangeHandler}
-          className="form-checkbox w-3 h-3"
-        />
-      </label>
-    </>
-  );
-};
+import { CheckBox } from "./CheckBox";
 
 const Certificates = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
