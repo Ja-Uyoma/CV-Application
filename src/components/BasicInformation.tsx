@@ -25,7 +25,11 @@ const BasicInformation = () => {
   }, [isOpen]);
 
   return (
-    <section tabIndex={0} className="collapse collapse-close" ref={sectionRef}>
+    <section
+      tabIndex={0}
+      className="collapse collapse-close bg-primary-content"
+      ref={sectionRef}
+    >
       <div className="collapse-title flex justify-between items-center">
         <h2 className="font-bold text-xl py-4">Basic Information</h2>
         <CircleButton handleClick={onButtonClicked} />

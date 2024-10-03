@@ -2,7 +2,7 @@ import { ResumeBuilder } from "./components/ResumeBuilder";
 
 function App() {
   return (
-    <main>
+    <main className="bg-primary">
       <ResumeBuilder />
     </main>
   );

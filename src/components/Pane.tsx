@@ -26,7 +26,7 @@ const Pane = ({ sectionName }: { sectionName: string }) => {
   return (
     <section
       tabIndex={0}
-      className="my-4 collapse collapse-close"
+      className="my-4 collapse collapse-close bg-primary-content"
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
