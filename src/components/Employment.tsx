@@ -1,16 +1,40 @@
+import { useEffect, useRef, useState } from "react";
 import { Date } from "./Date";
 import { TextArea } from "./TextArea";
 import { TextField } from "./TextField";
+import { CircleButton } from "./Buttons";
 
 export const Employment = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const onButtonClicked = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (section && isOpen) {
+      section.classList.remove("collapse-close");
+      section.classList.add("collapse-open");
+    } else if (section && !isOpen) {
+      section.classList.remove("collapse-open");
+      section.classList.add("collapse-close");
+    }
+  }, [isOpen]);
+
   return (
-    <section>
-      <h2 className="font-bold text-xl py-4">Employment</h2>
+    <section tabIndex={0} className="collapse collapse-close" ref={sectionRef}>
+      <div className="collapse-title flex justify-between items-center">
+        <h2 className="font-bold text-xl py-4">Employment</h2>
+        <CircleButton handleClick={onButtonClicked} />
+      </div>
 
       <form
         action="/"
         method="post"
-        className="border border-solid rounded-lg border-gray-900 p-4"
+        className="border border-solid rounded-lg border-gray-900 p-4 collapse-content"
       >
         <>
           <TextField name="Position" />
