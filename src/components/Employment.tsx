@@ -1,28 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { Date } from "./Date";
 import { TextArea } from "./TextArea";
 import { TextField } from "./TextField";
 import { CircleButton } from "./Buttons";
+import { useOpenStatus } from "../main";
 
 export const Employment = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const sectionRef = useRef<HTMLElement | null>(null);
-
-  const onButtonClicked = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (section && isOpen) {
-      section.classList.remove("collapse-close");
-      section.classList.add("collapse-open");
-    } else if (section && !isOpen) {
-      section.classList.remove("collapse-open");
-      section.classList.add("collapse-close");
-    }
-  }, [isOpen]);
+  const onButtonClicked = useOpenStatus(sectionRef);
 
   return (
     <section

@@ -1,13 +1,8 @@
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { ChangeEvent, ChangeEventHandler, useRef, useState } from "react";
 import { TextField } from "./TextField";
 import { TextArea } from "./TextArea";
 import { CircleButton } from "./Buttons";
+import { useOpenStatus } from "../main";
 
 const Months = ({ isDisabled }: { isDisabled: boolean }) => {
   const months = [
@@ -99,24 +94,8 @@ const CheckBox = ({
 };
 
 const Certificates = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const sectionRef = useRef<HTMLElement | null>(null);
-
-  const onButtonClicked = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (section && isOpen) {
-      section.classList.remove("collapse-close");
-      section.classList.add("collapse-open");
-    } else if (section && !isOpen) {
-      section.classList.remove("collapse-open");
-      section.classList.add("collapse-close");
-    }
-  }, [isOpen]);
+  const onButtonClicked = useOpenStatus(sectionRef);
 
   const [isChecked, setIsChecked] = useState(false);
 

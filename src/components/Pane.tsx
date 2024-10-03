@@ -1,27 +1,12 @@
 import PropTypes from "prop-types";
 import { TextArea } from "./TextArea";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { CircleButton } from "./Buttons";
+import { useOpenStatus } from "../main";
 
 const Pane = ({ name }: { name: string }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const sectionRef = useRef<HTMLElement | null>(null);
-
-  const onButtonClicked = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    const section = sectionRef.current;
-
-    if (section && isOpen) {
-      section.classList.remove("collapse-close");
-      section.classList.add("collapse-open");
-    } else if (section && !isOpen) {
-      section.classList.remove("collapse-open");
-      section.classList.add("collapse-close");
-    }
-  }, [isOpen]);
+  const onButtonClicked = useOpenStatus(sectionRef);
 
   return (
     <section
