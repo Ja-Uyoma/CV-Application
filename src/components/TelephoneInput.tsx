@@ -5,7 +5,7 @@ export const TelephoneInput = ({ name }: { name: string }) => {
 
   return (
     <>
-      <label htmlFor={id}>
+      <label htmlFor={id} className="block w-full">
         <span className="block font-medium text-gray-700">{name}</span>
         <input
           type="tel"
