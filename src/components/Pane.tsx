@@ -30,7 +30,7 @@ const Pane = ({ sectionName }: { sectionName: string }) => {
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl py-4">{sectionName}</h2>
+        <h2 className="font-bold text-xl">{sectionName}</h2>
         <CircleButton handleClick={() => onButtonClicked()} />
       </div>
 

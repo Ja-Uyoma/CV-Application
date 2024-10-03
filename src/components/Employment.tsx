@@ -31,14 +31,14 @@ export const Employment = () => {
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl py-4">Employment</h2>
+        <h2 className="font-bold text-xl">Employment</h2>
         <CircleButton handleClick={onButtonClicked} />
       </div>
 
       <form
         action="/"
         method="post"
-        className="border border-solid rounded-lg border-gray-900 p-4 collapse-content"
+        className="border border-solid rounded-lg border-gray-900 collapse-content"
       >
         <>
           <TextField name="Position" />

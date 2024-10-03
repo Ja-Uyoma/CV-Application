@@ -131,7 +131,7 @@ const Certificates = () => {
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl my-5">Certificates</h2>
+        <h2 className="font-bold text-xl">Certificates</h2>
         <CircleButton handleClick={onButtonClicked} />
       </div>
 
@@ -139,7 +139,7 @@ const Certificates = () => {
         action="/"
         method="post"
         autoComplete="off"
-        className="border-solid border rounded-lg border-gray-900 p-4 flex flex-col gap-1 collapse-content"
+        className="border-solid border rounded-lg border-gray-900 flex flex-col gap-1 collapse-content"
       >
         <TextField name="Certificate" />
 

@@ -31,7 +31,7 @@ const BasicInformation = () => {
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl py-4">Basic Information</h2>
+        <h2 className="font-bold text-xl">Basic Information</h2>
         <CircleButton handleClick={onButtonClicked} />
       </div>
 
@@ -39,7 +39,7 @@ const BasicInformation = () => {
         action="/"
         method="post"
         autoComplete="off"
-        className="border rounded-lg border-gray-900 p-4 collapse-content"
+        className="border rounded-lg border-gray-900 collapse-content"
       >
         <div className="flex gap-2 my-2">
           <div className="flex-1">
