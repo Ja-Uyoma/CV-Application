@@ -6,7 +6,7 @@ export const Date = ({ name }: { name: string }) => {
   return (
     <>
       <label htmlFor={id} className="block w-full">
-        <span className="font-medium text-gray-700">{name}</span>
+        <span className="font-medium">{name}</span>
         <input
           type="date"
           name={name}

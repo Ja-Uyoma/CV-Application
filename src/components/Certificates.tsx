@@ -84,7 +84,7 @@ const CheckBox = ({
   return (
     <>
       <label htmlFor="present">
-        <span className="font-medium text-gray-700 p-1">Present</span>
+        <span className="font-medium p-1">Present</span>
         <input
           type="checkbox"
           name="present"
@@ -144,7 +144,7 @@ const Certificates = () => {
         <TextField name="Certificate" />
 
         <div className="flex justify-between">
-          <span className="font-medium text-gray-700">Period</span>
+          <span className="font-medium">Period</span>
           <CheckBox
             isChecked={isChecked}
             onChangeHandler={handleCheckBoxChecked}

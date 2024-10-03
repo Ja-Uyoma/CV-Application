@@ -6,7 +6,7 @@ export const TextArea = ({ name }: { name: string }) => {
   return (
     <>
       <label htmlFor={id}>
-        <span className="block font-medium text-gray-700">{name}</span>
+        <span className="block font-medium">{name}</span>
         <textarea
           name={name}
           id={id}
