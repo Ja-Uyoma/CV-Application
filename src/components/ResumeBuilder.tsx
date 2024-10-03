@@ -3,6 +3,7 @@ import { History } from "./History.tsx";
 import { Certificates } from "./Certificates.tsx";
 import { BasicInformation } from "./BasicInformation.tsx";
 import { Education } from "./Education.tsx";
+import { Employment } from "./Employment.tsx";
 
 export const ResumeBuilder = () => {
   return (
@@ -13,7 +14,7 @@ export const ResumeBuilder = () => {
       <Pane sectionName={"Interests"} />
       <Pane sectionName={"References"} />
       <Pane sectionName={"Skills"} />
-      <History formName={"Work Experience"} />
+      <Employment />
       <Certificates />
     </div>
   );
