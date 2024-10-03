@@ -6,7 +6,7 @@ import { Employment } from "./Employment.tsx";
 
 export const ResumeBuilder = () => {
   return (
-    <div className="w-1/2 m-auto">
+    <div className="w-1/2 m-auto flex flex-col gap-4">
       <BasicInformation />
       <Education />
       <Pane sectionName={"Qualifications"} />
