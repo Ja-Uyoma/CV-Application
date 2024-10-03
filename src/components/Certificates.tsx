@@ -4,34 +4,7 @@ import { TextArea } from "./TextArea";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 import { Months } from "./Months";
-
-const Years = ({ isDisabled }: { isDisabled: boolean }) => {
-  const years = [];
-  years.push("Year");
-
-  for (let i = 2029; i >= 1924; i--) {
-    years.push(i.toString());
-  }
-
-  return (
-    <>
-      <label htmlFor="years" className="block w-full">
-        <select
-          name="years"
-          id="years"
-          disabled={isDisabled}
-          className="rounded-lg bg-gray-100 border-none min-w-full"
-        >
-          {years.map((val, idx) => (
-            <option value={val} key={idx}>
-              {val}
-            </option>
-          ))}
-        </select>
-      </label>
-    </>
-  );
-};
+import { Years } from "./Years";
 
 const CheckBox = ({
   isChecked,
