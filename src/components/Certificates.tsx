@@ -1,6 +1,13 @@
-import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import {
+  ChangeEvent,
+  ChangeEventHandler,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { TextField } from "./TextField";
 import { TextArea } from "./TextArea";
+import { CircleButton } from "./Buttons";
 
 const Months = ({ isDisabled }: { isDisabled: boolean }) => {
   const months = [
@@ -92,6 +99,25 @@ const CheckBox = ({
 };
 
 const Certificates = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const onButtonClicked = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const section = sectionRef.current;
+
+    if (section && isOpen) {
+      section.classList.remove("collapse-close");
+      section.classList.add("collapse-open");
+    } else if (section && !isOpen) {
+      section.classList.remove("collapse-open");
+      section.classList.add("collapse-close");
+    }
+  }, [isOpen]);
+
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckBoxChecked = (event: ChangeEvent<HTMLInputElement>) => {
@@ -99,14 +125,21 @@ const Certificates = () => {
   };
 
   return (
-    <section className="my-4">
-      <h2 className="font-bold text-xl my-5">Certificates</h2>
+    <section
+      tabIndex={0}
+      className="my-4 collapse collapse-close"
+      ref={sectionRef}
+    >
+      <div className="collapse-title flex justify-between items-center">
+        <h2 className="font-bold text-xl my-5">Certificates</h2>
+        <CircleButton handleClick={onButtonClicked} />
+      </div>
 
       <form
         action="/"
         method="post"
         autoComplete="off"
-        className="border-solid border rounded-lg border-gray-900 p-4 flex flex-col gap-1"
+        className="border-solid border rounded-lg border-gray-900 p-4 flex flex-col gap-1 collapse-content"
       >
         <TextField name="Certificate" />
 
