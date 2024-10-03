@@ -44,10 +44,13 @@ const PlusCircle = () => {
 
 const BasicInformation = () => {
   return (
-    <section tabIndex={0} className="collapse collapse-open">
-      <h2 className="font-bold text-xl py-4 collapse-title">
-        Basic Information
-      </h2>
+    <section tabIndex={0} className="collapse">
+      <div className="collapse-title flex justify-between items-center">
+        <h2 className="font-bold text-xl py-4">Basic Information</h2>
+        <button type="button" className="btn btn-circle">
+          <PlusCircle />
+        </button>
+      </div>
 
       <form
         action="/"
