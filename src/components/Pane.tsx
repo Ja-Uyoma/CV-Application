@@ -3,7 +3,7 @@ import { TextArea } from "./TextArea";
 import { useEffect, useRef, useState } from "react";
 import { CircleButton } from "./Buttons";
 
-const Pane = ({ sectionName }: { sectionName: string }) => {
+const Pane = ({ name }: { name: string }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const sectionRef = useRef<HTMLElement | null>(null);
 
@@ -30,7 +30,7 @@ const Pane = ({ sectionName }: { sectionName: string }) => {
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl">{sectionName}</h2>
+        <h2 className="font-bold text-xl">{name}</h2>
         <CircleButton handleClick={() => onButtonClicked()} />
       </div>
 

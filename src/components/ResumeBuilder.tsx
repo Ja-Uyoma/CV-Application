@@ -9,10 +9,10 @@ export const ResumeBuilder = () => {
     <div className="w-1/2 flex flex-col gap-2">
       <BasicInformation />
       <Education />
-      <Pane sectionName={"Qualifications"} />
-      <Pane sectionName={"Interests"} />
-      <Pane sectionName={"References"} />
-      <Pane sectionName={"Skills"} />
+      <Pane name={"Qualifications"} />
+      <Pane name={"Interests"} />
+      <Pane name={"References"} />
+      <Pane name={"Skills"} />
       <Employment />
       <Certificates />
     </div>
