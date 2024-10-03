@@ -1,5 +1,4 @@
 import { Pane } from "./Pane.tsx";
-import { History } from "./History.tsx";
 import { Certificates } from "./Certificates.tsx";
 import { BasicInformation } from "./BasicInformation.tsx";
 import { Education } from "./Education.tsx";
