@@ -1,24 +1,6 @@
 import PropTypes from "prop-types";
-import { createIDFromName } from "../main";
 import { TextArea } from "./TextArea";
-
-const Date = ({ name }: { name: string }) => {
-  const id = createIDFromName(name);
-
-  return (
-    <>
-      <label htmlFor={id} className="block w-full">
-        <span className="font-medium text-gray-700">{name}</span>
-        <input
-          type="date"
-          name={name}
-          id={id}
-          className="bg-gray-100 rounded-lg border-none w-full"
-        />
-      </label>
-    </>
-  );
-};
+import { Date } from "./Date";
 
 const History = ({ formName }: { formName: string }) => {
   return (
