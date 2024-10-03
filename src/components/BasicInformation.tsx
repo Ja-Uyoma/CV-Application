@@ -1,30 +1,9 @@
-import { MutableRefObject, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { EmailInput } from "./EmailInput";
 import { TelephoneInput } from "./TelephoneInput";
 import { TextField } from "./TextField";
 import { CircleButton } from "./Buttons";
-
-const useOpenStatus = (elementRef: MutableRefObject<HTMLElement | null>) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const onButtonClicked = () => {
-    setIsOpen(!isOpen);
-  };
-
-  useEffect(() => {
-    const e = elementRef.current;
-
-    if (e && isOpen) {
-      e.classList.remove("collapse-close");
-      e.classList.add("collapse-open");
-    } else if (e && !isOpen) {
-      e.classList.remove("collapse-open");
-      e.classList.add("collapse-close");
-    }
-  }, [isOpen, elementRef]);
-
-  return onButtonClicked;
-};
+import { useOpenStatus } from "../main";
 
 const BasicInformation = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
