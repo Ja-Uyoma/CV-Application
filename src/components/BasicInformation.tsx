@@ -41,14 +41,9 @@ const BasicInformation = () => {
         autoComplete="off"
         className="border rounded-lg border-gray-900 collapse-content"
       >
-        <div className="flex gap-2 my-2">
-          <div className="flex-1">
-            <TextField name="Given Name" />
-          </div>
-
-          <div className="flex-1">
-            <TextField name="Family Name" />
-          </div>
+        <div className="flex justify-between gap-2">
+          <TextField name="Given Name" />
+          <TextField name="Family Name" />
         </div>
 
         <div className="flex justify-between gap-2">
@@ -56,13 +51,9 @@ const BasicInformation = () => {
           <TelephoneInput name="Phone Number" />
         </div>
 
-        <div className="my-2">
-          <TextField name="Headline" />
-        </div>
+        <TextField name="Headline" />
 
-        <div className="my-2">
-          <TextField name="Address" />
-        </div>
+        <TextField name="Address" />
 
         <div className="flex gap-2 my-2">
           <div className="flex-1">
