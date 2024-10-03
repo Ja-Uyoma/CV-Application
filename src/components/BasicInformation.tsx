@@ -41,17 +41,18 @@ const BasicInformation = () => {
         autoComplete="off"
         className="border rounded-lg border-gray-900 collapse-content"
       >
-        <div className="flex justify-between gap-2">
-          <TextField name="Given Name" />
-          <TextField name="Family Name" />
+        <div className="flex flex-col">
+          <div className="flex justify-between gap-2">
+            <TextField name="Given Name" />
+            <TextField name="Family Name" />
+          </div>
+          <TextField name="Headline" />
         </div>
 
         <div className="flex justify-between gap-2">
           <EmailInput name="Email Address" />
           <TelephoneInput name="Phone Number" />
         </div>
-
-        <TextField name="Headline" />
 
         <TextField name="Address" />
 
