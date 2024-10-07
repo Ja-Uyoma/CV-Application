@@ -1,4 +1,4 @@
-export const Years = ({ isDisabled }: { isDisabled: boolean }) => {
+export const Years = (props: { isDisabled: boolean }) => {
   const years = [];
   years.push("Year");
 
@@ -12,7 +12,7 @@ export const Years = ({ isDisabled }: { isDisabled: boolean }) => {
         <select
           name="years"
           id="years"
-          disabled={isDisabled}
+          disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none min-w-full"
         >
           {years.map((val, idx) => (

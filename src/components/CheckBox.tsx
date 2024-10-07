@@ -1,9 +1,6 @@
 import { ChangeEventHandler } from "react";
 
-export const CheckBox = ({
-  isChecked,
-  onChangeHandler,
-}: {
+export const CheckBox = (props: {
   isChecked: boolean;
   onChangeHandler: ChangeEventHandler<HTMLInputElement>;
 }) => {
@@ -15,8 +12,8 @@ export const CheckBox = ({
           type="checkbox"
           name="present"
           id="present"
-          checked={isChecked}
-          onChange={onChangeHandler}
+          checked={props.isChecked}
+          onChange={props.onChangeHandler}
           className="form-checkbox w-3 h-3"
         />
       </label>

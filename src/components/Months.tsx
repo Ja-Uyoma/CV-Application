@@ -1,4 +1,4 @@
-export const Months = ({ isDisabled }: { isDisabled: boolean }) => {
+export const Months = (props: { isDisabled: boolean }) => {
   const months = [
     "Month",
     "January",
@@ -21,7 +21,7 @@ export const Months = ({ isDisabled }: { isDisabled: boolean }) => {
         <select
           name="months"
           id="months"
-          disabled={isDisabled}
+          disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none min-w-full"
         >
           {months.map((val, idx) => (

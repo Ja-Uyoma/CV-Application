@@ -1,15 +1,15 @@
 import { createIDFromName } from "../main";
 
-export const TelephoneInput = ({ name }: { name: string }) => {
-  const id = createIDFromName(name);
+export const TelephoneInput = (props: { name: string }) => {
+  const id = createIDFromName(props.name);
 
   return (
     <>
       <label htmlFor={id} className="block w-full">
-        <span className="block font-medium">{name}</span>
+        <span className="block font-medium">{props.name}</span>
         <input
           type="tel"
-          name={name}
+          name={props.name}
           id={id}
           required
           autoComplete="on"

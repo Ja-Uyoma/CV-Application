@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 
-const Pane = ({ name }: { name: string }) => {
+const Pane = (props: { name: string }) => {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
 
@@ -15,7 +15,7 @@ const Pane = ({ name }: { name: string }) => {
       ref={sectionRef}
     >
       <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl">{name}</h2>
+        <h2 className="font-bold text-xl">{props.name}</h2>
         <CircleButton handleClick={() => onButtonClicked()} />
       </div>
 

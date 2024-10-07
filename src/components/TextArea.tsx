@@ -1,14 +1,14 @@
 import { createIDFromName } from "../main";
 
-export const TextArea = ({ name }: { name: string }) => {
-  const id = createIDFromName(name);
+export const TextArea = (props: { name: string }) => {
+  const id = createIDFromName(props.name);
 
   return (
     <>
       <label htmlFor={id}>
-        <span className="block font-medium">{name}</span>
+        <span className="block font-medium">{props.name}</span>
         <textarea
-          name={name}
+          name={props.name}
           id={id}
           cols={80}
           rows={10}
