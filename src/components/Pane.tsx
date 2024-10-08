@@ -1,6 +1,3 @@
-import { useRef } from "react";
-import { CircleButton } from "./Buttons";
-import { useOpenStatus } from "../main";
 import { useForm } from "react-hook-form";
 
 interface Inputs {
@@ -8,27 +5,15 @@ interface Inputs {
 }
 
 function Pane(props: { name: string }) {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const onButtonClicked = useOpenStatus(sectionRef);
   const { register } = useForm<Inputs>();
 
   return (
-    <section
-      tabIndex={0}
-      className="collapse collapse-close bg-primary-content"
-      ref={sectionRef}
-    >
-      <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl">{props.name}</h2>
-        <CircleButton handleClick={() => onButtonClicked()} />
-      </div>
+    <details className="bg-primary-content rounded-xl">
+      <summary className="list-none">
+        <span className="font-bold text-xl">{props.name}</span>
+      </summary>
 
-      <form
-        action="/"
-        method="post"
-        autoComplete="off"
-        className="collapse-content"
-      >
+      <form action="/" method="post" autoComplete="off" className="rounded-lg">
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
@@ -39,7 +24,7 @@ function Pane(props: { name: string }) {
           ></textarea>
         </label>
       </form>
-    </section>
+    </details>
   );
 }
 

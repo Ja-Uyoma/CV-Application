@@ -1,6 +1,3 @@
-import { useRef } from "react";
-import { CircleButton } from "./Buttons";
-import { useOpenStatus } from "../main";
 import { useForm } from "react-hook-form";
 
 interface Inputs {
@@ -15,27 +12,15 @@ interface Inputs {
 }
 
 function PersonalDetails() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const onButtonClicked = useOpenStatus(sectionRef);
   const { register } = useForm<Inputs>();
 
   return (
-    <section
-      tabIndex={0}
-      className="collapse collapse-close bg-primary-content"
-      ref={sectionRef}
-    >
-      <div className="collapse-title flex justify-between items-center">
-        <h2 className="font-bold text-xl">Basic Information</h2>
-        <CircleButton handleClick={onButtonClicked} />
-      </div>
+    <details className="bg-primary-content rounded-xl">
+      <summary className="list-none">
+        <span className="font-bold text-xl">Personal details</span>
+      </summary>
 
-      <form
-        action="/"
-        method="post"
-        autoComplete="off"
-        className="border rounded-lg border-gray-900 collapse-content"
-      >
+      <form action="/" method="post" autoComplete="off" className="rounded-lg">
         <div className="flex flex-col">
           <div className="flex justify-between gap-2">
             <label className="block w-full">
@@ -124,7 +109,7 @@ function PersonalDetails() {
           </label>
         </div>
       </form>
-    </section>
+    </details>
   );
 }
 
