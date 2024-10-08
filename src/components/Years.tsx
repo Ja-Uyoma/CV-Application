@@ -8,10 +8,9 @@ export const Years = (props: { isDisabled: boolean }) => {
 
   return (
     <>
-      <label htmlFor="years" className="block w-full">
+      <label className="block w-full">
         <select
           name="years"
-          id="years"
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none min-w-full"
         >

@@ -17,10 +17,9 @@ export const Months = (props: { isDisabled: boolean }) => {
 
   return (
     <>
-      <label htmlFor="months" className="block w-full">
+      <label className="block w-full">
         <select
           name="months"
-          id="months"
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none min-w-full"
         >
