@@ -10,7 +10,7 @@ function Pane(props: { name: string }) {
   return (
     <details
       name="resume"
-      className="bg-primary-content rounded-none space-y-2 cursor-pointer"
+      className="bg-primary-content rounded-none space-y-2 cursor-pointer pb-2"
     >
       <summary className="list-none my-4">
         <span className="font-bold text-xl">{props.name}</span>
