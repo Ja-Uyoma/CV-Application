@@ -21,7 +21,7 @@ export const Months = (props: { isDisabled: boolean }) => {
         <select
           name="months"
           disabled={props.isDisabled}
-          className="rounded-lg bg-gray-100 border-none min-w-full"
+          className="rounded-lg bg-gray-100 border-none w-full"
         >
           {months.map((val, idx) => (
             <option value={val} key={idx}>

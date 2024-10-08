@@ -12,7 +12,7 @@ export const Years = (props: { isDisabled: boolean }) => {
         <select
           name="years"
           disabled={props.isDisabled}
-          className="rounded-lg bg-gray-100 border-none min-w-full"
+          className="rounded-lg bg-gray-100 border-none w-full"
         >
           {years.map((val, idx) => (
             <option value={val} key={idx}>
