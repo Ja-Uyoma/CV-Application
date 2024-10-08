@@ -14,7 +14,7 @@ export function Employment() {
   return (
     <details
       name="resume"
-      className="bg-primary-content rounded-xl space-y-2 cursor-pointer"
+      className="bg-primary-content rounded-none space-y-2 cursor-pointer"
     >
       <summary className="list-none my-4">
         <span className="font-bold text-xl">Employment</span>
