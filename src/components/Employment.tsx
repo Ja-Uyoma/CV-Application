@@ -12,12 +12,12 @@ export function Employment() {
   const { register } = useForm<Inputs>();
 
   return (
-    <details name="resume" className="bg-primary-content rounded-xl">
-      <summary className="list-none">
+    <details name="resume" className="bg-primary-content rounded-xl space-y-2">
+      <summary className="list-none my-4">
         <span className="font-bold text-xl">Employment</span>
       </summary>
 
-      <form action="/" method="post" className="rounded-lg">
+      <form action="/" method="post" className="rounded-lg space-y-2">
         <label className="block w-full">
           <span className="font-medium">Position</span>
           <input

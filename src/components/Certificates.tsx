@@ -19,8 +19,8 @@ function Certificates() {
   const { register } = useForm<Inputs>();
 
   return (
-    <details name="resume" className="bg-primary-content rounded-xl">
-      <summary className="list-none">
+    <details name="resume" className="bg-primary-content rounded-xl space-y-2">
+      <summary className="list-none my-4">
         <span className="font-bold text-xl">Certificates</span>
       </summary>
 
@@ -28,7 +28,7 @@ function Certificates() {
         action="/"
         method="post"
         autoComplete="off"
-        className="rounded-lg flex flex-col gap-1"
+        className="rounded-lg flex flex-col gap-2"
       >
         <label className="block w-full">
           <span className="font-medium">Certificate</span>

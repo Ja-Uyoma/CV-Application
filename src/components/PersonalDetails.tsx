@@ -15,13 +15,18 @@ function PersonalDetails() {
   const { register } = useForm<Inputs>();
 
   return (
-    <details name="resume" className="bg-primary-content rounded-xl">
-      <summary className="list-none">
+    <details name="resume" className="bg-primary-content rounded-xl space-y-2">
+      <summary className="list-none my-4">
         <span className="font-bold text-xl">Personal details</span>
       </summary>
 
-      <form action="/" method="post" autoComplete="off" className="rounded-lg">
-        <div className="flex flex-col">
+      <form
+        action="/"
+        method="post"
+        autoComplete="off"
+        className="rounded-lg space-y-2"
+      >
+        <div className="flex flex-col space-y-2">
           <div className="flex justify-between gap-2">
             <label className="block w-full">
               <span className="font-medium">Given Name</span>
