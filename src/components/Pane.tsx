@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
@@ -37,9 +36,5 @@ function Pane(props: { name: string }) {
     </section>
   );
 }
-
-Pane.propTypes = {
-  sectionName: PropTypes.string,
-};
 
 export { Pane };
