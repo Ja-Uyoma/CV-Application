@@ -15,7 +15,10 @@ function PersonalDetails() {
   const { register } = useForm<Inputs>();
 
   return (
-    <details name="resume" className="bg-primary-content rounded-xl space-y-2">
+    <details
+      name="resume"
+      className="bg-primary-content rounded-xl space-y-2 cursor-pointer"
+    >
       <summary className="list-none my-4">
         <span className="font-bold text-xl">Personal details</span>
       </summary>
