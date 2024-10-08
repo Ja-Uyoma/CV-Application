@@ -1,12 +1,14 @@
 import { MouseEventHandler } from "react";
 
-export const CircleButton = ({
-  handleClick,
-}: {
+export function CircleButton(props: {
   handleClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}) {
   return (
-    <button type="button" onClick={handleClick} className="btn btn-circle">
+    <button
+      type="button"
+      onClick={props.handleClick}
+      className="btn btn-circle"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -23,7 +25,7 @@ export const CircleButton = ({
       </svg>
     </button>
   );
-};
+}
 
 export const ChevronButton = ({
   handleClick,

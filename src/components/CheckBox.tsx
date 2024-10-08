@@ -1,25 +1,28 @@
 import { ChangeEventHandler } from "react";
+import { useForm } from "react-hook-form";
 
-export const CheckBox = ({
-  isChecked,
-  onChangeHandler,
-}: {
+interface Inputs {
+  present: string;
+}
+
+export function CheckBox(props: {
   isChecked: boolean;
   onChangeHandler: ChangeEventHandler<HTMLInputElement>;
-}) => {
+}) {
+  const { register } = useForm<Inputs>();
+
   return (
     <>
-      <label htmlFor="present">
+      <label>
         <span className="font-medium p-1">Present</span>
         <input
           type="checkbox"
-          name="present"
-          id="present"
-          checked={isChecked}
-          onChange={onChangeHandler}
+          {...register("present", { required: true })}
+          checked={props.isChecked}
+          onChange={props.onChangeHandler}
           className="form-checkbox w-3 h-3"
         />
       </label>
     </>
   );
-};
+}

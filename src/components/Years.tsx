@@ -1,4 +1,10 @@
-export const Years = ({ isDisabled }: { isDisabled: boolean }) => {
+import { useForm } from "react-hook-form";
+
+interface Inputs {
+  years: string;
+}
+
+export function Years(props: { isDisabled: boolean }) {
   const years = [];
   years.push("Year");
 
@@ -6,14 +12,15 @@ export const Years = ({ isDisabled }: { isDisabled: boolean }) => {
     years.push(i.toString());
   }
 
+  const { register } = useForm<Inputs>();
+
   return (
     <>
-      <label htmlFor="years" className="block w-full">
+      <label className="block w-full">
         <select
-          name="years"
-          id="years"
-          disabled={isDisabled}
-          className="rounded-lg bg-gray-100 border-none min-w-full"
+          {...register("years", { required: true })}
+          disabled={props.isDisabled}
+          className="rounded-lg bg-gray-100 border-none w-full"
         >
           {years.map((val, idx) => (
             <option value={val} key={idx}>
@@ -24,4 +31,4 @@ export const Years = ({ isDisabled }: { isDisabled: boolean }) => {
       </label>
     </>
   );
-};
+}
