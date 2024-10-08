@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 
-function BasicInformation() {
+function PersonalDetails() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
 
@@ -115,4 +115,4 @@ function BasicInformation() {
   );
 }
 
-export { BasicInformation };
+export { PersonalDetails };
