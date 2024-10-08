@@ -1,9 +1,5 @@
 import { MutableRefObject, useEffect, useState } from "react";
 
-export const createIDFromName = (name: string) => {
-  return name.toLowerCase().replace(" ", "-");
-};
-
 export const useOpenStatus = (
   elementRef: MutableRefObject<HTMLElement | null>
 ) => {
