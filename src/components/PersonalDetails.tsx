@@ -31,7 +31,7 @@ function PersonalDetails() {
               <span className="font-medium">Given Name</span>
               <input
                 type="text"
-                {...register("given-name", { required: true })}
+                {...register("givenName", { required: true })}
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
@@ -41,7 +41,7 @@ function PersonalDetails() {
               <span className="font-medium">Family Name</span>
               <input
                 type="text"
-                {...register("family-name", { required: true })}
+                {...register("familyName", { required: true })}
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
@@ -64,7 +64,7 @@ function PersonalDetails() {
             <span className="font-medium">Email Address</span>
             <input
               type="email"
-              {...register("email-address", { required: true })}
+              {...register("emailAddress", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -74,7 +74,7 @@ function PersonalDetails() {
             <span className="font-medium">Phone Number</span>
             <input
               type="text"
-              {...register("phone-number", { required: true })}
+              {...register("phoneNumber", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -96,7 +96,7 @@ function PersonalDetails() {
             <span className="font-medium">Post code</span>
             <input
               type="text"
-              {...register("post-code", { required: true })}
+              {...register("postCode", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />

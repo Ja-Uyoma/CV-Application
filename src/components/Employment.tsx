@@ -47,7 +47,7 @@ export function Employment() {
             <span className="font-medium">Start Date</span>
             <input
               type="date"
-              name="start-date"
+              name="startDate"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
           </label>
@@ -56,7 +56,7 @@ export function Employment() {
             <span className="font-medium">End Date</span>
             <input
               type="date"
-              name="end-date"
+              name="endDate"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
           </label>
