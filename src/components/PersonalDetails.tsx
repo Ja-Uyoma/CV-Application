@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
+import { useForm } from "react-hook-form";
 
 function PersonalDetails() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
+  const { register } = useForm();
 
   return (
     <section
@@ -29,7 +31,7 @@ function PersonalDetails() {
               <span className="font-medium">Given Name</span>
               <input
                 type="text"
-                name="given-name"
+                {...register("given-name", { required: true })}
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
@@ -39,7 +41,7 @@ function PersonalDetails() {
               <span className="font-medium">Family Name</span>
               <input
                 type="text"
-                name="family-name"
+                {...register("family-name", { required: true })}
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
@@ -50,7 +52,7 @@ function PersonalDetails() {
             <span className="font-medium">Headline</span>
             <input
               type="text"
-              name="headline"
+              {...register("headline", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -62,7 +64,7 @@ function PersonalDetails() {
             <span className="font-medium">Email Address</span>
             <input
               type="email"
-              name="email-address"
+              {...register("email-address", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -72,7 +74,7 @@ function PersonalDetails() {
             <span className="font-medium">Phone Number</span>
             <input
               type="text"
-              name="phone-number"
+              {...register("phone-number", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -83,7 +85,7 @@ function PersonalDetails() {
           <span className="font-medium">Address</span>
           <input
             type="text"
-            name="address"
+            {...register("address", { required: true })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -94,7 +96,7 @@ function PersonalDetails() {
             <span className="font-medium">Post code</span>
             <input
               type="text"
-              name="post-code"
+              {...register("post-code", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -104,7 +106,7 @@ function PersonalDetails() {
             <span className="font-medium">City</span>
             <input
               type="text"
-              name="city"
+              {...register("city", { required: true })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
