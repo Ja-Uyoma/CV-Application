@@ -1,4 +1,4 @@
-export const Months = (props: { isDisabled: boolean }) => {
+export function Months(props: { isDisabled: boolean }) {
   const months = [
     "Month",
     "January",
@@ -32,4 +32,4 @@ export const Months = (props: { isDisabled: boolean }) => {
       </label>
     </>
   );
-};
+}

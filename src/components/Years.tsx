@@ -1,4 +1,4 @@
-export const Years = (props: { isDisabled: boolean }) => {
+export function Years (props: { isDisabled: boolean }) {
   const years = [];
   years.push("Year");
 

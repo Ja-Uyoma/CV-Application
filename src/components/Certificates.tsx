@@ -5,7 +5,7 @@ import { Months } from "./Months";
 import { Years } from "./Years";
 import { CheckBox } from "./CheckBox";
 
-const Certificates = () => {
+function Certificates() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
 
@@ -67,6 +67,6 @@ const Certificates = () => {
       </form>
     </section>
   );
-};
+}
 
 export { Certificates };

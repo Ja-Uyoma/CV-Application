@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 
-const BasicInformation = () => {
+function BasicInformation() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
 
@@ -113,6 +113,6 @@ const BasicInformation = () => {
       </form>
     </section>
   );
-};
+}
 
 export { BasicInformation };

@@ -1,8 +1,8 @@
 import { MouseEventHandler } from "react";
 
-export const CircleButton = (props: {
+export function CircleButton(props: {
   handleClick: MouseEventHandler<HTMLButtonElement>;
-}) => {
+}) {
   return (
     <button
       type="button"
@@ -25,7 +25,7 @@ export const CircleButton = (props: {
       </svg>
     </button>
   );
-};
+}
 
 export const ChevronButton = ({
   handleClick,

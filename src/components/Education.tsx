@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 
-export const Education = () => {
+export function Education() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
 
@@ -74,4 +74,4 @@ export const Education = () => {
       </form>
     </section>
   );
-};
+}

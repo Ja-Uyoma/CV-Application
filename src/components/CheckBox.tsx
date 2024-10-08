@@ -1,9 +1,9 @@
 import { ChangeEventHandler } from "react";
 
-export const CheckBox = (props: {
+export function CheckBox(props: {
   isChecked: boolean;
   onChangeHandler: ChangeEventHandler<HTMLInputElement>;
-}) => {
+}) {
   return (
     <>
       <label htmlFor="present">
@@ -19,4 +19,4 @@ export const CheckBox = (props: {
       </label>
     </>
   );
-};
+}

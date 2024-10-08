@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 
-const Pane = (props: { name: string }) => {
+function Pane(props: { name: string }) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
 
@@ -36,7 +36,7 @@ const Pane = (props: { name: string }) => {
       </form>
     </section>
   );
-};
+}
 
 Pane.propTypes = {
   sectionName: PropTypes.string,

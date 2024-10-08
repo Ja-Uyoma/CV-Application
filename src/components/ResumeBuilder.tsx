@@ -4,7 +4,7 @@ import { BasicInformation } from "./BasicInformation.tsx";
 import { Education } from "./Education.tsx";
 import { Employment } from "./Employment.tsx";
 
-export const ResumeBuilder = () => {
+export function ResumeBuilder() {
   return (
     <div className="w-1/2 flex flex-col gap-2">
       <BasicInformation />
@@ -17,4 +17,4 @@ export const ResumeBuilder = () => {
       <Certificates />
     </div>
   );
-};
+}
