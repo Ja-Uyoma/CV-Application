@@ -1,6 +1,6 @@
 import { Pane } from "./Pane.tsx";
 import { Certificates } from "./Certificates.tsx";
-import { PersonalDetails } from "./BasicInformation.tsx";
+import { PersonalDetails } from "./PersonalDetails.tsx";
 import { Education } from "./Education.tsx";
 import { Employment } from "./Employment.tsx";
 
