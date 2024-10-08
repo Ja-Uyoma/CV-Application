@@ -6,12 +6,11 @@ export function CheckBox(props: {
 }) {
   return (
     <>
-      <label htmlFor="present">
+      <label>
         <span className="font-medium p-1">Present</span>
         <input
           type="checkbox"
           name="present"
-          id="present"
           checked={props.isChecked}
           onChange={props.onChangeHandler}
           className="form-checkbox w-3 h-3"
