@@ -7,7 +7,7 @@ import { PersonalDetails } from "./components/PersonalDetails";
 function App() {
   return (
     <main className="bg-primary flex">
-      <div className="w-1/2 flex flex-col gap-2">
+      <div className="w-1/2 flex flex-col gap-1">
         <PersonalDetails />
         <Education />
         <Pane name={"Qualifications"} />
