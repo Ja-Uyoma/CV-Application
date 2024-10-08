@@ -1,10 +1,20 @@
 import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
+import { useForm } from "react-hook-form";
+
+interface Inputs {
+  education: string;
+  school: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}
 
 export function Education() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
+  const { register } = useForm<Inputs>();
 
   return (
     <section
@@ -26,7 +36,7 @@ export function Education() {
           <span className="font-medium">Education</span>
           <input
             type="text"
-            name="education"
+            {...register("education", { required: true })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -36,7 +46,7 @@ export function Education() {
           <span className="font-medium">School</span>
           <input
             type="text"
-            name="school"
+            {...register("school", { required: true })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -47,7 +57,7 @@ export function Education() {
             <span className="font-medium">Start Date</span>
             <input
               type="date"
-              name="startDate"
+              {...register("startDate", { required: true })}
               className="bg-gray-100 rounded-lg border-none w-full"
             />
           </label>
@@ -56,7 +66,7 @@ export function Education() {
             <span className="font-medium">End Date</span>
             <input
               type="date"
-              name="endDate"
+              {...register("endDate", { required: true })}
               className="bg-gray-100 rounded-lg border-none w-full"
             />
           </label>
@@ -65,7 +75,7 @@ export function Education() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            name="description"
+            {...register("description", { required: true })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"

@@ -4,6 +4,12 @@ import { useOpenStatus } from "../main";
 import { Months } from "./Months";
 import { Years } from "./Years";
 import { CheckBox } from "./CheckBox";
+import { useForm } from "react-hook-form";
+
+interface Inputs {
+  certificate: string;
+  description: string;
+}
 
 function Certificates() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -14,6 +20,8 @@ function Certificates() {
   const handleCheckBoxChecked = (event: ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
   };
+
+  const { register } = useForm<Inputs>();
 
   return (
     <section
@@ -36,7 +44,7 @@ function Certificates() {
           <span className="font-medium">Certificate</span>
           <input
             type="text"
-            name="certificate"
+            {...register("certificate", { required: true })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -58,7 +66,7 @@ function Certificates() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            name="description"
+            {...register("description", { required: true })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"

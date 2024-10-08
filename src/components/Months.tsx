@@ -1,3 +1,9 @@
+import { useForm } from "react-hook-form";
+
+interface Inputs {
+  months: string;
+}
+
 export function Months(props: { isDisabled: boolean }) {
   const months = [
     "Month",
@@ -15,11 +21,13 @@ export function Months(props: { isDisabled: boolean }) {
     "December",
   ];
 
+  const { register } = useForm<Inputs>();
+
   return (
     <>
       <label className="block w-full">
         <select
-          name="months"
+          {...register("months", { required: true })}
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none w-full"
         >

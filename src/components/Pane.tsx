@@ -1,10 +1,16 @@
 import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
+import { useForm } from "react-hook-form";
+
+interface Inputs {
+  description: string;
+}
 
 function Pane(props: { name: string }) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
+  const { register } = useForm<Inputs>();
 
   return (
     <section
@@ -26,7 +32,7 @@ function Pane(props: { name: string }) {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            name="description"
+            {...register("description", { required: true })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
