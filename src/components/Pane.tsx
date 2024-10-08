@@ -8,7 +8,7 @@ function Pane(props: { name: string }) {
   const { register } = useForm<Inputs>();
 
   return (
-    <details className="bg-primary-content rounded-xl">
+    <details name="resume" className="bg-primary-content rounded-xl">
       <summary className="list-none">
         <span className="font-bold text-xl">{props.name}</span>
       </summary>
