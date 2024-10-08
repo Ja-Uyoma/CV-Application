@@ -1,7 +1,4 @@
 import { useRef } from "react";
-import { EmailInput } from "./EmailInput";
-import { TelephoneInput } from "./TelephoneInput";
-import { TextField } from "./TextField";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 
@@ -28,27 +25,90 @@ const BasicInformation = () => {
       >
         <div className="flex flex-col">
           <div className="flex justify-between gap-2">
-            <TextField name="Given Name" />
-            <TextField name="Family Name" />
+            <label className="block w-full">
+              <span className="font-medium">Given Name</span>
+              <input
+                type="text"
+                name="given-name"
+                autoComplete="on"
+                className="bg-gray-100 rounded-lg border-none w-full"
+              />
+            </label>
+
+            <label className="block w-full">
+              <span className="font-medium">Family Name</span>
+              <input
+                type="text"
+                name="family-name"
+                autoComplete="on"
+                className="bg-gray-100 rounded-lg border-none w-full"
+              />
+            </label>
           </div>
-          <TextField name="Headline" />
+
+          <label className="block w-full">
+            <span className="font-medium">Headline</span>
+            <input
+              type="text"
+              name="headline"
+              autoComplete="on"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
         </div>
 
         <div className="flex justify-between gap-2">
-          <EmailInput name="Email Address" />
-          <TelephoneInput name="Phone Number" />
+          <label className="block w-full">
+            <span className="font-medium">Email Address</span>
+            <input
+              type="email"
+              name="email-address"
+              autoComplete="on"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
+
+          <label className="block w-full">
+            <span className="font-medium">Phone Number</span>
+            <input
+              type="text"
+              name="phone-number"
+              autoComplete="on"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
         </div>
 
-        <TextField name="Address" />
+        <label className="block w-full">
+          <span className="font-medium">Address</span>
+          <input
+            type="text"
+            name="address"
+            autoComplete="on"
+            className="bg-gray-100 rounded-lg border-none w-full"
+          />
+        </label>
 
-        <div className="flex gap-2 my-2">
-          <div className="flex-1">
-            <TextField name="Postal Code" />
-          </div>
+        <div className="flex gap-2">
+          <label className="block w-full">
+            <span className="font-medium">Post code</span>
+            <input
+              type="text"
+              name="post-code"
+              autoComplete="on"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
 
-          <div className="flex-1">
-            <TextField name="City" />
-          </div>
+          <label className="block w-full">
+            <span className="font-medium">City</span>
+            <input
+              type="text"
+              name="city"
+              autoComplete="on"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
         </div>
       </form>
     </section>

@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { TextArea } from "./TextArea";
 import { useRef } from "react";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
@@ -25,7 +24,15 @@ const Pane = (props: { name: string }) => {
         autoComplete="off"
         className="collapse-content"
       >
-        <TextArea name="Description" />
+        <label className="block w-full">
+          <span className="font-medium">Description</span>
+          <textarea
+            name="description"
+            cols={80}
+            rows={10}
+            className="bg-gray-100 rounded-lg border-none w-full"
+          ></textarea>
+        </label>
       </form>
     </section>
   );

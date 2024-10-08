@@ -1,8 +1,5 @@
 import { useRef } from "react";
 import { CircleButton } from "./Buttons";
-import { Date } from "./Date";
-import { TextArea } from "./TextArea";
-import { TextField } from "./TextField";
 import { useOpenStatus } from "../main";
 
 export const Education = () => {
@@ -25,17 +22,55 @@ export const Education = () => {
         method="post"
         className="border border-solid rounded-lg border-gray-900 collapse-content"
       >
-        <>
-          <TextField name="Education" />
-          <TextField name="School" />
-        </>
+        <label className="block w-full">
+          <span className="font-medium">Education</span>
+          <input
+            type="text"
+            name="education"
+            autoComplete="on"
+            className="bg-gray-100 rounded-lg border-none w-full"
+          />
+        </label>
+
+        <label className="block w-full">
+          <span className="font-medium">School</span>
+          <input
+            type="text"
+            name="school"
+            autoComplete="on"
+            className="bg-gray-100 rounded-lg border-none w-full"
+          />
+        </label>
+
         <div className="flex gap-2">
-          <Date name="Start Date" />
-          <Date name="End Date" />
+          <label className="block w-full">
+            <span className="font-medium">Start Date</span>
+            <input
+              type="date"
+              name="start-date"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
+
+          <label className="block w-full">
+            <span className="font-medium">End Date</span>
+            <input
+              type="date"
+              name="end-date"
+              className="bg-gray-100 rounded-lg border-none w-full"
+            />
+          </label>
         </div>
-        <>
-          <TextArea name="Description" />
-        </>
+
+        <label className="block w-full">
+          <span className="font-medium">Description</span>
+          <textarea
+            name="description"
+            cols={80}
+            rows={10}
+            className="bg-gray-100 rounded-lg border-none w-full"
+          ></textarea>
+        </label>
       </form>
     </section>
   );

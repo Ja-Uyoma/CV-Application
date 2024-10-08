@@ -1,6 +1,4 @@
 import { ChangeEvent, useRef, useState } from "react";
-import { TextField } from "./TextField";
-import { TextArea } from "./TextArea";
 import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 import { Months } from "./Months";
@@ -34,7 +32,15 @@ const Certificates = () => {
         autoComplete="off"
         className="border-solid border rounded-lg border-gray-900 flex flex-col gap-1 collapse-content"
       >
-        <TextField name="Certificate" />
+        <label className="block w-full">
+          <span className="font-medium">Certificate</span>
+          <input
+            type="text"
+            name="certificate"
+            autoComplete="on"
+            className="bg-gray-100 rounded-lg border-none w-full"
+          />
+        </label>
 
         <div className="flex justify-between">
           <span className="font-medium">Period</span>
@@ -49,7 +55,15 @@ const Certificates = () => {
           <Years isDisabled={isChecked} />
         </div>
 
-        <TextArea name="Description" />
+        <label className="block w-full">
+          <span className="font-medium">Description</span>
+          <textarea
+            name="description"
+            cols={80}
+            rows={10}
+            className="bg-gray-100 rounded-lg border-none w-full"
+          ></textarea>
+        </label>
       </form>
     </section>
   );
