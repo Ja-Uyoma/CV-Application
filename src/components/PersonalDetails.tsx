@@ -3,10 +3,21 @@ import { CircleButton } from "./Buttons";
 import { useOpenStatus } from "../main";
 import { useForm } from "react-hook-form";
 
+interface Inputs {
+  givenName: string;
+  familyName: string;
+  headline: string;
+  emailAddress: string;
+  phoneNumber: string;
+  address: string;
+  postCode: string;
+  city: string;
+}
+
 function PersonalDetails() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const onButtonClicked = useOpenStatus(sectionRef);
-  const { register } = useForm();
+  const { register } = useForm<Inputs>();
 
   return (
     <section
