@@ -19,8 +19,13 @@ function PersonalDetails() {
       name="resume"
       className="bg-primary-content rounded-none space-y-2 cursor-pointer pb-3"
     >
-      <summary className="list-none my-4">
-        <span className="font-bold text-xl">Personal details</span>
+      <summary className="list-none my-4 flex items-center justify-between">
+        <span className="inline-block font-bold text-xl">Personal details</span>
+        <button className="inline-block">
+          <span className="material-symbols-outlined size-full">
+            add_circle
+          </span>
+        </button>
       </summary>
 
       <form
