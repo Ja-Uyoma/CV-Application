@@ -7,7 +7,7 @@ import { PersonalDetails } from "./components/PersonalDetails";
 function App() {
   return (
     <main className="flex">
-      <div className="w-1/2 flex flex-col gap-1">
+      <div className="flex flex-1 flex-col gap-1">
         <PersonalDetails />
         <Education />
         <Pane name={"Qualifications"} />
@@ -18,7 +18,7 @@ function App() {
         <Certificates />
       </div>
 
-      <div>
+      <div className="flex-1">
         <p>View Your Resume!</p>
       </div>
     </main>
