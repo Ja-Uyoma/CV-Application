@@ -19,7 +19,7 @@ function App() {
       </div>
 
       <div className="flex-1">
-        <p>View Your Resume!</p>
+        <p className="text-center font-medium text-xl">Resume</p>
       </div>
     </main>
   );
