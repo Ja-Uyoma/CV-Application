@@ -1,18 +1,8 @@
 import { useForm } from "react-hook-form";
-
-interface Inputs {
-  givenName: string;
-  familyName: string;
-  headline: string;
-  emailAddress: string;
-  phoneNumber: string;
-  address: string;
-  postCode: string;
-  city: string;
-}
+import { PersonalDetailsData } from "../types/PersonalDetails";
 
 function PersonalDetails() {
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<PersonalDetailsData>();
 
   return (
     <details
