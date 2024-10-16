@@ -1,15 +1,8 @@
 import { useForm } from "react-hook-form";
-
-interface Inputs {
-  position: string;
-  employer: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-}
+import { EmploymentData } from "../types/Employment";
 
 export function Employment() {
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<EmploymentData>();
 
   return (
     <details
