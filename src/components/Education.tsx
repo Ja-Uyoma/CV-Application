@@ -1,15 +1,8 @@
 import { useForm } from "react-hook-form";
-
-interface Inputs {
-  education: string;
-  school: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-}
+import { EducationData } from "../types/Education";
 
 export function Education() {
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<EducationData>();
 
   return (
     <details
