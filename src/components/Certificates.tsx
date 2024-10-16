@@ -3,11 +3,7 @@ import { Months } from "./Months";
 import { Years } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
-
-interface Inputs {
-  certificate: string;
-  description: string;
-}
+import { CertificateData } from "../types/Certificates";
 
 function Certificates() {
   const [isChecked, setIsChecked] = useState(false);
@@ -16,7 +12,7 @@ function Certificates() {
     setIsChecked(event.target.checked);
   };
 
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<CertificateData>();
 
   return (
     <details
