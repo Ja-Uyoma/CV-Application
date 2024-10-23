@@ -127,4 +127,23 @@ function PersonalDetails(props: {
   );
 }
 
-export { PersonalDetails };
+function PersonalDetailsPreview(props: { details: PersonalDetailsData }) {
+  return (
+    <div>
+      {props.details && (
+        <>
+          <p>{props.details.givenName}</p>
+          <p>{props.details.familyName}</p>
+          <p>{props.details.headline}</p>
+          <p>{props.details.emailAddress}</p>
+          <p>{props.details.phoneNumber}</p>
+          <p>{props.details.address}</p>
+          <p>{props.details.postCode}</p>
+          <p>{props.details.city}</p>
+        </>
+      )}
+    </div>
+  );
+}
+
+export { PersonalDetails, PersonalDetailsPreview };
