@@ -1,8 +1,19 @@
 import { useForm } from "react-hook-form";
 import { PersonalDetailsData } from "../types/PersonalDetails";
+import { useEffect } from "react";
 
-function PersonalDetails() {
-  const { register } = useForm<PersonalDetailsData>();
+function PersonalDetails(props: {
+  setDetails: (details: PersonalDetailsData) => void;
+}) {
+  const { register, watch } = useForm<PersonalDetailsData>();
+
+  useEffect(() => {
+    const { unsubscribe } = watch((value) => {
+      props.setDetails(value as PersonalDetailsData);
+    });
+
+    return () => unsubscribe();
+  }, [watch]);
 
   return (
     <details
