@@ -36,6 +36,7 @@ function App() {
 
       <div className="flex-1">
         <p className="text-center font-medium text-xl">Resume</p>
+        <PersonalDetailsPreview details={details} />
       </div>
     </main>
   );
