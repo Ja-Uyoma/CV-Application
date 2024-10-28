@@ -3,21 +3,22 @@ import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
 type State = {
-  description: string;
+  qualifications: string;
 };
 
 type Action = {
-  updateDescription: (description: State["description"]) => void;
+  updateQualifications: (description: State["qualifications"]) => void;
 };
 
 const useStore = create<State & Action>()((set) => ({
-  description: "",
-  updateDescription: (description) => set(() => ({ description: description })),
+  qualifications: "",
+  updateQualifications: (qualifications) =>
+    set(() => ({ qualifications: qualifications })),
 }));
 
 export function Qualifications() {
   const { register } = useForm<State>();
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updateQualifications = useStore((state) => state.updateQualifications);
 
   return (
     <details
@@ -35,12 +36,12 @@ export function Qualifications() {
 
       <form action="/" method="post" autoComplete="off" className="rounded-lg">
         <label className="block w-full">
-          <span className="font-medium">Description</span>
+          <span className="font-medium">Qualifications</span>
           <textarea
-            {...register("description", {
+            {...register("qualifications", {
               required: true,
               onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
-                updateDescription(e.target.value),
+                updateQualifications(e.target.value),
             })}
             cols={80}
             rows={10}
@@ -53,7 +54,7 @@ export function Qualifications() {
 }
 
 export function QualificationsPreview() {
-  const description = useStore((state) => state.description);
+  const qualifications = useStore((state) => state.qualifications);
 
-  return <>{description}</>;
+  return <>{qualifications}</>;
 }
