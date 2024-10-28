@@ -7,7 +7,7 @@ import {
   PersonalDetailsPreview,
 } from "./components/PersonalDetails";
 import { Qualifications } from "./components/Qualifications";
-import { References } from "./components/References";
+import { References, ReferencesPreview } from "./components/References";
 import { Skills, SkillsPreview } from "./components/Skills";
 
 function App() {
@@ -28,6 +28,7 @@ function App() {
         <p className="text-center font-medium text-xl">Resume</p>
         <PersonalDetailsPreview />
         <EducationPreview />
+        <ReferencesPreview />
         <SkillsPreview />
         <EmploymentPreview />
         <CertificatesPreview />
