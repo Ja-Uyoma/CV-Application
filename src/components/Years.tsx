@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 
-type Inputs = {
+type State = {
   year: string;
 };
 
@@ -12,7 +12,7 @@ export function Years(props: { isDisabled: boolean }) {
     years.push(i.toString());
   }
 
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<State>();
 
   return (
     <>
