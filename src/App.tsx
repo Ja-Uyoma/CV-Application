@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Certificates } from "./components/Certificates";
 import { Education, EducationPreview } from "./components/Education";
-import { Employment } from "./components/Employment";
+import { Employment, EmploymentPreview } from "./components/Employment";
 import { Pane } from "./components/Pane";
 import {
   PersonalDetails,
@@ -38,6 +38,7 @@ function App() {
         <p className="text-center font-medium text-xl">Resume</p>
         <PersonalDetailsPreview details={details} />
         <EducationPreview />
+        <EmploymentPreview />
       </div>
     </main>
   );
