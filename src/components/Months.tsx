@@ -1,8 +1,19 @@
+import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
+import { create } from "zustand";
 
 interface Inputs {
   months: string;
 }
+
+type Action = {
+  updateMonth: (month: Inputs["months"]) => void;
+};
+
+const useStore = create<Inputs & Action>()((set) => ({
+  months: "",
+  updateMonth: (month) => set(() => ({ months: month })),
+}));
 
 export function Months(props: { isDisabled: boolean }) {
   const months = [
