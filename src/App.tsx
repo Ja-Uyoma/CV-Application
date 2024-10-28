@@ -1,4 +1,4 @@
-import { Certificates } from "./components/Certificates";
+import { Certificates, CertificatesPreview } from "./components/Certificates";
 import { Education, EducationPreview } from "./components/Education";
 import { Employment, EmploymentPreview } from "./components/Employment";
 import { Pane } from "./components/Pane";
@@ -26,6 +26,7 @@ function App() {
         <PersonalDetailsPreview />
         <EducationPreview />
         <EmploymentPreview />
+        <CertificatesPreview />
       </div>
     </main>
   );
