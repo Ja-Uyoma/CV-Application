@@ -51,3 +51,9 @@ export function Qualifications() {
     </details>
   );
 }
+
+export function QualificationsPreview() {
+  const description = useStore((state) => state.description);
+
+  return <>{description}</>;
+}
