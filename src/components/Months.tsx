@@ -2,9 +2,9 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
-interface State {
+type State = {
   months: string;
-}
+};
 
 type Action = {
   updateMonth: (month: State["months"]) => void;
