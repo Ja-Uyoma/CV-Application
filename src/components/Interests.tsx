@@ -3,21 +3,21 @@ import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
 type State = {
-  description: string;
+  interests: string;
 };
 
 type Action = {
-  updateDescription: (description: State["description"]) => void;
+  updateInterests: (description: State["interests"]) => void;
 };
 
 const useStore = create<State & Action>()((set) => ({
-  description: "",
-  updateDescription: (description) => set(() => ({ description: description })),
+  interests: "",
+  updateInterests: (interests) => set(() => ({ interests: interests })),
 }));
 
 export function Interests() {
   const { register } = useForm<State>();
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updateInterests = useStore((state) => state.updateInterests);
 
   return (
     <details
@@ -37,10 +37,10 @@ export function Interests() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", {
+            {...register("interests", {
               required: true,
               onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
-                updateDescription(e.target.value),
+                updateInterests(e.target.value),
             })}
             cols={80}
             rows={10}
@@ -53,7 +53,7 @@ export function Interests() {
 }
 
 export function InterestsPreview() {
-  const description = useStore((state) => state.description);
+  const interests = useStore((state) => state.interests);
 
-  return <>{description}</>;
+  return <>{interests}</>;
 }
