@@ -1,11 +1,23 @@
+import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
+import { create } from "zustand";
 
 type State = {
   description: string;
 };
 
+type Action = {
+  updateDescription: (description: State["description"]) => void;
+};
+
+const useStore = create<State & Action>()((set) => ({
+  description: "",
+  updateDescription: (descrpition) => set(() => ({ description: descrpition })),
+}));
+
 export function Skills() {
   const { register } = useForm<State>();
+  const updateDescription = useStore((state) => state.updateDescription);
 
   return (
     <details
@@ -25,7 +37,11 @@ export function Skills() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", { required: true })}
+            {...register("description", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
+                updateDescription(e.target.value),
+            })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
@@ -34,4 +50,10 @@ export function Skills() {
       </form>
     </details>
   );
+}
+
+export function SkillsPreview() {
+  const description = useStore((state) => state.description);
+
+  return <>{description}</>;
 }
