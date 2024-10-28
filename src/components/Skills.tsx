@@ -12,7 +12,7 @@ type Action = {
 
 const useStore = create<State & Action>()((set) => ({
   description: "",
-  updateDescription: (descrpition) => set(() => ({ description: descrpition })),
+  updateDescription: (description) => set(() => ({ description: description })),
 }));
 
 export function Skills() {
