@@ -1,6 +1,7 @@
 import { Certificates, CertificatesPreview } from "./components/Certificates";
 import { Education, EducationPreview } from "./components/Education";
 import { Employment, EmploymentPreview } from "./components/Employment";
+import { Interests } from "./components/Interests";
 import { Pane } from "./components/Pane";
 import {
   PersonalDetails,
@@ -15,7 +16,7 @@ function App() {
         <PersonalDetails />
         <Education />
         <Qualifications />
-        <Pane name={"Interests"} />
+        <Interests />
         <Pane name={"References"} />
         <Pane name={"Skills"} />
         <Employment />
