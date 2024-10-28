@@ -169,22 +169,27 @@ function PersonalDetails(props: {
   );
 }
 
-function PersonalDetailsPreview(props: { details: PersonalDetailsData }) {
+function PersonalDetailsPreview() {
+  const givenName = useStore((state) => state.givenName);
+  const familyName = useStore((state) => state.familyName);
+  const headline = useStore((state) => state.headline);
+  const emailAddress = useStore((state) => state.emailAddress);
+  const phoneNumber = useStore((state) => state.phoneNumber);
+  const address = useStore((state) => state.address);
+  const postCode = useStore((state) => state.postCode);
+  const city = useStore((state) => state.city);
+
   return (
-    <div>
-      {props.details && (
-        <>
-          <p>{props.details.givenName}</p>
-          <p>{props.details.familyName}</p>
-          <p>{props.details.headline}</p>
-          <p>{props.details.emailAddress}</p>
-          <p>{props.details.phoneNumber}</p>
-          <p>{props.details.address}</p>
-          <p>{props.details.postCode}</p>
-          <p>{props.details.city}</p>
-        </>
-      )}
-    </div>
+    <>
+      <p>{givenName}</p>
+      <p>{familyName}</p>
+      <p>{headline}</p>
+      <p>{emailAddress}</p>
+      <p>{phoneNumber}</p>
+      <p>{address}</p>
+      <p>{postCode}</p>
+      <p>{city}</p>
+    </>
   );
 }
 
