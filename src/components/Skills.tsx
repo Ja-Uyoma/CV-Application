@@ -3,21 +3,21 @@ import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
 type State = {
-  description: string;
+  skills: string;
 };
 
 type Action = {
-  updateDescription: (description: State["description"]) => void;
+  updateSkills: (description: State["skills"]) => void;
 };
 
 const useStore = create<State & Action>()((set) => ({
-  description: "",
-  updateDescription: (description) => set(() => ({ description: description })),
+  skills: "",
+  updateSkills: (description) => set(() => ({ skills: description })),
 }));
 
 export function Skills() {
   const { register } = useForm<State>();
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updateSkills = useStore((state) => state.updateSkills);
 
   return (
     <details
@@ -37,10 +37,10 @@ export function Skills() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", {
+            {...register("skills", {
               required: true,
               onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
-                updateDescription(e.target.value),
+                updateSkills(e.target.value),
             })}
             cols={80}
             rows={10}
@@ -53,7 +53,7 @@ export function Skills() {
 }
 
 export function SkillsPreview() {
-  const description = useStore((state) => state.description);
+  const skills = useStore((state) => state.skills);
 
-  return <>{description}</>;
+  return <>{skills}</>;
 }
