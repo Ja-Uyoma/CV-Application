@@ -3,16 +3,16 @@ import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
 type State = {
-  months: string;
+  month: string;
 };
 
 type Action = {
-  updateMonth: (month: State["months"]) => void;
+  updateMonth: (month: State["month"]) => void;
 };
 
 const useStore = create<State & Action>()((set) => ({
-  months: "",
-  updateMonth: (month) => set(() => ({ months: month })),
+  month: "",
+  updateMonth: (month) => set(() => ({ month: month })),
 }));
 
 export function Months(props: { isDisabled: boolean }) {
@@ -39,7 +39,7 @@ export function Months(props: { isDisabled: boolean }) {
     <>
       <label className="block w-full">
         <select
-          {...register("months", {
+          {...register("month", {
             required: true,
             onChange: (e: ChangeEvent<HTMLSelectElement>) =>
               updateMonth(e.target.value),
@@ -59,7 +59,7 @@ export function Months(props: { isDisabled: boolean }) {
 }
 
 export function MonthsPreview() {
-  const month = useStore((state) => state.months);
+  const month = useStore((state) => state.month);
 
   return <>{month}</>;
 }
