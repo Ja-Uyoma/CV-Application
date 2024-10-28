@@ -3,7 +3,6 @@ import { Months } from "./Months";
 import { Years } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
-import { CertificateData } from "../types/Certificates";
 import { create } from "zustand";
 
 type State = {
