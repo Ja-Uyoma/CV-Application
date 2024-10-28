@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { Months } from "./Months";
+import { Months, MonthsPreview } from "./Months";
 import { Years } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
@@ -106,6 +106,7 @@ export function CertificatesPreview() {
   return (
     <>
       {certificate}
+      <MonthsPreview />
       {description}
     </>
   );
