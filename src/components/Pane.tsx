@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 
-interface Inputs {
+type Inputs = {
   description: string;
-}
+};
 
 function Pane(props: { name: string }) {
   const { register } = useForm<Inputs>();
