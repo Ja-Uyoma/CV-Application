@@ -4,6 +4,24 @@ import { Years } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
 import { CertificateData } from "../types/Certificates";
+import { create } from "zustand";
+
+type State = {
+  certificate: string;
+  description: string;
+};
+
+type Action = {
+  updateCertificate: (certificate: State["certificate"]) => void;
+  updateDescription: (description: State["description"]) => void;
+};
+
+const useStore = create<State & Action>()((set) => ({
+  certificate: "",
+  description: "",
+  updateCertificate: (cert) => set(() => ({ certificate: cert })),
+  updateDescription: (desc) => set(() => ({ description: desc })),
+}));
 
 function Certificates() {
   const [isChecked, setIsChecked] = useState(false);
