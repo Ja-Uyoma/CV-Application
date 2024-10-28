@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 
-interface Inputs {
+type Inputs = {
   year: string;
-}
+};
 
 export function Years(props: { isDisabled: boolean }) {
   const years = [];
