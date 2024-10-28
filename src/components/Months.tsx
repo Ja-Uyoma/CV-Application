@@ -1,8 +1,19 @@
+import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
+import { create } from "zustand";
 
-interface Inputs {
-  months: string;
-}
+type State = {
+  month: string;
+};
+
+type Action = {
+  updateMonth: (month: State["month"]) => void;
+};
+
+const useStore = create<State & Action>()((set) => ({
+  month: "",
+  updateMonth: (month) => set(() => ({ month: month })),
+}));
 
 export function Months(props: { isDisabled: boolean }) {
   const months = [
@@ -21,13 +32,18 @@ export function Months(props: { isDisabled: boolean }) {
     "December",
   ];
 
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<State>();
+  const updateMonth = useStore((state) => state.updateMonth);
 
   return (
     <>
       <label className="block w-full">
         <select
-          {...register("months", { required: true })}
+          {...register("month", {
+            required: true,
+            onChange: (e: ChangeEvent<HTMLSelectElement>) =>
+              updateMonth(e.target.value),
+          })}
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none w-full"
         >
@@ -40,4 +56,10 @@ export function Months(props: { isDisabled: boolean }) {
       </label>
     </>
   );
+}
+
+export function MonthsPreview() {
+  const month = useStore((state) => state.month);
+
+  return <>{month}</>;
 }

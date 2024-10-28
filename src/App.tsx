@@ -1,8 +1,11 @@
-import { Certificates } from "./components/Certificates";
-import { Education } from "./components/Education";
-import { Employment } from "./components/Employment";
+import { Certificates, CertificatesPreview } from "./components/Certificates";
+import { Education, EducationPreview } from "./components/Education";
+import { Employment, EmploymentPreview } from "./components/Employment";
 import { Pane } from "./components/Pane";
-import { PersonalDetails } from "./components/PersonalDetails";
+import {
+  PersonalDetails,
+  PersonalDetailsPreview,
+} from "./components/PersonalDetails";
 
 function App() {
   return (
@@ -20,6 +23,10 @@ function App() {
 
       <div className="flex-1">
         <p className="text-center font-medium text-xl">Resume</p>
+        <PersonalDetailsPreview />
+        <EducationPreview />
+        <EmploymentPreview />
+        <CertificatesPreview />
       </div>
     </main>
   );

@@ -1,9 +1,26 @@
 import { ChangeEvent, useState } from "react";
-import { Months } from "./Months";
-import { Years } from "./Years";
+import { Months, MonthsPreview } from "./Months";
+import { Years, YearsPreview } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
-import { CertificateData } from "../types/Certificates";
+import { create } from "zustand";
+
+type State = {
+  certificate: string;
+  description: string;
+};
+
+type Action = {
+  updateCertificate: (certificate: State["certificate"]) => void;
+  updateDescription: (description: State["description"]) => void;
+};
+
+const useStore = create<State & Action>()((set) => ({
+  certificate: "",
+  description: "",
+  updateCertificate: (cert) => set(() => ({ certificate: cert })),
+  updateDescription: (desc) => set(() => ({ description: desc })),
+}));
 
 function Certificates() {
   const [isChecked, setIsChecked] = useState(false);
@@ -12,7 +29,10 @@ function Certificates() {
     setIsChecked(event.target.checked);
   };
 
-  const { register } = useForm<CertificateData>();
+  const { register } = useForm<State>();
+
+  const updateCertificate = useStore((state) => state.updateCertificate);
+  const updateDescription = useStore((state) => state.updateDescription);
 
   return (
     <details
@@ -38,7 +58,11 @@ function Certificates() {
           <span className="font-medium">Certificate</span>
           <input
             type="text"
-            {...register("certificate", { required: true })}
+            {...register("certificate", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateCertificate(e.target.value),
+            })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -60,7 +84,11 @@ function Certificates() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", { required: true })}
+            {...register("description", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateDescription(e.target.value),
+            })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
@@ -68,6 +96,20 @@ function Certificates() {
         </label>
       </form>
     </details>
+  );
+}
+
+export function CertificatesPreview() {
+  const certificate = useStore((state) => state.certificate);
+  const description = useStore((state) => state.description);
+
+  return (
+    <>
+      {certificate}
+      <MonthsPreview />
+      <YearsPreview />
+      {description}
+    </>
   );
 }
 
