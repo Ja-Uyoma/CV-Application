@@ -57,3 +57,9 @@ export function Months(props: { isDisabled: boolean }) {
     </>
   );
 }
+
+export function MonthsPreview() {
+  const month = useStore((state) => state.months);
+
+  return <>{month}</>;
+}
