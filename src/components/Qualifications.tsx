@@ -36,7 +36,7 @@ export function Qualifications() {
 
       <form action="/" method="post" autoComplete="off" className="rounded-lg">
         <label className="block w-full">
-          <span className="font-medium">Qualifications</span>
+          <span className="font-medium">Description</span>
           <textarea
             {...register("qualifications", {
               required: true,
