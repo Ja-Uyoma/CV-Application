@@ -1,11 +1,11 @@
 import { useForm } from "react-hook-form";
 
-type Inputs = {
+type State = {
   description: string;
 };
 
 function Pane(props: { name: string }) {
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<State>();
 
   return (
     <details
