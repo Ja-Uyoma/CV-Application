@@ -51,3 +51,9 @@ export function References() {
     </details>
   );
 }
+
+export function ReferencesPreview() {
+  const description = useStore((state) => state.description);
+
+  return <>{description}</>;
+}
