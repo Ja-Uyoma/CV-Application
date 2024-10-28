@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
@@ -16,6 +17,7 @@ const useStore = create<State & Action>()((set) => ({
 
 export function References() {
   const { register } = useForm<State>();
+  const updateDescription = useStore((state) => state.updateDescription);
 
   return (
     <details
@@ -35,7 +37,11 @@ export function References() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", { required: true })}
+            {...register("description", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
+                updateDescription(e.target.value),
+            })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
