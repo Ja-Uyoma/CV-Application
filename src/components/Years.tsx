@@ -1,8 +1,18 @@
 import { useForm } from "react-hook-form";
+import { create } from "zustand";
 
 type State = {
   year: string;
 };
+
+type Action = {
+  updateYear: (year: State["year"]) => void;
+};
+
+const useStore = create<State & Action>()((set) => ({
+  year: "",
+  updateYear: (year) => set(() => ({ year: year })),
+}));
 
 export function Years(props: { isDisabled: boolean }) {
   const years = [];
