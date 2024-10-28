@@ -30,7 +30,7 @@ function Certificates() {
     setIsChecked(event.target.checked);
   };
 
-  const { register } = useForm<CertificateData>();
+  const { register } = useForm<State>();
 
   const updateCertificate = useStore((state) => state.updateCertificate);
   const updateDescription = useStore((state) => state.updateDescription);
