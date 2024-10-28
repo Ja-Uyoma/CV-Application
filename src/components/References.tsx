@@ -1,8 +1,18 @@
 import { useForm } from "react-hook-form";
+import { create } from "zustand";
 
 type State = {
   description: string;
 };
+
+type Action = {
+  updateDescription: (description: State["description"]) => void;
+};
+
+const useStore = create<State & Action>()((set) => ({
+  description: "",
+  updateDescription: (description) => set(() => ({ description: description })),
+}));
 
 export function References() {
   const { register } = useForm<State>();
