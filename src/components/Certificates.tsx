@@ -32,6 +32,9 @@ function Certificates() {
 
   const { register } = useForm<CertificateData>();
 
+  const updateCertificate = useStore((state) => state.updateCertificate);
+  const updateDescription = useStore((state) => state.updateDescription);
+
   return (
     <details
       name="resume"
@@ -56,7 +59,11 @@ function Certificates() {
           <span className="font-medium">Certificate</span>
           <input
             type="text"
-            {...register("certificate", { required: true })}
+            {...register("certificate", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateCertificate(e.target.value),
+            })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -78,7 +85,11 @@ function Certificates() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", { required: true })}
+            {...register("description", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateDescription(e.target.value),
+            })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
