@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import { EmploymentData } from "../types/Employment";
 import { create } from "zustand";
 import { ChangeEvent } from "react";
 
@@ -33,7 +32,7 @@ const useStore = create<State & Action>((set) => ({
 }));
 
 export function Employment() {
-  const { register } = useForm<EmploymentData>();
+  const { register } = useForm<State>();
 
   const updatePosition = useStore((state) => state.updatePosition);
   const updateEmployer = useStore((state) => state.updateEmployer);
