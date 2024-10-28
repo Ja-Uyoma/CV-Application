@@ -6,6 +6,7 @@ import {
   PersonalDetails,
   PersonalDetailsPreview,
 } from "./components/PersonalDetails";
+import { Qualifications } from "./components/Qualifications";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <div className="flex flex-1 flex-col gap-1">
         <PersonalDetails />
         <Education />
-        <Pane name={"Qualifications"} />
+        <Qualifications />
         <Pane name={"Interests"} />
         <Pane name={"References"} />
         <Pane name={"Skills"} />
