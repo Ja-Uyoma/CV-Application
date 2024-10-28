@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
 interface Inputs {
-  years: string;
+  year: string;
 }
 
 export function Years(props: { isDisabled: boolean }) {
@@ -18,7 +18,7 @@ export function Years(props: { isDisabled: boolean }) {
     <>
       <label className="block w-full">
         <select
-          {...register("years", { required: true })}
+          {...register("year", { required: true })}
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none w-full"
         >
