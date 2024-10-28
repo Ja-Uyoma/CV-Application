@@ -3,21 +3,21 @@ import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
 type State = {
-  description: string;
+  references: string;
 };
 
 type Action = {
-  updateDescription: (description: State["description"]) => void;
+  updateReferences: (description: State["references"]) => void;
 };
 
 const useStore = create<State & Action>()((set) => ({
-  description: "",
-  updateDescription: (description) => set(() => ({ description: description })),
+  references: "",
+  updateReferences: (references) => set(() => ({ references: references })),
 }));
 
 export function References() {
   const { register } = useForm<State>();
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updateReferences = useStore((state) => state.updateReferences);
 
   return (
     <details
@@ -37,10 +37,10 @@ export function References() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", {
+            {...register("references", {
               required: true,
               onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
-                updateDescription(e.target.value),
+                updateReferences(e.target.value),
             })}
             cols={80}
             rows={10}
@@ -53,7 +53,7 @@ export function References() {
 }
 
 export function ReferencesPreview() {
-  const description = useStore((state) => state.description);
+  const references = useStore((state) => state.references);
 
-  return <>{description}</>;
+  return <>{references}</>;
 }
