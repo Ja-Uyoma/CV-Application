@@ -33,12 +33,17 @@ export function Months(props: { isDisabled: boolean }) {
   ];
 
   const { register } = useForm<Inputs>();
+  const updateMonth = useStore((state) => state.updateMonth);
 
   return (
     <>
       <label className="block w-full">
         <select
-          {...register("months", { required: true })}
+          {...register("months", {
+            required: true,
+            onChange: (e: ChangeEvent<HTMLSelectElement>) =>
+              updateMonth(e.target.value),
+          })}
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none w-full"
         >
