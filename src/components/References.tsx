@@ -4,7 +4,7 @@ type State = {
   description: string;
 };
 
-function Pane(props: { name: string }) {
+export function References() {
   const { register } = useForm<State>();
 
   return (
@@ -13,7 +13,7 @@ function Pane(props: { name: string }) {
       className="bg-primary-content rounded-none space-y-2 cursor-pointer pb-3"
     >
       <summary className="list-none my-4 flex items-center justify-between">
-        <span className="inline-block font-bold text-xl">{props.name}</span>
+        <span className="inline-block font-bold text-xl">References</span>
         <button className="inline-block">
           <span className="material-symbols-outlined size-full">
             add_circle
@@ -35,5 +35,3 @@ function Pane(props: { name: string }) {
     </details>
   );
 }
-
-export { Pane };
