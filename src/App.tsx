@@ -9,6 +9,7 @@ import {
 } from "./components/PersonalDetails";
 import { Qualifications } from "./components/Qualifications";
 import { References } from "./components/References";
+import { Skills } from "./components/Skills";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Qualifications />
         <Interests />
         <References />
-        <Pane name={"Skills"} />
+        <Skills />
         <Employment />
         <Certificates />
       </div>
