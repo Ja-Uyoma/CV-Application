@@ -24,7 +24,7 @@ type Action = {
   updateCity: (city: State["city"]) => void;
 };
 
-const useStore = create<State & Action>((set) => ({
+const useStore = create<State & Action>()((set) => ({
   givenName: "",
   familyName: "",
   headline: "",

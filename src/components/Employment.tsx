@@ -18,7 +18,7 @@ type Action = {
   updateDescription: (desc: State["description"]) => void;
 };
 
-const useStore = create<State & Action>((set) => ({
+const useStore = create<State & Action>()((set) => ({
   position: "",
   employer: "",
   startDate: "",

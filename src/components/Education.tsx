@@ -18,7 +18,7 @@ type Action = {
   updateDescription: (description: EducationData["description"]) => void;
 };
 
-const useEducationStore = create<EducationData & Action>((set) => ({
+const useEducationStore = create<EducationData & Action>()((set) => ({
   education: "",
   school: "",
   startDate: "",
