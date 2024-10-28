@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { EducationData } from "../types/Education";
 import { create } from "zustand";
+import { ChangeEvent } from "react";
 
 type Action = {
   updateEducation: (education: EducationData["education"]) => void;
@@ -26,6 +27,14 @@ const useEducationStore = create<EducationData & Action>((set) => ({
 export function Education() {
   const { register } = useForm<EducationData>();
 
+  const updateEducation = useEducationStore((state) => state.updateEducation);
+  const updateSchool = useEducationStore((state) => state.updateSchool);
+  const updateStartDate = useEducationStore((state) => state.updateStartDate);
+  const updateEndDate = useEducationStore((state) => state.updateEndDate);
+  const updateDescription = useEducationStore(
+    (state) => state.updateDescription
+  );
+
   return (
     <details
       name="resume"
@@ -45,7 +54,11 @@ export function Education() {
           <span className="font-medium">Education</span>
           <input
             type="text"
-            {...register("education", { required: true })}
+            {...register("education", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateEducation(e.target.value),
+            })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -55,7 +68,11 @@ export function Education() {
           <span className="font-medium">School</span>
           <input
             type="text"
-            {...register("school", { required: true })}
+            {...register("school", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateSchool(e.target.value),
+            })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -66,7 +83,11 @@ export function Education() {
             <span className="font-medium">Start Date</span>
             <input
               type="date"
-              {...register("startDate", { required: true })}
+              {...register("startDate", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updateStartDate(e.target.value),
+              })}
               className="bg-gray-100 rounded-lg border-none w-full"
             />
           </label>
@@ -75,7 +96,11 @@ export function Education() {
             <span className="font-medium">End Date</span>
             <input
               type="date"
-              {...register("endDate", { required: true })}
+              {...register("endDate", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updateEndDate(e.target.value),
+              })}
               className="bg-gray-100 rounded-lg border-none w-full"
             />
           </label>
@@ -84,7 +109,11 @@ export function Education() {
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
-            {...register("description", { required: true })}
+            {...register("description", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLTextAreaElement>) =>
+                updateDescription(e.target.value),
+            })}
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
