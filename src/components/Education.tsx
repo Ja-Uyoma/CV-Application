@@ -124,7 +124,7 @@ export function Education() {
             cols={80}
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
-          ></textarea>
+          />
         </label>
       </form>
     </details>
