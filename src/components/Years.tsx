@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 
@@ -23,12 +24,17 @@ export function Years(props: { isDisabled: boolean }) {
   }
 
   const { register } = useForm<State>();
+  const updateYear = useStore((state) => state.updateYear);
 
   return (
     <>
       <label className="block w-full">
         <select
-          {...register("year", { required: true })}
+          {...register("year", {
+            required: true,
+            onChange: (e: ChangeEvent<HTMLSelectElement>) =>
+              updateYear(e.target.value),
+          })}
           disabled={props.isDisabled}
           className="rounded-lg bg-gray-100 border-none w-full"
         >
