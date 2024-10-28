@@ -1,7 +1,14 @@
 import { useForm } from "react-hook-form";
-import { EducationData } from "../types/Education";
 import { create } from "zustand";
 import { ChangeEvent } from "react";
+
+type EducationData = {
+  education: string;
+  school: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+};
 
 type Action = {
   updateEducation: (education: EducationData["education"]) => void;
