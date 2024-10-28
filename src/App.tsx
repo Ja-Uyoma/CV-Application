@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Certificates } from "./components/Certificates";
-import { Education } from "./components/Education";
+import { Education, EducationPreview } from "./components/Education";
 import { Employment } from "./components/Employment";
 import { Pane } from "./components/Pane";
 import {
@@ -37,6 +37,7 @@ function App() {
       <div className="flex-1">
         <p className="text-center font-medium text-xl">Resume</p>
         <PersonalDetailsPreview details={details} />
+        <EducationPreview />
       </div>
     </main>
   );
