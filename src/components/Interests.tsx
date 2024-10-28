@@ -51,3 +51,9 @@ export function Interests() {
     </details>
   );
 }
+
+export function InterestsPreview() {
+  const description = useStore((state) => state.description);
+
+  return <>{description}</>;
+}
