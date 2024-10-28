@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Certificates } from "./components/Certificates";
 import { Education, EducationPreview } from "./components/Education";
 import { Employment, EmploymentPreview } from "./components/Employment";
@@ -7,24 +6,12 @@ import {
   PersonalDetails,
   PersonalDetailsPreview,
 } from "./components/PersonalDetails";
-import { PersonalDetailsData } from "./types/PersonalDetails";
 
 function App() {
-  const [details, setDetails] = useState<PersonalDetailsData>({
-    givenName: "",
-    familyName: "",
-    headline: "",
-    emailAddress: "",
-    phoneNumber: "",
-    address: "",
-    postCode: "",
-    city: "",
-  });
-
   return (
     <main className="flex">
       <div className="flex flex-1 flex-col gap-1">
-        <PersonalDetails setDetails={setDetails} />
+        <PersonalDetails />
         <Education />
         <Pane name={"Qualifications"} />
         <Pane name={"Interests"} />

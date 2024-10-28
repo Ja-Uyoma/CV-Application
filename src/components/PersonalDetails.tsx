@@ -1,6 +1,5 @@
+import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { PersonalDetailsData } from "../types/PersonalDetails";
-import { useEffect } from "react";
 import { create } from "zustand";
 
 type State = {
@@ -44,18 +43,17 @@ const useStore = create<State & Action>((set) => ({
   updateCity: (city) => set(() => ({ city: city })),
 }));
 
-function PersonalDetails(props: {
-  setDetails: (details: PersonalDetailsData) => void;
-}) {
-  const { register, watch } = useForm<PersonalDetailsData>();
+function PersonalDetails() {
+  const { register } = useForm<State>();
 
-  useEffect(() => {
-    const { unsubscribe } = watch((value) => {
-      props.setDetails(value as PersonalDetailsData);
-    });
-
-    return () => unsubscribe();
-  }, [watch]);
+  const updateGivenName = useStore((state) => state.updateGivenName);
+  const updateFamilyName = useStore((state) => state.updateFamilyName);
+  const updateHeadline = useStore((state) => state.updateHeadline);
+  const updateEmail = useStore((state) => state.updateEmail);
+  const updatePhoneNumber = useStore((state) => state.updatePhoneNumber);
+  const updateAddress = useStore((state) => state.updateAddress);
+  const updatePostCode = useStore((state) => state.updatePostCode);
+  const updateCity = useStore((state) => state.updateCity);
 
   return (
     <details
@@ -83,7 +81,11 @@ function PersonalDetails(props: {
               <span className="font-medium">Given Name</span>
               <input
                 type="text"
-                {...register("givenName", { required: true })}
+                {...register("givenName", {
+                  required: true,
+                  onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                    updateGivenName(e.target.value),
+                })}
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
@@ -93,7 +95,11 @@ function PersonalDetails(props: {
               <span className="font-medium">Family Name</span>
               <input
                 type="text"
-                {...register("familyName", { required: true })}
+                {...register("familyName", {
+                  required: true,
+                  onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                    updateFamilyName(e.target.value),
+                })}
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
@@ -104,7 +110,11 @@ function PersonalDetails(props: {
             <span className="font-medium">Headline</span>
             <input
               type="text"
-              {...register("headline", { required: true })}
+              {...register("headline", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updateHeadline(e.target.value),
+              })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -116,7 +126,11 @@ function PersonalDetails(props: {
             <span className="font-medium">Email Address</span>
             <input
               type="email"
-              {...register("emailAddress", { required: true })}
+              {...register("emailAddress", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updateEmail(e.target.value),
+              })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -126,7 +140,11 @@ function PersonalDetails(props: {
             <span className="font-medium">Phone Number</span>
             <input
               type="text"
-              {...register("phoneNumber", { required: true })}
+              {...register("phoneNumber", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updatePhoneNumber(e.target.value),
+              })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -137,7 +155,11 @@ function PersonalDetails(props: {
           <span className="font-medium">Address</span>
           <input
             type="text"
-            {...register("address", { required: true })}
+            {...register("address", {
+              required: true,
+              onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                updateAddress(e.target.value),
+            })}
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
@@ -148,7 +170,11 @@ function PersonalDetails(props: {
             <span className="font-medium">Post code</span>
             <input
               type="text"
-              {...register("postCode", { required: true })}
+              {...register("postCode", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updatePostCode(e.target.value),
+              })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
@@ -158,7 +184,11 @@ function PersonalDetails(props: {
             <span className="font-medium">City</span>
             <input
               type="text"
-              {...register("city", { required: true })}
+              {...register("city", {
+                required: true,
+                onChange: (e: ChangeEvent<HTMLInputElement>) =>
+                  updateCity(e.target.value),
+              })}
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
