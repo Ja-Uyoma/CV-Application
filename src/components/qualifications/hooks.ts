@@ -1,15 +1,10 @@
 import { create } from "zustand";
+import { QualificationsAction, QualificationsState } from "./types";
 
-export type State = {
-  qualifications: string;
-};
-
-type Action = {
-  updateQualifications: (description: State["qualifications"]) => void;
-};
-
-export const useStore = create<State & Action>()((set) => ({
-  qualifications: "",
-  updateQualifications: (qualifications) =>
-    set(() => ({ qualifications: qualifications })),
-}));
+export const useStore = create<QualificationsState & QualificationsAction>()(
+  (set) => ({
+    qualifications: "",
+    updateQualifications: (qualifications) =>
+      set(() => ({ qualifications: qualifications })),
+  })
+);
