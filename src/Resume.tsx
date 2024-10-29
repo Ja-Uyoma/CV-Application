@@ -7,23 +7,27 @@ import { Qualifications } from "./components/Qualifications";
 import { References } from "./components/References";
 import { Skills } from "./components/Skills";
 
+function Divider() {
+  return <hr className="w-11/12 mx-auto" />;
+}
+
 export function Resume() {
   return (
     <div className="flex flex-1 flex-col gap-1 bg-white">
       <PersonalDetails />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <Education />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <Qualifications />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <Interests />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <References />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <Skills />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <Employment />
-      <hr className="w-11/12 mx-auto" />
+      <Divider />
       <Certificates />
     </div>
   );
