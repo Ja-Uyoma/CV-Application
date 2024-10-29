@@ -1,5 +1,5 @@
 import { useStore } from "./hooks";
-import { MonthsPreview } from "./months";
+import { MonthsPreview } from "./months/months";
 import { YearsPreview } from "./years";
 
 export function CertificatesPreview() {
