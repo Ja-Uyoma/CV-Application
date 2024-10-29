@@ -1,14 +1,7 @@
 import { create } from "zustand";
+import { ReferencesAction, ReferencesState } from "./types";
 
-export type State = {
-  references: string;
-};
-
-type Action = {
-  updateReferences: (description: State["references"]) => void;
-};
-
-export const useStore = create<State & Action>()((set) => ({
+export const useStore = create<ReferencesState & ReferencesAction>()((set) => ({
   references: "",
   updateReferences: (references) => set(() => ({ references: references })),
 }));

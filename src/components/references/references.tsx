@@ -2,10 +2,11 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { State, useStore } from "./hooks";
+import { useStore } from "./hooks";
+import { ReferencesState } from "./types";
 
 export function References() {
-  const { register } = useForm<State>();
+  const { register } = useForm<ReferencesState>();
   const updateReferences = useStore((state) => state.updateReferences);
 
   return (
