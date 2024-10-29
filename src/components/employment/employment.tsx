@@ -2,10 +2,11 @@ import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { State, useStore } from "./hooks";
+import { useStore } from "./hooks";
+import { EmploymentState } from "./types";
 
 export function Employment() {
-  const { register } = useForm<State>();
+  const { register } = useForm<EmploymentState>();
 
   const updatePosition = useStore((state) => state.updatePosition);
   const updateEmployer = useStore((state) => state.updateEmployer);
