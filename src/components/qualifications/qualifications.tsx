@@ -2,12 +2,14 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { useStore } from "./hooks";
+import { useQualificationsStore } from "./hooks";
 import { QualificationsState } from "./types";
 
 export function Qualifications() {
   const { register } = useForm<QualificationsState>();
-  const updateQualifications = useStore((state) => state.updateQualifications);
+  const updateQualifications = useQualificationsStore(
+    (state) => state.updateQualifications
+  );
 
   return (
     <Details name="resume">

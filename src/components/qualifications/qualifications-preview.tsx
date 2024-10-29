@@ -1,7 +1,9 @@
-import { useStore } from "./hooks";
+import { useQualificationsStore } from "./hooks";
 
 export function QualificationsPreview() {
-  const qualifications = useStore((state) => state.qualifications);
+  const qualifications = useQualificationsStore(
+    (state) => state.qualifications
+  );
 
   return <>{qualifications}</>;
 }
