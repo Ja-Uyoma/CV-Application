@@ -16,7 +16,7 @@ type Action = {
   updateDescription: (description: State["description"]) => void;
 };
 
-export const useEducationStore = create<State & Action>()((set) => ({
+export const useStore = create<State & Action>()((set) => ({
   education: "",
   school: "",
   startDate: "",
