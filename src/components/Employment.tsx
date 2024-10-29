@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { ChangeEvent } from "react";
+import { Summary } from "./Summary";
 
 type State = {
   position: string;
@@ -45,14 +46,7 @@ export function Employment() {
       name="resume"
       className="rounded-none space-y-2 cursor-pointer pb-3 w-11/12 mx-auto"
     >
-      <summary className="list-none my-4 flex items-center justify-between">
-        <span className="inline-block font-bold text-xl">Employment</span>
-        <button className="inline-block">
-          <span className="material-symbols-outlined size-full">
-            add_circle
-          </span>
-        </button>
-      </summary>
+      <Summary title="Employment" />
 
       <form action="/" method="post" className="rounded-lg space-y-2">
         <label className="block w-full">
