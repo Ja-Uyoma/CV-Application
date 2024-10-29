@@ -1,11 +1,11 @@
-import { useStore } from "./hooks";
+import { useEducationStore } from "./hooks";
 
 export function EducationPreview() {
-  const education = useStore((state) => state.education);
-  const school = useStore((state) => state.school);
-  const startDate = useStore((state) => state.startDate);
-  const endDate = useStore((state) => state.endDate);
-  const description = useStore((state) => state.description);
+  const education = useEducationStore((state) => state.education);
+  const school = useEducationStore((state) => state.school);
+  const startDate = useEducationStore((state) => state.startDate);
+  const endDate = useEducationStore((state) => state.endDate);
+  const description = useEducationStore((state) => state.description);
 
   return (
     <>

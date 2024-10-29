@@ -2,17 +2,19 @@ import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { useStore } from "./hooks";
+import { useEducationStore } from "./hooks";
 import { EducationState } from "./types";
 
 export function Education() {
   const { register } = useForm<EducationState>();
 
-  const updateEducation = useStore((state) => state.updateEducation);
-  const updateSchool = useStore((state) => state.updateSchool);
-  const updateStartDate = useStore((state) => state.updateStartDate);
-  const updateEndDate = useStore((state) => state.updateEndDate);
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updateEducation = useEducationStore((state) => state.updateEducation);
+  const updateSchool = useEducationStore((state) => state.updateSchool);
+  const updateStartDate = useEducationStore((state) => state.updateStartDate);
+  const updateEndDate = useEducationStore((state) => state.updateEndDate);
+  const updateDescription = useEducationStore(
+    (state) => state.updateDescription
+  );
 
   return (
     <Details name="resume">
