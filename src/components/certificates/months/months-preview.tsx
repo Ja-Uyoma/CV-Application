@@ -1,7 +1,7 @@
-import { useStore } from "./hooks";
+import { useMonthStore } from "./hooks";
 
 export function MonthsPreview() {
-  const month = useStore((state) => state.month);
+  const month = useMonthStore((state) => state.month);
 
   return <>{month}</>;
 }
