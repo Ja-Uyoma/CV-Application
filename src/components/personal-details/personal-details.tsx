@@ -2,10 +2,11 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { State, useStore } from "./hooks";
+import { useStore } from "./hooks";
+import { PersonalDetailsState } from "./types";
 
 function PersonalDetails() {
-  const { register } = useForm<State>();
+  const { register } = useForm<PersonalDetailsState>();
 
   const updateGivenName = useStore((state) => state.updateGivenName);
   const updateFamilyName = useStore((state) => state.updateFamilyName);
