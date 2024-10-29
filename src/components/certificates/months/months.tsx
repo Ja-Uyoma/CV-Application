@@ -1,14 +1,7 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
-
-type State = {
-  month: string;
-};
-
-type Action = {
-  updateMonth: (month: State["month"]) => void;
-};
+import { State, Action } from "./types";
 
 const useStore = create<State & Action>()((set) => ({
   month: "",
