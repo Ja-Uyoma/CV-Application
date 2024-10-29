@@ -2,7 +2,7 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { Summary } from "./Summary";
-import { Details } from "./Details";
+import { Details } from "./details/details";
 
 type State = {
   references: string;
