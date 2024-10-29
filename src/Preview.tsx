@@ -1,4 +1,4 @@
-import { CertificatesPreview } from "./components/certificates/certificates";
+import { CertificatesPreview } from "./components/certificates/certificates-preview";
 import { EducationPreview } from "./components/education/education-preview";
 import { EmploymentPreview } from "./components/employment/employment-preview";
 import { InterestsPreview } from "./components/interests/interests-preview";
