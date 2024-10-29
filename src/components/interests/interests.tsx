@@ -30,9 +30,3 @@ export function Interests() {
     </Details>
   );
 }
-
-export function InterestsPreview() {
-  const interests = useStore((state) => state.interests);
-
-  return <>{interests}</>;
-}
