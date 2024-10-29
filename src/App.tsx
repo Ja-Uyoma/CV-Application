@@ -24,7 +24,7 @@ function App() {
 
 function Resume() {
   return (
-    <div className="flex flex-1 flex-col gap-1">
+    <div className="flex flex-1 flex-col gap-1 bg-white">
       <PersonalDetails />
       <hr />
       <Education />
