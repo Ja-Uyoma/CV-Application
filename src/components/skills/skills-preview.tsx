@@ -1,7 +1,7 @@
-import { useStore } from "./hooks";
+import { useSkillsStore } from "./hooks";
 
 export function SkillsPreview() {
-  const skills = useStore((state) => state.skills);
+  const skills = useSkillsStore((state) => state.skills);
 
   return <>{skills}</>;
 }
