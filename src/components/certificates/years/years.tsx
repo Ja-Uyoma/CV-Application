@@ -36,9 +36,3 @@ export function Years(props: { isDisabled: boolean }) {
     </>
   );
 }
-
-export function YearsPreview() {
-  const year = useYearsStore((state) => state.year);
-
-  return <>{year}</>;
-}
