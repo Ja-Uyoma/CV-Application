@@ -1,7 +1,7 @@
 import { Certificates } from "./components/Certificates";
 import { Education } from "./components/education/education";
 import { Employment } from "./components/Employment";
-import { Interests } from "./components/Interests";
+import { Interests } from "./components/interests/interests";
 import { PersonalDetails } from "./components/personal-details/personal-details";
 import { Qualifications } from "./components/qualifications/qualifications";
 import { References } from "./components/References";
