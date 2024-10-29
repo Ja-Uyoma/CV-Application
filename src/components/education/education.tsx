@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { ChangeEvent } from "react";
-import { Summary } from "./details/summary";
-import { Details } from "./details/details";
+import { Summary } from "../details/summary";
+import { Details } from "../details/details";
 
 type EducationData = {
   education: string;
