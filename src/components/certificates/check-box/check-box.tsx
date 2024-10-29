@@ -1,15 +1,12 @@
 import { ChangeEventHandler } from "react";
 import { useForm } from "react-hook-form";
-
-interface Inputs {
-  present: string;
-}
+import { CheckBoxState } from "./types";
 
 export function CheckBox(props: {
   isChecked: boolean;
   onChangeHandler: ChangeEventHandler<HTMLInputElement>;
 }) {
-  const { register } = useForm<Inputs>();
+  const { register } = useForm<CheckBoxState>();
 
   return (
     <>
