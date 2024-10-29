@@ -4,8 +4,8 @@ import { Years } from "./years/years";
 import { CheckBox } from "./check-box";
 import { useForm } from "react-hook-form";
 import { Details } from "../details/details";
-import { State } from "./types";
-import { useStore } from "./hooks";
+import { CertificateState } from "./types";
+import { useCertificateStore } from "./hooks";
 import { Summary } from "../details/summary";
 
 function Certificates() {
@@ -15,10 +15,14 @@ function Certificates() {
     setIsChecked(event.target.checked);
   };
 
-  const { register } = useForm<State>();
+  const { register } = useForm<CertificateState>();
 
-  const updateCertificate = useStore((state) => state.updateCertificate);
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updateCertificate = useCertificateStore(
+    (state) => state.updateCertificate
+  );
+  const updateDescription = useCertificateStore(
+    (state) => state.updateDescription
+  );
 
   return (
     <Details name="resume">
