@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { EducationAction, EducationState } from "./types";
 
-export const useStore = create<EducationState & EducationAction>()((set) => ({
+const useStore = create<EducationState & EducationAction>()((set) => ({
   education: "",
   school: "",
   startDate: "",
@@ -13,3 +13,5 @@ export const useStore = create<EducationState & EducationAction>()((set) => ({
   updateEndDate: (endDate) => set(() => ({ endDate: endDate })),
   updateDescription: (description) => set(() => ({ description: description })),
 }));
+
+export { useStore as useEducationStore };
