@@ -2,20 +2,22 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { useStore } from "./hooks";
+import { usePersonalStore } from "./hooks";
 import { PersonalDetailsState } from "./types";
 
 function PersonalDetails() {
   const { register } = useForm<PersonalDetailsState>();
 
-  const updateGivenName = useStore((state) => state.updateGivenName);
-  const updateFamilyName = useStore((state) => state.updateFamilyName);
-  const updateHeadline = useStore((state) => state.updateHeadline);
-  const updateEmail = useStore((state) => state.updateEmail);
-  const updatePhoneNumber = useStore((state) => state.updatePhoneNumber);
-  const updateAddress = useStore((state) => state.updateAddress);
-  const updatePostCode = useStore((state) => state.updatePostCode);
-  const updateCity = useStore((state) => state.updateCity);
+  const updateGivenName = usePersonalStore((state) => state.updateGivenName);
+  const updateFamilyName = usePersonalStore((state) => state.updateFamilyName);
+  const updateHeadline = usePersonalStore((state) => state.updateHeadline);
+  const updateEmail = usePersonalStore((state) => state.updateEmail);
+  const updatePhoneNumber = usePersonalStore(
+    (state) => state.updatePhoneNumber
+  );
+  const updateAddress = usePersonalStore((state) => state.updateAddress);
+  const updatePostCode = usePersonalStore((state) => state.updatePostCode);
+  const updateCity = usePersonalStore((state) => state.updateCity);
 
   return (
     <Details name="resume">
