@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { MonthState } from "./types";
-import { useStore } from "./hooks";
+import { useMonthStore } from "./hooks";
 
 export function Months(props: { isDisabled: boolean }) {
   const months = [
@@ -21,7 +21,7 @@ export function Months(props: { isDisabled: boolean }) {
   ];
 
   const { register } = useForm<MonthState>();
-  const updateMonth = useStore((state) => state.updateMonth);
+  const updateMonth = useMonthStore((state) => state.updateMonth);
 
   return (
     <>
