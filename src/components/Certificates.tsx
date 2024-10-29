@@ -4,7 +4,7 @@ import { Years, YearsPreview } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
-import { Details } from "./Details";
+import { Details } from "./details/details";
 
 type State = {
   certificate: string;
