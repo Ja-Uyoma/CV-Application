@@ -1,14 +1,7 @@
 import { create } from "zustand";
+import { SkillsAction, SkillsState } from "./types";
 
-export type State = {
-  skills: string;
-};
-
-type Action = {
-  updateSkills: (description: State["skills"]) => void;
-};
-
-export const useStore = create<State & Action>()((set) => ({
+export const useStore = create<SkillsState & SkillsAction>()((set) => ({
   skills: "",
   updateSkills: (description) => set(() => ({ skills: description })),
 }));
