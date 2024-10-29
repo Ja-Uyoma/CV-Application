@@ -2,7 +2,7 @@ import { CertificatesPreview } from "./components/Certificates";
 import { EducationPreview } from "./components/Education";
 import { EmploymentPreview } from "./components/Employment";
 import { InterestsPreview } from "./components/Interests";
-import { PersonalDetailsPreview } from "./components/personal-details/personal-details";
+import { PersonalDetailsPreview } from "./components/personal-details/personal-details-preview";
 import { QualificationsPreview } from "./components/Qualifications";
 import { ReferencesPreview } from "./components/References";
 import { SkillsPreview } from "./components/Skills";
