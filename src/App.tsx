@@ -18,12 +18,19 @@ function App() {
     <main className="flex">
       <div className="flex flex-1 flex-col gap-1">
         <PersonalDetails />
+        <hr />
         <Education />
+        <hr />
         <Qualifications />
+        <hr />
         <Interests />
+        <hr />
         <References />
+        <hr />
         <Skills />
+        <hr />
         <Employment />
+        <hr />
         <Certificates />
       </div>
 
