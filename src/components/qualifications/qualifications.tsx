@@ -30,9 +30,3 @@ export function Qualifications() {
     </Details>
   );
 }
-
-export function QualificationsPreview() {
-  const qualifications = useStore((state) => state.qualifications);
-
-  return <>{qualifications}</>;
-}
