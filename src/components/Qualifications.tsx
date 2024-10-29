@@ -2,6 +2,7 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { Summary } from "./Summary";
+import { Details } from "./Details";
 
 type State = {
   qualifications: string;
@@ -22,10 +23,7 @@ export function Qualifications() {
   const updateQualifications = useStore((state) => state.updateQualifications);
 
   return (
-    <details
-      name="resume"
-      className="rounded-none space-y-2 cursor-pointer pb-3 w-11/12 mx-auto"
-    >
+    <Details name="resume">
       <Summary title="Qualifications" />
 
       <form action="/" method="post" autoComplete="off" className="rounded-lg">
@@ -43,7 +41,7 @@ export function Qualifications() {
           />
         </label>
       </form>
-    </details>
+    </Details>
   );
 }
 

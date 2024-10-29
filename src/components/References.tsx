@@ -2,6 +2,7 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { Summary } from "./Summary";
+import { Details } from "./Details";
 
 type State = {
   references: string;
@@ -21,10 +22,7 @@ export function References() {
   const updateReferences = useStore((state) => state.updateReferences);
 
   return (
-    <details
-      name="resume"
-      className="rounded-none space-y-2 cursor-pointer pb-3 w-11/12 mx-auto"
-    >
+    <Details name="resume">
       <Summary title="References" />
 
       <form action="/" method="post" autoComplete="off" className="rounded-lg">
@@ -42,7 +40,7 @@ export function References() {
           />
         </label>
       </form>
-    </details>
+    </Details>
   );
 }
 
