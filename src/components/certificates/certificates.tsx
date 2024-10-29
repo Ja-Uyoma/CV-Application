@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { Details } from "../details/details";
 import { State } from "./types";
 import { useStore } from "./hooks";
+import { Summary } from "../details/summary";
 
 function Certificates() {
   const [isChecked, setIsChecked] = useState(false);
@@ -21,14 +22,7 @@ function Certificates() {
 
   return (
     <Details name="resume">
-      <summary className="list-none my-4 flex items-center justify-between">
-        <span className="inline-block font-bold text-xl">Certificates</span>
-        <button className="inline-block">
-          <span className="material-symbols-outlined size-full">
-            add_circle
-          </span>
-        </button>
-      </summary>
+      <Summary title="Certificates" />
 
       <form
         action="/"
