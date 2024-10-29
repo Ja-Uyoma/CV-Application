@@ -1,12 +1,7 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { create } from "zustand";
-import { YearsAction, YearsState } from "./types";
-
-const useStore = create<YearsState & YearsAction>()((set) => ({
-  year: "",
-  updateYear: (year) => set(() => ({ year: year })),
-}));
+import { YearsState } from "./types";
+import { useYearsStore } from "./hooks";
 
 export function Years(props: { isDisabled: boolean }) {
   const years = [];
@@ -17,7 +12,7 @@ export function Years(props: { isDisabled: boolean }) {
   }
 
   const { register } = useForm<YearsState>();
-  const updateYear = useStore((state) => state.updateYear);
+  const updateYear = useYearsStore((state) => state.updateYear);
 
   return (
     <>
@@ -43,7 +38,7 @@ export function Years(props: { isDisabled: boolean }) {
 }
 
 export function YearsPreview() {
-  const year = useStore((state) => state.year);
+  const year = useYearsStore((state) => state.year);
 
   return <>{year}</>;
 }
