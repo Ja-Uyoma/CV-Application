@@ -1,9 +1,11 @@
 import { create } from "zustand";
-import { Action, State } from "./types";
+import { CertificateAction, CertificateState } from "./types";
 
-export const useStore = create<State & Action>()((set) => ({
+const useStore = create<CertificateState & CertificateAction>()((set) => ({
   certificate: "",
   description: "",
   updateCertificate: (cert) => set(() => ({ certificate: cert })),
   updateDescription: (desc) => set(() => ({ description: desc })),
 }));
+
+export { useStore as useCertificateStore };

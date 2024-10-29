@@ -1,10 +1,10 @@
-import { useStore } from "./hooks";
+import { useCertificateStore } from "./hooks";
 import { MonthsPreview } from "./months/months-preview";
 import { YearsPreview } from "./years/years-preview";
 
 export function CertificatesPreview() {
-  const certificate = useStore((state) => state.certificate);
-  const description = useStore((state) => state.description);
+  const certificate = useCertificateStore((state) => state.certificate);
+  const description = useCertificateStore((state) => state.description);
 
   return (
     <>
