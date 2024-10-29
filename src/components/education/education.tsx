@@ -2,10 +2,11 @@ import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { State, useStore } from "./hooks";
+import { useStore } from "./hooks";
+import { EducationState } from "./types";
 
 export function Education() {
-  const { register } = useForm<State>();
+  const { register } = useForm<EducationState>();
 
   const updateEducation = useStore((state) => state.updateEducation);
   const updateSchool = useStore((state) => state.updateSchool);
