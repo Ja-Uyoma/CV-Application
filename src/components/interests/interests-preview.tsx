@@ -1,7 +1,7 @@
-import { useStore } from "./hooks";
+import { useInterestsStore } from "./hooks";
 
 export function InterestsPreview() {
-  const interests = useStore((state) => state.interests);
+  const interests = useInterestsStore((state) => state.interests);
 
   return <>{interests}</>;
 }
