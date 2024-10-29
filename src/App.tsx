@@ -16,36 +16,47 @@ import { Skills, SkillsPreview } from "./components/Skills";
 function App() {
   return (
     <main className="flex">
-      <div className="flex flex-1 flex-col gap-1">
-        <PersonalDetails />
-        <hr />
-        <Education />
-        <hr />
-        <Qualifications />
-        <hr />
-        <Interests />
-        <hr />
-        <References />
-        <hr />
-        <Skills />
-        <hr />
-        <Employment />
-        <hr />
-        <Certificates />
-      </div>
-
-      <div className="flex-1">
-        <p className="text-center font-medium text-xl">Resume</p>
-        <PersonalDetailsPreview />
-        <EducationPreview />
-        <QualificationsPreview />
-        <InterestsPreview />
-        <ReferencesPreview />
-        <SkillsPreview />
-        <EmploymentPreview />
-        <CertificatesPreview />
-      </div>
+      <Resume />
+      <Preview />
     </main>
+  );
+}
+
+function Resume() {
+  return (
+    <div className="flex flex-1 flex-col gap-1">
+      <PersonalDetails />
+      <hr />
+      <Education />
+      <hr />
+      <Qualifications />
+      <hr />
+      <Interests />
+      <hr />
+      <References />
+      <hr />
+      <Skills />
+      <hr />
+      <Employment />
+      <hr />
+      <Certificates />
+    </div>
+  );
+}
+
+function Preview() {
+  return (
+    <div className="flex-1">
+      <p className="text-center font-medium text-xl">Resume</p>
+      <PersonalDetailsPreview />
+      <EducationPreview />
+      <QualificationsPreview />
+      <InterestsPreview />
+      <ReferencesPreview />
+      <SkillsPreview />
+      <EmploymentPreview />
+      <CertificatesPreview />
+    </div>
   );
 }
 
