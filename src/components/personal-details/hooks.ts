@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { PersonalDetailsAction, PersonalDetailsState } from "./types";
 
-export const useStore = create<PersonalDetailsState & PersonalDetailsAction>()(
+const useStore = create<PersonalDetailsState & PersonalDetailsAction>()(
   (set) => ({
     givenName: "",
     familyName: "",
@@ -22,3 +22,5 @@ export const useStore = create<PersonalDetailsState & PersonalDetailsAction>()(
     updateCity: (city) => set(() => ({ city: city })),
   })
 );
+
+export { useStore as usePersonalStore };

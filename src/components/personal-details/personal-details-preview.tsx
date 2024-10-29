@@ -1,14 +1,14 @@
-import { useStore } from "./hooks";
+import { usePersonalStore } from "./hooks";
 
 export function PersonalDetailsPreview() {
-  const givenName = useStore((state) => state.givenName);
-  const familyName = useStore((state) => state.familyName);
-  const headline = useStore((state) => state.headline);
-  const emailAddress = useStore((state) => state.emailAddress);
-  const phoneNumber = useStore((state) => state.phoneNumber);
-  const address = useStore((state) => state.address);
-  const postCode = useStore((state) => state.postCode);
-  const city = useStore((state) => state.city);
+  const givenName = usePersonalStore((state) => state.givenName);
+  const familyName = usePersonalStore((state) => state.familyName);
+  const headline = usePersonalStore((state) => state.headline);
+  const emailAddress = usePersonalStore((state) => state.emailAddress);
+  const phoneNumber = usePersonalStore((state) => state.phoneNumber);
+  const address = usePersonalStore((state) => state.address);
+  const postCode = usePersonalStore((state) => state.postCode);
+  const city = usePersonalStore((state) => state.city);
 
   return (
     <>
