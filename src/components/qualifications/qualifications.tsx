@@ -1,22 +1,8 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { create } from "zustand";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-
-type State = {
-  qualifications: string;
-};
-
-type Action = {
-  updateQualifications: (description: State["qualifications"]) => void;
-};
-
-const useStore = create<State & Action>()((set) => ({
-  qualifications: "",
-  updateQualifications: (qualifications) =>
-    set(() => ({ qualifications: qualifications })),
-}));
+import { State, useStore } from "./hooks";
 
 export function Qualifications() {
   const { register } = useForm<State>();
