@@ -4,7 +4,7 @@ import { EmploymentPreview } from "./components/Employment";
 import { InterestsPreview } from "./components/interests/interests-preview";
 import { PersonalDetailsPreview } from "./components/personal-details/personal-details-preview";
 import { QualificationsPreview } from "./components/qualifications/qualifications-preview";
-import { ReferencesPreview } from "./components/References";
+import { ReferencesPreview } from "./components/references/references-preview";
 import { SkillsPreview } from "./components/Skills";
 
 export function Preview() {
