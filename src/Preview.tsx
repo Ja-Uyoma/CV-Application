@@ -1,5 +1,5 @@
 import { CertificatesPreview } from "./components/Certificates";
-import { EducationPreview } from "./components/education/education";
+import { EducationPreview } from "./components/education/education-preview";
 import { EmploymentPreview } from "./components/Employment";
 import { InterestsPreview } from "./components/Interests";
 import { PersonalDetailsPreview } from "./components/personal-details/personal-details-preview";
