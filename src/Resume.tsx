@@ -4,7 +4,7 @@ import { Employment } from "./components/Employment";
 import { Interests } from "./components/interests/interests";
 import { PersonalDetails } from "./components/personal-details/personal-details";
 import { Qualifications } from "./components/qualifications/qualifications";
-import { References } from "./components/References";
+import { References } from "./components/references/references";
 import { Skills } from "./components/Skills";
 
 function Divider() {
