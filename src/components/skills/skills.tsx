@@ -30,9 +30,3 @@ export function Skills() {
     </Details>
   );
 }
-
-export function SkillsPreview() {
-  const skills = useStore((state) => state.skills);
-
-  return <>{skills}</>;
-}
