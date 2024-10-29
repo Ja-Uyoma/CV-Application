@@ -1,22 +1,7 @@
 import { create } from "zustand";
+import { EducationAction, EducationState } from "./types";
 
-export type State = {
-  education: string;
-  school: string;
-  startDate: string;
-  endDate: string;
-  description: string;
-};
-
-type Action = {
-  updateEducation: (education: State["education"]) => void;
-  updateSchool: (school: State["school"]) => void;
-  updateStartDate: (startDate: State["startDate"]) => void;
-  updateEndDate: (endDate: State["endDate"]) => void;
-  updateDescription: (description: State["description"]) => void;
-};
-
-export const useStore = create<State & Action>()((set) => ({
+export const useStore = create<EducationState & EducationAction>()((set) => ({
   education: "",
   school: "",
   startDate: "",
