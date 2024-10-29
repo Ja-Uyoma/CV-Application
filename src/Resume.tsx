@@ -5,7 +5,7 @@ import { Interests } from "./components/interests/interests";
 import { PersonalDetails } from "./components/personal-details/personal-details";
 import { Qualifications } from "./components/qualifications/qualifications";
 import { References } from "./components/references/references";
-import { Skills } from "./components/Skills";
+import { Skills } from "./components/skills/skills";
 
 function Divider() {
   return <hr className="w-11/12 mx-auto" />;
