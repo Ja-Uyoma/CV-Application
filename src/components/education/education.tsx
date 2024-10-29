@@ -2,10 +2,10 @@ import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { EducationData, useEducationStore } from "./hooks";
+import { State, useEducationStore } from "./hooks";
 
 export function Education() {
-  const { register } = useForm<EducationData>();
+  const { register } = useForm<State>();
 
   const updateEducation = useEducationStore((state) => state.updateEducation);
   const updateSchool = useEducationStore((state) => state.updateSchool);

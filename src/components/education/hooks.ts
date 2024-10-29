@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export type EducationData = {
+export type State = {
   education: string;
   school: string;
   startDate: string;
@@ -9,14 +9,14 @@ export type EducationData = {
 };
 
 type Action = {
-  updateEducation: (education: EducationData["education"]) => void;
-  updateSchool: (school: EducationData["school"]) => void;
-  updateStartDate: (startDate: EducationData["startDate"]) => void;
-  updateEndDate: (endDate: EducationData["endDate"]) => void;
-  updateDescription: (description: EducationData["description"]) => void;
+  updateEducation: (education: State["education"]) => void;
+  updateSchool: (school: State["school"]) => void;
+  updateStartDate: (startDate: State["startDate"]) => void;
+  updateEndDate: (endDate: State["endDate"]) => void;
+  updateDescription: (description: State["description"]) => void;
 };
 
-export const useEducationStore = create<EducationData & Action>()((set) => ({
+export const useEducationStore = create<State & Action>()((set) => ({
   education: "",
   school: "",
   startDate: "",
