@@ -30,9 +30,3 @@ export function References() {
     </Details>
   );
 }
-
-export function ReferencesPreview() {
-  const references = useStore((state) => state.references);
-
-  return <>{references}</>;
-}
