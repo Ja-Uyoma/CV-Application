@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
-import { Summary } from "./Summary";
+import { Summary } from "./details/summary";
 import { Details } from "./details/details";
 
 type State = {
