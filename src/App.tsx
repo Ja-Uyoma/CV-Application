@@ -26,19 +26,19 @@ function Resume() {
   return (
     <div className="flex flex-1 flex-col gap-1 bg-white">
       <PersonalDetails />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <Education />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <Qualifications />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <Interests />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <References />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <Skills />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <Employment />
-      <hr />
+      <hr className="w-11/12 mx-auto" />
       <Certificates />
     </div>
   );
