@@ -2,17 +2,19 @@ import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { useStore } from "./hooks";
+import { useEmploymentStore } from "./hooks";
 import { EmploymentState } from "./types";
 
 export function Employment() {
   const { register } = useForm<EmploymentState>();
 
-  const updatePosition = useStore((state) => state.updatePosition);
-  const updateEmployer = useStore((state) => state.updateEmployer);
-  const updateStartDate = useStore((state) => state.updateStartDate);
-  const updateEndDate = useStore((state) => state.updateEndDate);
-  const updateDescription = useStore((state) => state.updateDescription);
+  const updatePosition = useEmploymentStore((state) => state.updatePosition);
+  const updateEmployer = useEmploymentStore((state) => state.updateEmployer);
+  const updateStartDate = useEmploymentStore((state) => state.updateStartDate);
+  const updateEndDate = useEmploymentStore((state) => state.updateEndDate);
+  const updateDescription = useEmploymentStore(
+    (state) => state.updateDescription
+  );
 
   return (
     <Details name="resume">

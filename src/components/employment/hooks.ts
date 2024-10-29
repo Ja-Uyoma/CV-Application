@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { EmploymentAction, EmploymentState } from "./types";
 
-export const useStore = create<EmploymentState & EmploymentAction>()((set) => ({
+const useStore = create<EmploymentState & EmploymentAction>()((set) => ({
   position: "",
   employer: "",
   startDate: "",
@@ -13,3 +13,5 @@ export const useStore = create<EmploymentState & EmploymentAction>()((set) => ({
   updateEndDate: (edate) => set(() => ({ endDate: edate })),
   updateDescription: (desc) => set(() => ({ description: desc })),
 }));
+
+export { useStore as useEmploymentStore };
