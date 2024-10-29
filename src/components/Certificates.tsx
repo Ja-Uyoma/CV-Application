@@ -4,6 +4,7 @@ import { Years, YearsPreview } from "./Years";
 import { CheckBox } from "./CheckBox";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
+import { Details } from "./Details";
 
 type State = {
   certificate: string;
@@ -35,10 +36,7 @@ function Certificates() {
   const updateDescription = useStore((state) => state.updateDescription);
 
   return (
-    <details
-      name="resume"
-      className="rounded-none space-y-2 cursor-pointer pb-3 w-11/12 mx-auto"
-    >
+    <Details name="resume">
       <summary className="list-none my-4 flex items-center justify-between">
         <span className="inline-block font-bold text-xl">Certificates</span>
         <button className="inline-block">
@@ -95,7 +93,7 @@ function Certificates() {
           />
         </label>
       </form>
-    </details>
+    </Details>
   );
 }
 

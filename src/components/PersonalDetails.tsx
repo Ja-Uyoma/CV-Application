@@ -2,6 +2,7 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { Summary } from "./Summary";
+import { Details } from "./Details";
 
 type State = {
   givenName: string;
@@ -57,10 +58,7 @@ function PersonalDetails() {
   const updateCity = useStore((state) => state.updateCity);
 
   return (
-    <details
-      name="resume"
-      className="rounded-none space-y-2 cursor-pointer pb-3 w-11/12 mx-auto"
-    >
+    <Details name="resume">
       <Summary title="Personal Details" />
 
       <form
@@ -189,7 +187,7 @@ function PersonalDetails() {
           </label>
         </div>
       </form>
-    </details>
+    </Details>
   );
 }
 

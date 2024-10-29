@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { create } from "zustand";
 import { ChangeEvent } from "react";
 import { Summary } from "./Summary";
+import { Details } from "./Details";
 
 type State = {
   position: string;
@@ -42,10 +43,7 @@ export function Employment() {
   const updateDescription = useStore((state) => state.updateDescription);
 
   return (
-    <details
-      name="resume"
-      className="rounded-none space-y-2 cursor-pointer pb-3 w-11/12 mx-auto"
-    >
+    <Details name="resume">
       <Summary title="Employment" />
 
       <form action="/" method="post" className="rounded-lg space-y-2">
@@ -121,7 +119,7 @@ export function Employment() {
 
         {/*  */}
       </form>
-    </details>
+    </Details>
   );
 }
 
