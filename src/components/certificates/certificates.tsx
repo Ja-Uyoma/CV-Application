@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
-import { Months, MonthsPreview } from "./months";
-import { Years, YearsPreview } from "./years";
+import { Months } from "./months";
+import { Years } from "./years";
 import { CheckBox } from "./check-box";
 import { useForm } from "react-hook-form";
 import { Details } from "../details/details";
@@ -78,20 +78,6 @@ function Certificates() {
         </label>
       </form>
     </Details>
-  );
-}
-
-export function CertificatesPreview() {
-  const certificate = useStore((state) => state.certificate);
-  const description = useStore((state) => state.description);
-
-  return (
-    <>
-      {certificate}
-      <MonthsPreview />
-      <YearsPreview />
-      {description}
-    </>
   );
 }
 
