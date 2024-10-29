@@ -1,7 +1,9 @@
-export type State = {
+type State = {
   month: string;
 };
 
-export type Action = {
+type Action = {
   updateMonth: (month: State["month"]) => void;
 };
+
+export { type Action as MonthAction, type State as MonthState };
