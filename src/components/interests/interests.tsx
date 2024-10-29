@@ -2,10 +2,11 @@ import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-import { State, useStore } from "./hooks";
+import { useStore } from "./hooks";
+import { InterestsState } from "./types";
 
 export function Interests() {
-  const { register } = useForm<State>();
+  const { register } = useForm<InterestsState>();
   const updateInterests = useStore((state) => state.updateInterests);
 
   return (
