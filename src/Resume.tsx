@@ -1,4 +1,4 @@
-import { Certificates } from "./components/Certificates";
+import { Certificates } from "./components/certificates/certificates";
 import { Education } from "./components/education/education";
 import { Employment } from "./components/employment/employment";
 import { Interests } from "./components/interests/interests";

@@ -1,10 +1,10 @@
 import { ChangeEvent, useState } from "react";
-import { Months, MonthsPreview } from "./Months";
-import { Years, YearsPreview } from "./Years";
-import { CheckBox } from "./CheckBox";
+import { Months, MonthsPreview } from "./months";
+import { Years, YearsPreview } from "./years";
+import { CheckBox } from "./check-box";
 import { useForm } from "react-hook-form";
 import { create } from "zustand";
-import { Details } from "./details/details";
+import { Details } from "../details/details";
 
 type State = {
   certificate: string;
