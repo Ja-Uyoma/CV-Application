@@ -1,21 +1,8 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { create } from "zustand";
 import { Summary } from "../details/summary";
 import { Details } from "../details/details";
-
-type State = {
-  references: string;
-};
-
-type Action = {
-  updateReferences: (description: State["references"]) => void;
-};
-
-const useStore = create<State & Action>()((set) => ({
-  references: "",
-  updateReferences: (references) => set(() => ({ references: references })),
-}));
+import { State, useStore } from "./hooks";
 
 export function References() {
   const { register } = useForm<State>();
