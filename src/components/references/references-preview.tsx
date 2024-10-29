@@ -1,7 +1,7 @@
-import { useStore } from "./hooks";
+import { useReferencesStore } from "./hooks";
 
 export function ReferencesPreview() {
-  const references = useStore((state) => state.references);
+  const references = useReferencesStore((state) => state.references);
 
   return <>{references}</>;
 }
