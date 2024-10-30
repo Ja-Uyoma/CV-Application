@@ -1,5 +1,5 @@
 import { Preview } from "./components/preview";
-import { Resume } from "./Resume";
+import { Resume } from "./components/resume";
 
 function App() {
   return (
