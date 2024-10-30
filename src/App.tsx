@@ -1,4 +1,4 @@
-import { Preview } from "./Preview";
+import { Preview } from "./components/preview";
 import { Resume } from "./Resume";
 
 function App() {
