@@ -4,6 +4,7 @@ import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { usePersonalStore } from "./hooks";
 import { PersonalDetailsState } from "./types";
+import { Form } from "../form/form";
 
 function PersonalDetails() {
   const { register } = useForm<PersonalDetailsState>();
@@ -23,12 +24,7 @@ function PersonalDetails() {
     <Details name="resume">
       <Summary title="Personal Details" />
 
-      <form
-        action="/"
-        method="post"
-        autoComplete="off"
-        className="rounded-lg space-y-2"
-      >
+      <Form>
         <div className="flex flex-col space-y-2">
           <div className="flex justify-between gap-2">
             <label className="block w-full">
@@ -148,7 +144,7 @@ function PersonalDetails() {
             />
           </label>
         </div>
-      </form>
+      </Form>
     </Details>
   );
 }

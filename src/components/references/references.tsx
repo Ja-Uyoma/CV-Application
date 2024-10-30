@@ -4,6 +4,7 @@ import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useReferencesStore } from "./hooks";
 import { ReferencesState } from "./types";
+import { Form } from "../form/form";
 
 export function References() {
   const { register } = useForm<ReferencesState>();
@@ -15,7 +16,7 @@ export function References() {
     <Details name="resume">
       <Summary title="References" />
 
-      <form action="/" method="post" autoComplete="off" className="rounded-lg">
+      <Form>
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
@@ -29,7 +30,7 @@ export function References() {
             className="bg-gray-100 rounded-lg border-none w-full"
           />
         </label>
-      </form>
+      </Form>
     </Details>
   );
 }
