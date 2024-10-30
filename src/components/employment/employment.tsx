@@ -5,6 +5,7 @@ import { Details } from "../details/details";
 import { useEmploymentStore } from "./hooks";
 import { EmploymentState } from "./types";
 import { Form } from "../form/form";
+import { Label } from "../form/label";
 
 export function Employment() {
   const { register } = useForm<EmploymentState>();
@@ -22,8 +23,7 @@ export function Employment() {
       <Summary title="Employment" />
 
       <Form>
-        <label className="block w-full">
-          <span className="font-medium">Position</span>
+        <Label labelText="Position">
           <input
             type="text"
             {...register("position", {
@@ -34,10 +34,9 @@ export function Employment() {
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
 
-        <label className="block w-full">
-          <span className="font-medium">Employer</span>
+        <Label labelText="Employer">
           <input
             type="text"
             {...register("employer", {
@@ -48,11 +47,10 @@ export function Employment() {
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
 
         <div className="flex gap-2">
-          <label className="block w-full">
-            <span className="font-medium">Start Date</span>
+          <Label labelText="Start Date">
             <input
               type="date"
               {...register("startDate", {
@@ -62,10 +60,9 @@ export function Employment() {
               })}
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
 
-          <label className="block w-full">
-            <span className="font-medium">End Date</span>
+          <Label labelText="End Date">
             <input
               type="date"
               {...register("endDate", {
@@ -75,11 +72,10 @@ export function Employment() {
               })}
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
         </div>
 
-        <label className="block w-full">
-          <span className="font-medium">Description</span>
+        <Label labelText="Description">
           <textarea
             {...register("description", {
               required: true,
@@ -90,7 +86,7 @@ export function Employment() {
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
 
         {/*  */}
       </Form>

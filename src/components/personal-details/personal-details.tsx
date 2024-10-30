@@ -5,6 +5,7 @@ import { Details } from "../details/details";
 import { usePersonalStore } from "./hooks";
 import { PersonalDetailsState } from "./types";
 import { Form } from "../form/form";
+import { Label } from "../form/label";
 
 function PersonalDetails() {
   const { register } = useForm<PersonalDetailsState>();
@@ -27,8 +28,7 @@ function PersonalDetails() {
       <Form>
         <div className="flex flex-col space-y-2">
           <div className="flex justify-between gap-2">
-            <label className="block w-full">
-              <span className="font-medium">Given Name</span>
+            <Label labelText="Given Name">
               <input
                 type="text"
                 {...register("givenName", {
@@ -39,10 +39,9 @@ function PersonalDetails() {
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
-            </label>
+            </Label>
 
-            <label className="block w-full">
-              <span className="font-medium">Family Name</span>
+            <Label labelText="Family Name">
               <input
                 type="text"
                 {...register("familyName", {
@@ -53,11 +52,10 @@ function PersonalDetails() {
                 autoComplete="on"
                 className="bg-gray-100 rounded-lg border-none w-full"
               />
-            </label>
+            </Label>
           </div>
 
-          <label className="block w-full">
-            <span className="font-medium">Headline</span>
+          <Label labelText="Headline">
             <input
               type="text"
               {...register("headline", {
@@ -68,12 +66,11 @@ function PersonalDetails() {
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
         </div>
 
         <div className="flex justify-between gap-2">
-          <label className="block w-full">
-            <span className="font-medium">Email Address</span>
+          <Label labelText="Email Address">
             <input
               type="email"
               {...register("emailAddress", {
@@ -84,10 +81,9 @@ function PersonalDetails() {
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
 
-          <label className="block w-full">
-            <span className="font-medium">Phone Number</span>
+          <Label labelText="Phone Number">
             <input
               type="text"
               {...register("phoneNumber", {
@@ -98,11 +94,10 @@ function PersonalDetails() {
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
         </div>
 
-        <label className="block w-full">
-          <span className="font-medium">Address</span>
+        <Label labelText="Address">
           <input
             type="text"
             {...register("address", {
@@ -113,11 +108,10 @@ function PersonalDetails() {
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
 
         <div className="flex gap-2">
-          <label className="block w-full">
-            <span className="font-medium">Post code</span>
+          <Label labelText="Post code">
             <input
               type="text"
               {...register("postCode", {
@@ -128,10 +122,9 @@ function PersonalDetails() {
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
 
-          <label className="block w-full">
-            <span className="font-medium">City</span>
+          <Label labelText="City">
             <input
               type="text"
               {...register("city", {
@@ -142,7 +135,7 @@ function PersonalDetails() {
               autoComplete="on"
               className="bg-gray-100 rounded-lg border-none w-full"
             />
-          </label>
+          </Label>
         </div>
       </Form>
     </Details>

@@ -5,6 +5,7 @@ import { Details } from "../details/details";
 import { useQualificationsStore } from "./hooks";
 import { QualificationsState } from "./types";
 import { Form } from "../form/form";
+import { Label } from "../form/label";
 
 export function Qualifications() {
   const { register } = useForm<QualificationsState>();
@@ -17,8 +18,7 @@ export function Qualifications() {
       <Summary title="Qualifications" />
 
       <Form>
-        <label className="block w-full">
-          <span className="font-medium">Description</span>
+        <Label labelText="Description">
           <textarea
             {...register("qualifications", {
               required: true,
@@ -29,7 +29,7 @@ export function Qualifications() {
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
       </Form>
     </Details>
   );
