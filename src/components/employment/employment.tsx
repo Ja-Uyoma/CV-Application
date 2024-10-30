@@ -4,6 +4,7 @@ import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useEmploymentStore } from "./hooks";
 import { EmploymentState } from "./types";
+import { Form } from "../form/form";
 
 export function Employment() {
   const { register } = useForm<EmploymentState>();
@@ -20,7 +21,7 @@ export function Employment() {
     <Details name="resume">
       <Summary title="Employment" />
 
-      <form action="/" method="post" className="rounded-lg space-y-2">
+      <Form>
         <label className="block w-full">
           <span className="font-medium">Position</span>
           <input
@@ -92,7 +93,7 @@ export function Employment() {
         </label>
 
         {/*  */}
-      </form>
+      </Form>
     </Details>
   );
 }

@@ -7,6 +7,7 @@ import { Details } from "../details/details";
 import { CertificateState } from "./types";
 import { useCertificateStore } from "./hooks";
 import { Summary } from "../details/summary";
+import { Form } from "../form/form";
 
 function Certificates() {
   const [isChecked, setIsChecked] = useState(false);
@@ -28,12 +29,7 @@ function Certificates() {
     <Details name="resume">
       <Summary title="Certificates" />
 
-      <form
-        action="/"
-        method="post"
-        autoComplete="off"
-        className="rounded-lg flex flex-col gap-2"
-      >
+      <Form>
         <label className="block w-full">
           <span className="font-medium">Certificate</span>
           <input
@@ -74,7 +70,7 @@ function Certificates() {
             className="bg-gray-100 rounded-lg border-none w-full"
           />
         </label>
-      </form>
+      </Form>
     </Details>
   );
 }

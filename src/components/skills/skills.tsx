@@ -4,6 +4,7 @@ import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useSkillsStore } from "./hooks";
 import { SkillsState } from "./types";
+import { Form } from "../form/form";
 
 export function Skills() {
   const { register } = useForm<SkillsState>();
@@ -13,7 +14,7 @@ export function Skills() {
     <Details name="resume">
       <Summary title="Skills" />
 
-      <form action="/" method="post" autoComplete="off" className="rounded-lg">
+      <Form>
         <label className="block w-full">
           <span className="font-medium">Description</span>
           <textarea
@@ -27,7 +28,7 @@ export function Skills() {
             className="bg-gray-100 rounded-lg border-none w-full"
           />
         </label>
-      </form>
+      </Form>
     </Details>
   );
 }

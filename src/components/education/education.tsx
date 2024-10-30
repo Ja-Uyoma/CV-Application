@@ -4,6 +4,7 @@ import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useEducationStore } from "./hooks";
 import { EducationState } from "./types";
+import { Form } from "../form/form";
 
 export function Education() {
   const { register } = useForm<EducationState>();
@@ -20,7 +21,7 @@ export function Education() {
     <Details name="resume">
       <Summary title="Education" />
 
-      <form action="/" method="post" className="rounded-lg space-y-2">
+      <Form>
         <label className="block w-full">
           <span className="font-medium">Education</span>
           <input
@@ -90,7 +91,7 @@ export function Education() {
             className="bg-gray-100 rounded-lg border-none w-full"
           />
         </label>
-      </form>
+      </Form>
     </Details>
   );
 }
