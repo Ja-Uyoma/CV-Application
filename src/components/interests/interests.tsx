@@ -5,6 +5,7 @@ import { Details } from "../details/details";
 import { useInterestsStore } from "./hooks";
 import { InterestsState } from "./types";
 import { Form } from "../form/form";
+import { Label } from "../form/label";
 
 export function Interests() {
   const { register } = useForm<InterestsState>();
@@ -15,8 +16,7 @@ export function Interests() {
       <Summary title="Interests" />
 
       <Form>
-        <label className="block w-full">
-          <span className="font-medium">Description</span>
+        <Label labelText="Description">
           <textarea
             {...register("interests", {
               required: true,
@@ -27,7 +27,7 @@ export function Interests() {
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
       </Form>
     </Details>
   );

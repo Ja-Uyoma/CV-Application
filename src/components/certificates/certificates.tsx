@@ -8,6 +8,7 @@ import { CertificateState } from "./types";
 import { useCertificateStore } from "./hooks";
 import { Summary } from "../details/summary";
 import { Form } from "../form/form";
+import { Label } from "../form/label";
 
 function Certificates() {
   const [isChecked, setIsChecked] = useState(false);
@@ -30,8 +31,7 @@ function Certificates() {
       <Summary title="Certificates" />
 
       <Form>
-        <label className="block w-full">
-          <span className="font-medium">Certificate</span>
+        <Label labelText="Certificate">
           <input
             type="text"
             {...register("certificate", {
@@ -42,7 +42,7 @@ function Certificates() {
             autoComplete="on"
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
 
         <div className="flex justify-between">
           <span className="font-medium">Period</span>
@@ -57,8 +57,7 @@ function Certificates() {
           <Years isDisabled={isChecked} />
         </div>
 
-        <label className="block w-full">
-          <span className="font-medium">Description</span>
+        <Label labelText="Description">
           <textarea
             {...register("description", {
               required: true,
@@ -69,7 +68,7 @@ function Certificates() {
             rows={10}
             className="bg-gray-100 rounded-lg border-none w-full"
           />
-        </label>
+        </Label>
       </Form>
     </Details>
   );
