@@ -4,7 +4,9 @@ import { Preview } from "./components/preview";
 import { Resume } from "./components/resume";
 
 function App() {
-  const [title, setTitle] = useState("Untitled resume");
+  const [title, setTitle] = useState("");
+  const placeholder = "Untitled resume";
+  const length = title.length > 0 ? title.length : placeholder.length;
 
   useEffect(() => {
     if (title.length > 0) {
