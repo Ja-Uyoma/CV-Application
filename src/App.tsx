@@ -14,10 +14,12 @@ function App() {
     <>
       <header className="text-center py-5 text-white font-medium bg-gray-900">
         <h1>
-          <label>
+          <label className="block w-full">
             <input
               type="text"
+              name="page-title"
               placeholder="Untitled resume"
+              className="bg-gray-900 p-0 border-0 size-max focus:ring-0 focus:border-b-2 focus:text-slate-400 focus:border-blue-300"
               value={title}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
                 setTitle(e.target.value)
