@@ -7,7 +7,9 @@ function App() {
   const [title, setTitle] = useState("Untitled resume");
 
   useEffect(() => {
-    document.title = title;
+    if (title.length > 0) {
+      document.title = title;
+    }
   }, [title]);
 
   return (
