@@ -49,7 +49,7 @@ export function Employment() {
           />
         </Label>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <Label labelText="Start Date">
             <input
               type="date"
