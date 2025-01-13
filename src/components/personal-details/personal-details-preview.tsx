@@ -17,8 +17,9 @@ export function PersonalDetailsPreview() {
           Personal Details
         </span>
       </p>
-      <p>{givenName}</p>
-      <p>{familyName}</p>
+      <p>
+        <span>{givenName}</span> <span>{familyName}</span>
+      </p>
       <p>{headline}</p>
       <p>{emailAddress}</p>
       <p>{phoneNumber}</p>
