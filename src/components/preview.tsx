@@ -10,7 +10,9 @@ import { SkillsPreview } from "./skills/skills-preview";
 export function Preview() {
   return (
     <div className="flex-1 bg-white">
-      <p className="text-center font-medium text-xl">Resume</p>
+      <p className="text-center font-medium text-4xl uppercase text-black py-4">
+        Resume
+      </p>
       <PersonalDetailsPreview />
       <EducationPreview />
       <QualificationsPreview />
