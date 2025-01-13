@@ -9,7 +9,7 @@ import { SkillsPreview } from "./skills/skills-preview";
 
 export function Preview() {
   return (
-    <div className="flex-1">
+    <div className="flex-1 bg-white">
       <p className="text-center font-medium text-xl">Resume</p>
       <PersonalDetailsPreview />
       <EducationPreview />
