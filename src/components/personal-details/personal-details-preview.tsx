@@ -12,6 +12,11 @@ export function PersonalDetailsPreview() {
 
   return (
     <>
+      <p>
+        <span className="uppercase text-2xl bg-black text-white px-1">
+          Personal Details
+        </span>
+      </p>
       <p>{givenName}</p>
       <p>{familyName}</p>
       <p>{headline}</p>

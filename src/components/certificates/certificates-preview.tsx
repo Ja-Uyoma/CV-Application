@@ -8,6 +8,12 @@ export function CertificatesPreview() {
 
   return (
     <>
+      <p>
+        <span className="uppercase text-2xl bg-black text-white px-1">
+          Certificates
+        </span>
+      </p>
+
       {certificate}
       <MonthsPreview />
       <YearsPreview />

@@ -9,6 +9,12 @@ export function EducationPreview() {
 
   return (
     <>
+      <p>
+        <span className="uppercase text-2xl bg-black text-white px-1">
+          Education
+        </span>
+      </p>
+
       <p>{education}</p>
       <p>{school}</p>
       <p>{startDate}</p>

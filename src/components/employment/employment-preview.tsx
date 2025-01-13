@@ -9,6 +9,12 @@ export function EmploymentPreview() {
 
   return (
     <>
+      <p>
+        <span className="uppercase text-2xl bg-black text-white px-1">
+          Employment
+        </span>
+      </p>
+
       {position}
       {employer}
       {startDate}
