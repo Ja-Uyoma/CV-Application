@@ -10,13 +10,31 @@ export function PersonalDetailsPreview() {
   const postCode = usePersonalStore((state) => state.postCode);
   const city = usePersonalStore((state) => state.city);
 
+  const storeHasData = () => {
+    return (
+      givenName ||
+      familyName ||
+      headline ||
+      emailAddress ||
+      phoneNumber ||
+      address ||
+      postCode ||
+      city
+    );
+  };
+
   return (
     <>
-      <p>
-        <span className="uppercase text-2xl bg-black text-white px-1">
-          Personal Details
-        </span>
-      </p>
+      {storeHasData() ? (
+        <p>
+          <span className="uppercase text-2xl bg-black text-white px-1">
+            Personal Details
+          </span>
+        </p>
+      ) : (
+        <></>
+      )}
+
       <p>
         <span>{givenName}</span> <span>{familyName}</span>
       </p>

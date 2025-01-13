@@ -7,11 +7,15 @@ export function QualificationsPreview() {
 
   return (
     <>
-      <p>
-        <span className="uppercase text-2xl bg-black text-white px-1">
-          Qualifications
-        </span>
-      </p>
+      {qualifications ? (
+        <p>
+          <span className="uppercase text-2xl bg-black text-white px-1">
+            Qualifications
+          </span>
+        </p>
+      ) : (
+        <></>
+      )}
 
       {qualifications}
     </>

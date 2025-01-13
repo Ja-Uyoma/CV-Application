@@ -5,11 +5,15 @@ export function ReferencesPreview() {
 
   return (
     <>
-      <p>
-        <span className="uppercase text-2xl bg-black text-white px-1">
-          References
-        </span>
-      </p>
+      {references ? (
+        <p>
+          <span className="uppercase text-2xl bg-black text-white px-1">
+            References
+          </span>
+        </p>
+      ) : (
+        <></>
+      )}
 
       {references}
     </>

@@ -7,13 +7,21 @@ export function EmploymentPreview() {
   const endDate = useEmploymentStore((state) => state.endDate);
   const description = useEmploymentStore((state) => state.description);
 
+  const storeHasData = () => {
+    return position || employer || startDate || endDate || description;
+  };
+
   return (
     <>
-      <p>
-        <span className="uppercase text-2xl bg-black text-white px-1">
-          Employment
-        </span>
-      </p>
+      {storeHasData() ? (
+        <p>
+          <span className="uppercase text-2xl bg-black text-white px-1">
+            Employment
+          </span>
+        </p>
+      ) : (
+        <></>
+      )}
 
       {position}
       {employer}

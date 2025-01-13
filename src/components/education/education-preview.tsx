@@ -7,13 +7,21 @@ export function EducationPreview() {
   const endDate = useEducationStore((state) => state.endDate);
   const description = useEducationStore((state) => state.description);
 
+  const storeHasData = () => {
+    return education || school || startDate || endDate || description;
+  };
+
   return (
     <>
-      <p>
-        <span className="uppercase text-2xl bg-black text-white px-1">
-          Education
-        </span>
-      </p>
+      {storeHasData() ? (
+        <p>
+          <span className="uppercase text-2xl bg-black text-white px-1">
+            Education
+          </span>
+        </p>
+      ) : (
+        <></>
+      )}
 
       <p>{education}</p>
       <p>{school}</p>
