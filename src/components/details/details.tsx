@@ -4,7 +4,7 @@ export function Details(props: { title: string; children: React.ReactNode }) {
       name="resume"
       className="rounded-none space-y-2 py-2 w-11/12 mx-auto"
     >
-      <summary className="list-none my-4 flex items-center justify-between">
+      <summary className="list-none my-4 flex justify-between">
         <span className="inline-block font-bold text-xl cursor-pointer">
           {props.title}
         </span>
