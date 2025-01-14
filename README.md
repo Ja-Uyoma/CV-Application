@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# CV Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+This is a simple web application for creating resumes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Background
 
-## Expanding the ESLint configuration
+This application is built as an exercise from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-cv-application).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Node JS
+
+### Installation
+
+1. Clone the repository
+
+```sh
+git clone https://github.com/Ja-Uyoma/CV-Application.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Change into the project's directory
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+cd CV-Application
 ```
+
+3. Install dependencies
+
+```sh
+npm install
+```
+
+## Usage
+
+1. For a development build, run the following command:
+
+```sh
+npm run dev
+```
+
+- You can now view the project at the following address in your browser: `http://localhost:5173`
+
+2. For a release build, run the following commands to build the project and run the preview build:
+
+```sh
+npm run build && npm run start
+```
+
+- You can now view the project at the following address in your browser: `http://localhost:3000`
+
+## License
+
+This project is licensed under the MIT license. See LICENSE.md for more information.
