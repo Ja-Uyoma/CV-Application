@@ -11,9 +11,9 @@ function Divider() {
   return <hr className="w-11/12 mx-auto" />;
 }
 
-export function Resume() {
+export function Resume(props: { className?: string }) {
   return (
-    <div className="flex flex-1 flex-col gap-1 bg-white">
+    <div className={`flex flex-col gap-1 bg-white ${props.className}`}>
       <PersonalDetails />
       <Divider />
       <Education />
