@@ -47,7 +47,7 @@ export function Education() {
         </Label>
 
         <div className="flex gap-2 flex-wrap">
-          <Label labelText="Start Date">
+          <Label labelText="Start Date" className="flex-1">
             <input
               type="date"
               {...register("startDate", {
@@ -59,7 +59,7 @@ export function Education() {
             />
           </Label>
 
-          <Label labelText="End Date">
+          <Label labelText="End Date" className="flex-1">
             <input
               type="date"
               {...register("endDate", {
