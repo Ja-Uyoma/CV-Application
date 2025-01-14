@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useSkillsStore } from "./hooks";
 import { SkillsState } from "./types";
@@ -12,9 +11,7 @@ export function Skills() {
   const updateSkills = useSkillsStore((state) => state.updateSkills);
 
   return (
-    <Details name="resume">
-      <Summary title="Skills" />
-
+    <Details title="Skills">
       <Form>
         <Label labelText="Description">
           <textarea

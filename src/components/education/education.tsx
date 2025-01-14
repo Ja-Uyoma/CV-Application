@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useEducationStore } from "./hooks";
 import { EducationState } from "./types";
@@ -19,9 +18,7 @@ export function Education() {
   );
 
   return (
-    <Details name="resume">
-      <Summary title="Education" />
-
+    <Details title="Education">
       <Form>
         <Label labelText="Education">
           <input

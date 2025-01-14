@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useEmploymentStore } from "./hooks";
 import { EmploymentState } from "./types";
@@ -19,9 +18,7 @@ export function Employment() {
   );
 
   return (
-    <Details name="resume">
-      <Summary title="Employment" />
-
+    <Details title="Employment">
       <Form>
         <Label labelText="Position">
           <input

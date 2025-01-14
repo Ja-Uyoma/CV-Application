@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useReferencesStore } from "./hooks";
 import { ReferencesState } from "./types";
@@ -14,9 +13,7 @@ export function References() {
   );
 
   return (
-    <Details name="resume">
-      <Summary title="References" />
-
+    <Details title="References">
       <Form>
         <Label labelText="Description">
           <textarea

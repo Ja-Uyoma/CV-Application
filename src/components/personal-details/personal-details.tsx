@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { usePersonalStore } from "./hooks";
 import { PersonalDetailsState } from "./types";
@@ -22,9 +21,7 @@ function PersonalDetails() {
   const updateCity = usePersonalStore((state) => state.updateCity);
 
   return (
-    <Details name="resume">
-      <Summary title="Personal Details" />
-
+    <Details title="Personal Details">
       <Form>
         <div className="flex flex-col space-y-2">
           <div className="flex justify-between gap-2">
