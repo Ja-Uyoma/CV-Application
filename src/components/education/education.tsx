@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { ChangeEvent } from "react";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useEducationStore } from "./hooks";
 import { EducationState } from "./types";
@@ -19,9 +18,7 @@ export function Education() {
   );
 
   return (
-    <Details name="resume">
-      <Summary title="Education" />
-
+    <Details title="Education">
       <Form>
         <Label labelText="Education">
           <input
@@ -49,8 +46,8 @@ export function Education() {
           />
         </Label>
 
-        <div className="flex gap-2">
-          <Label labelText="Start Date">
+        <div className="flex gap-2 flex-wrap">
+          <Label labelText="Start Date" className="flex-1">
             <input
               type="date"
               {...register("startDate", {
@@ -62,7 +59,7 @@ export function Education() {
             />
           </Label>
 
-          <Label labelText="End Date">
+          <Label labelText="End Date" className="flex-1">
             <input
               type="date"
               {...register("endDate", {

@@ -34,8 +34,8 @@ function App() {
         </h1>
       </header>
       <main className="flex">
-        <Resume />
-        <Preview />
+        <Resume className="flex-1" />
+        <Preview className="flex-1" />
       </main>
     </>
   );

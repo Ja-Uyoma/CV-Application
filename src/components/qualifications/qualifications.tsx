@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useQualificationsStore } from "./hooks";
 import { QualificationsState } from "./types";
@@ -14,9 +13,7 @@ export function Qualifications() {
   );
 
   return (
-    <Details name="resume">
-      <Summary title="Qualifications" />
-
+    <Details title="Qualifications">
       <Form>
         <Label labelText="Description">
           <textarea

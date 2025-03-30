@@ -1,6 +1,5 @@
 import { ChangeEvent } from "react";
 import { useForm } from "react-hook-form";
-import { Summary } from "../details/summary";
 import { Details } from "../details/details";
 import { useInterestsStore } from "./hooks";
 import { InterestsState } from "./types";
@@ -12,9 +11,7 @@ export function Interests() {
   const updateInterests = useInterestsStore((state) => state.updateInterests);
 
   return (
-    <Details name="resume">
-      <Summary title="Interests" />
-
+    <Details title="Interests">
       <Form>
         <Label labelText="Description">
           <textarea

@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { Details } from "../details/details";
 import { CertificateState } from "./types";
 import { useCertificateStore } from "./hooks";
-import { Summary } from "../details/summary";
 import { Form } from "../form/form";
 import { Label } from "../form/label";
 
@@ -27,9 +26,7 @@ function Certificates() {
   );
 
   return (
-    <Details name="resume">
-      <Summary title="Certificates" />
-
+    <Details title="Certificates">
       <Form>
         <Label labelText="Certificate">
           <input
