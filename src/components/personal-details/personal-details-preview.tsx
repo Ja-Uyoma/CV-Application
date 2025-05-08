@@ -27,11 +27,11 @@ export function PersonalDetailsPreview() {
   return (
     <>
       {storeHasData() ? (
-        <p>
+        <h2>
           <span className="text-2xl bg-black text-white px-1">
             Personal Details
           </span>
-        </p>
+        </h2>
       ) : (
         <></>
       )}
