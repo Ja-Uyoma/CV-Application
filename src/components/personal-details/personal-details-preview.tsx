@@ -36,7 +36,7 @@ export function PersonalDetailsPreview() {
         <></>
       )}
 
-      <hr />
+      <hr className="my-2" />
 
       <p className="flex gap-2">
         <span>
