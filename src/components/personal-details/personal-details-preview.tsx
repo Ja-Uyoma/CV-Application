@@ -51,10 +51,13 @@ export function PersonalDetailsPreview() {
         <Phone /> {phoneNumber}
       </p>
       <p>
-        <House /> {address}
+        <House />
+        <span>{address}</span>
+        <br />
+        <span>
+          {postCode} {city}
+        </span>
       </p>
-      <p>{postCode}</p>
-      <p>{city}</p>
     </>
   );
 }
