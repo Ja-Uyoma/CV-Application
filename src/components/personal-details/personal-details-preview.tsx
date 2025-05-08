@@ -38,24 +38,35 @@ export function PersonalDetailsPreview() {
 
       <hr />
 
-      <p>
-        <User />
+      <p className="flex gap-2">
+        <span>
+          <User />
+        </span>
         <span>{givenName}</span> <span>{familyName}</span>
       </p>
       <p>{headline}</p>
-      <p>
-        <Mail />
-        {emailAddress}
-      </p>
-      <p>
-        <Phone /> {phoneNumber}
-      </p>
-      <p>
-        <House />
-        <span>{address}</span>
-        <br />
+      <p className="flex gap-2">
         <span>
-          {postCode} {city}
+          <Mail />
+        </span>
+        <span>{emailAddress}</span>
+      </p>
+      <p className="flex gap-2">
+        <span>
+          <Phone />
+        </span>{" "}
+        <span>{phoneNumber}</span>
+      </p>
+      <p className="flex gap-2">
+        <span>
+          <House />
+        </span>
+        <span>
+          <span>{address}</span>
+          <br />
+          <span>
+            {postCode} {city}
+          </span>
         </span>
       </p>
     </>
