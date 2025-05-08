@@ -1,3 +1,5 @@
+import { CirclePlus } from "lucide-react";
+
 export function Details(props: { title: string; children: React.ReactNode }) {
   return (
     <details
@@ -9,9 +11,7 @@ export function Details(props: { title: string; children: React.ReactNode }) {
           {props.title}
         </span>
         <button className="inline-block">
-          <span className="material-symbols-outlined size-full">
-            add_circle
-          </span>
+          <CirclePlus />
         </button>
       </summary>
 
