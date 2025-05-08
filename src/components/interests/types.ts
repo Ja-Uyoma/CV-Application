@@ -1,9 +1,9 @@
-type State = {
+interface State {
   interests: string;
-};
+}
 
-type Action = {
+interface Action {
   updateInterests: (description: State["interests"]) => void;
-};
+}
 
 export { type State as InterestsState, type Action as InterestsAction };

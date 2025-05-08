@@ -1,9 +1,9 @@
-type State = {
+interface State {
   year: string;
-};
+}
 
-type Action = {
+interface Action {
   updateYear: (year: State["year"]) => void;
-};
+}
 
 export { type State as YearsState, type Action as YearsAction };
