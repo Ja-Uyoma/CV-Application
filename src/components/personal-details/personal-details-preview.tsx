@@ -35,6 +35,8 @@ export function PersonalDetailsPreview() {
         <></>
       )}
 
+      <hr />
+
       <p>
         <span>{givenName}</span> <span>{familyName}</span>
       </p>
