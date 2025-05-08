@@ -25,7 +25,7 @@ export function PersonalDetailsPreview() {
   };
 
   return (
-    <>
+    <section>
       {storeHasData() ? (
         <h2>
           <span className="text-2xl bg-black text-white px-1">
@@ -69,6 +69,6 @@ export function PersonalDetailsPreview() {
           </span>
         </span>
       </p>
-    </>
+    </section>
   );
 }
