@@ -48,7 +48,7 @@ function Certificates() {
             onChangeHandler={handleCheckBoxChecked}
           />
         </div>
-        <div className="flex justify-between gap-2">
+        <div className="flex flex-wrap sm:flex-nowrap justify-between gap-2">
           <Months isDisabled={isChecked} />
 
           <Years isDisabled={isChecked} />
