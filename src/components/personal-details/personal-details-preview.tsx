@@ -28,7 +28,7 @@ export function PersonalDetailsPreview() {
     <>
       {storeHasData() ? (
         <p>
-          <span className="uppercase text-2xl bg-black text-white px-1">
+          <span className="text-2xl bg-black text-white px-1">
             Personal Details
           </span>
         </p>
