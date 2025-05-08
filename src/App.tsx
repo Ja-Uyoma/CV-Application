@@ -35,7 +35,7 @@ function App() {
       </header>
       <main className="flex">
         <Resume className="flex-1" />
-        <Preview className="flex-1" />
+        <Preview className="flex-1 hidden sm:block" />
       </main>
     </>
   );
