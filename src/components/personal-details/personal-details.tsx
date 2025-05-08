@@ -24,7 +24,7 @@ function PersonalDetails() {
     <Details title="Personal Details">
       <Form>
         <div className="flex flex-col space-y-2">
-          <div className="flex justify-between gap-2">
+          <div className="flex flex-wrap sm:flex-nowrap justify-between gap-2">
             <Label labelText="Given Name">
               <input
                 type="text"
@@ -66,7 +66,7 @@ function PersonalDetails() {
           </Label>
         </div>
 
-        <div className="flex justify-between gap-2">
+        <div className="flex flex-wrap sm:flex-nowrap justify-between gap-2">
           <Label labelText="Email Address">
             <input
               type="email"
@@ -107,7 +107,7 @@ function PersonalDetails() {
           />
         </Label>
 
-        <div className="flex gap-2">
+        <div className="flex flex-wrap sm:flex-nowrap gap-2">
           <Label labelText="Post code">
             <input
               type="text"
