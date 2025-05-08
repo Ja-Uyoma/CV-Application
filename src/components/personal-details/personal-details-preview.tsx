@@ -1,4 +1,5 @@
 import { usePersonalStore } from "./hooks";
+import { User, Mail, Phone, House } from "lucide-react";
 
 export function PersonalDetailsPreview() {
   const givenName = usePersonalStore((state) => state.givenName);
@@ -38,12 +39,20 @@ export function PersonalDetailsPreview() {
       <hr />
 
       <p>
+        <User />
         <span>{givenName}</span> <span>{familyName}</span>
       </p>
       <p>{headline}</p>
-      <p>{emailAddress}</p>
-      <p>{phoneNumber}</p>
-      <p>{address}</p>
+      <p>
+        <Mail />
+        {emailAddress}
+      </p>
+      <p>
+        <Phone /> {phoneNumber}
+      </p>
+      <p>
+        <House /> {address}
+      </p>
       <p>{postCode}</p>
       <p>{city}</p>
     </>
