@@ -38,37 +38,57 @@ export function PersonalDetailsPreview() {
 
       <hr className="my-2" />
 
-      <p className="flex gap-2">
-        <span>
-          <User />
-        </span>
-        <span>{givenName}</span> <span>{familyName}</span>
-      </p>
-      <p>{headline}</p>
-      <p className="flex gap-2">
-        <span>
-          <Mail />
-        </span>
-        <span>{emailAddress}</span>
-      </p>
-      <p className="flex gap-2">
-        <span>
-          <Phone />
-        </span>{" "}
-        <span>{phoneNumber}</span>
-      </p>
-      <p className="flex gap-2">
-        <span>
-          <House />
-        </span>
-        <span>
-          <span>{address}</span>
-          <br />
+      {givenName ? (
+        <p className="flex gap-2">
           <span>
-            {postCode} {city}
+            <User />
           </span>
-        </span>
-      </p>
+          <span>{givenName}</span> <span>{familyName}</span>
+        </p>
+      ) : (
+        <></>
+      )}
+
+      {headline ? <p>{headline}</p> : <></>}
+
+      {emailAddress ? (
+        <p className="flex gap-2">
+          <span>
+            <Mail />
+          </span>
+          <span>{emailAddress}</span>
+        </p>
+      ) : (
+        <></>
+      )}
+
+      {phoneNumber ? (
+        <p className="flex gap-2">
+          <span>
+            <Phone />
+          </span>{" "}
+          <span>{phoneNumber}</span>
+        </p>
+      ) : (
+        <></>
+      )}
+
+      {address || postCode || city ? (
+        <p className="flex gap-2">
+          <span>
+            <House />
+          </span>
+          <span>
+            <span>{address}</span>
+            <br />
+            <span>
+              {postCode} {city}
+            </span>
+          </span>
+        </p>
+      ) : (
+        <></>
+      )}
     </section>
   );
 }
