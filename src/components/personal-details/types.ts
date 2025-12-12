@@ -1,4 +1,4 @@
-type State = {
+interface State {
   givenName: string;
   familyName: string;
   headline: string;
@@ -7,9 +7,9 @@ type State = {
   address: string;
   postCode: string;
   city: string;
-};
+}
 
-type Action = {
+interface Action {
   updateGivenName: (givenName: State["givenName"]) => void;
   updateFamilyName: (familyName: State["familyName"]) => void;
   updateHeadline: (headline: State["headline"]) => void;
@@ -18,7 +18,7 @@ type Action = {
   updateAddress: (addr: State["address"]) => void;
   updatePostCode: (postCode: State["postCode"]) => void;
   updateCity: (city: State["city"]) => void;
-};
+}
 
 export {
   type State as PersonalDetailsState,

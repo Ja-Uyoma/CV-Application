@@ -1,9 +1,9 @@
-type State = {
+interface State {
   references: string;
-};
+}
 
-type Action = {
+interface Action {
   updateReferences: (description: State["references"]) => void;
-};
+}
 
 export { type State as ReferencesState, type Action as ReferencesAction };
